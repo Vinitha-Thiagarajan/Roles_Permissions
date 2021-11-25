@@ -2,7 +2,7 @@ import './Table.css';
 import {Fragment,useState,useEffect} from 'react';
 
 import Dropdown from '../../UI/Dropdown';
-import projects from '../../project';
+import projects from '../../datas/project';
 import React from "react";
 const TableElement = props => {
     const [name , setName] = useState('');
