@@ -1,9 +1,9 @@
 
 import {useState,useEffect,Fragment} from "react";
 import React from "react";
-import Value from "./Value";
-import roles from "../../inputs";
-import projects from "../../project";
+import Value from "../Select/Value";
+import roles from "../../datas/roles";
+import projects from "../../datas/project";
 
 import './Table.css';
 
