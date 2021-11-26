@@ -1,27 +1,38 @@
 
 import {useState,useEffect,Fragment} from "react";
 import React from "react";
-import Value from "../Select/Value";
 import roles from "../../datas/roles";
-import projects from "../../datas/project";
+import projects from "../../datas/projects";
+import SelectedElement from "../Select/SelectedElement";
+import Dropdown from "../../UI/Dropdown";
+
 
 import './Table.css';
 
 const ProjectPermission =(props) =>
-{   const [project , setProject] = useState('');
+{   const [project , setProject] = useState([]);
+    const [selected , setSelected] = React.useState('');
+
+    const EventHandler = (event) =>{
+        setSelected(event.target.value);
+    };
   
     useEffect(()=>{
-        if(props.name && props.name!='')
+        if(props.project_name && props.project_name!='')
         {
-        const SelectedValue = roles.filter((e)=>e.project_name==projects.name)
-        setProject(SelectedValue[0])
-        console.log(SelectedValue)
+        const SelectedValue = roles.filter((e)=>e.project_name==props.project_name)
+        setProject(SelectedValue)
     }
-    },[props.name]) 
+    },[props.project_name]) 
 
         return(
             <Fragment>
-
+                <td>
+               <select onChange={EventHandler}>
+                 <Dropdown project={project}/>
+               </select>
+                </td>
+                <SelectedElement name={selected}/>
             </Fragment>
         )
     

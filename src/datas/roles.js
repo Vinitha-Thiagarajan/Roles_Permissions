@@ -1,8 +1,7 @@
 const roles=[
   {   id :0,
     name:"Select roles--",
-    project_name:"Dart",
-   permission:{
+    permission:{
     view:"disabled",
     edit:"disabled",
     update:"disabled",

@@ -8,27 +8,13 @@ import '../Components/Table/Table.css';
 import roles from "../datas/roles";
 import Checkbox from "./Checkbox/Checkbox";
 import CrossCheck from "./Checkbox/CrossCheck";
+import projects from "../datas/projects";
 
 const Dropdown = props => {
-    const [selected , setSelected] = React.useState('');
-
-    const EventHandler = (event) =>{
-        setSelected(event.target.value);
-    };
-    
-  
-
     return(
-        <><td>
-        <select onChange={EventHandler}>
-            <ProjectPermission name={props.project}/>
-          { roles.map((result) =>(<option text={result.id}>{result.name}</option>))}
-        </select>
-        </td>
-        <SelectedElement name={selected}/>
-        
-        
-        
+        <>
+        <option>Select roles--</option>
+            {props.project.map((result) =>(<option>{result.name}</option>))} 
     </>
     );
 

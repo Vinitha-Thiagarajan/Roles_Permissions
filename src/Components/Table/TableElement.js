@@ -2,8 +2,9 @@ import './Table.css';
 import {Fragment,useState,useEffect} from 'react';
 
 import Dropdown from '../../UI/Dropdown';
-import projects from '../../datas/project';
+import projects from '../../datas/projects';
 import React from "react";
+import ProjectPermission from './ProjectPermission';
 const TableElement = props => {
     const [name , setName] = useState('');
   
@@ -18,7 +19,7 @@ const TableElement = props => {
     return (<Fragment>
                 <tbody><tr><td>{props.name}</td>
                 <td>{name}</td>
-               <Dropdown project_name={name}/>
+               <ProjectPermission project_name={name}/>
                 </tr>
                 </tbody>
                 </Fragment>

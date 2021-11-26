@@ -2,7 +2,7 @@ import React from "react";
 import { Tabs, Tab, AppBar,Box } from "@material-ui/core";
 
 import Table from './Components/Table/Table';
-import projects from './datas/project';
+import projects from './datas/projects';
 
 const Home = props => {
   const [value, setValue] =React.useState(0)
