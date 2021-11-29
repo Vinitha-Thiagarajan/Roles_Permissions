@@ -1,14 +1,25 @@
 import React from "react";
 import { Tabs, Tab, AppBar, Box } from "@material-ui/core";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import Dropdown from "../UI/Dropdown";
+import SelectedRoles from "../Components/Select/SelectedRoles";
 import { faCogs } from '@fortawesome/free-solid-svg-icons'
+import './Settings.css';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEye, faEdit, faWrench, faTrash, faFilter } from '@fortawesome/free-solid-svg-icons'
 import Table from '../Components/Table/Table';
 import { projects } from '../utils/mockdata';
 import {useHistory} from "react-router-dom";
 const Settings = props => {
   let history = useHistory();
   const [value, setValue] = React.useState(0)
+
+  const [selected, setSelected] = React.useState('');
+
+  const EventHandler = (event) => {
+    setSelected(event.target.value);
+};
+
   const handleTabs = (e, val) => {
     setValue(val)
   }
@@ -25,10 +36,105 @@ const Settings = props => {
         <Tab label={"Permissions"} />
         </Tabs>
       </AppBar>
+      
+      <TabPanel value={value} index={0}>{<>
+      <table className='myTable myTable-horizontal'>
+      <thead>
+      <tr>
+          <th>Name </th>
+          <th>Actions</th>
+      </tr>
+  </thead>
+  <tbody>
+      {projects.map((result) => {
+      return (<><tr>
+              <td>{result.name}</td>
+              <td>
+              <div className = "min-container">
+                          <div className="edit_button">edit</div>
+                          <div className="delete_button">delete</div>
+                          </div>
+                          </td></tr></>
+                          )})}
+      </tbody>
+        </table>
+      </>}
+      </TabPanel>
 
-      <TabPanel value={value} index={0}></TabPanel>
-      <TabPanel value={value} index={1}></TabPanel>
-      <TabPanel value={value} index={3}></TabPanel>
+      <TabPanel value={value} index={1}>{
+        <>
+        <select onChange={EventHandler}>
+          <option>Select Project</option>
+          {projects.map((result) => (<option>{result.name}</option>))}
+        </select>
+        <SelectedRoles name={selected} />
+        </>}</TabPanel>
+
+      <TabPanel value={value} index={2}>{<><table className='myTable myTable-horizontal'>
+      <thead>
+      <tr>
+          <th>Icon </th>
+          <th>Name</th>
+          <th>Actions</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+              <td><FontAwesomeIcon icon={faEye}/></td>
+              <td>View</td>
+              <td>
+                <div className = "min-container">
+                    <div className="edit_button">edit</div>
+                    <div className="delete_button">delete</div>
+                </div>
+              </td>
+        </tr>
+        <tr>
+              <td><FontAwesomeIcon icon={faEdit}/></td>
+              <td>Edit</td>
+              <td>
+                <div className = "min-container">
+                    <div className="edit_button">edit</div>
+                    <div className="delete_button">delete</div>
+                </div>
+              </td>
+        </tr>
+        <tr>
+              <td><FontAwesomeIcon icon={faWrench}/></td>
+              <td>Settings</td>
+              <td>
+                <div className = "min-container">
+                    <div className="edit_button">edit</div>
+                    <div className="delete_button">delete</div>
+                </div>
+              </td>
+        </tr>
+        <tr>
+              <td><FontAwesomeIcon icon={faTrash}/></td>
+              <td>Delete</td>
+              <td>
+                <div className = "min-container">
+                    <div className="edit_button">edit</div>
+                    <div className="delete_button">delete</div>
+                </div>
+              </td>
+        </tr>
+        <tr>
+              <td><FontAwesomeIcon icon={faFilter}/></td>
+              <td>Filter</td>
+              <td>
+                <div className = "min-container">
+                    <div className="edit_button">edit</div>
+                    <div className="delete_button">delete</div>
+                </div>
+              </td>
+        </tr>
+                          
+      
+      </tbody>
+        </table>
+      </>}
+      </TabPanel>
     </div>
   );
 }
