@@ -1,41 +1,47 @@
 
-import {useState,useEffect,Fragment} from "react";
+import { useState, useEffect, Fragment } from "react";
 import React from "react";
-import roles from "../../datas/roles";
-import projects from "../../datas/projects";
+import { roles, projects } from "../../utils/mockdata";
 import SelectedElement from "../Select/SelectedElement";
 import Dropdown from "../../UI/Dropdown";
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSave } from '@fortawesome/free-solid-svg-icons'
 
 import './Table.css';
 
-const ProjectPermission =(props) =>
-{   const [project , setProject] = useState([]);
-    const [selected , setSelected] = React.useState('');
+const ProjectPermission = (props) => {
+    const [project, setProject] = useState([]);
+    const [selected, setSelected] = React.useState('');
 
-    const EventHandler = (event) =>{
+    const EventHandler = (event) => {
         setSelected(event.target.value);
     };
-  
-    useEffect(()=>{
-        if(props.project_name && props.project_name!='')
-        {
-        const SelectedValue = roles.filter((e)=>e.project_name==props.project_name)
-        setProject(SelectedValue)
-    }
-    },[props.project_name]) 
 
-        return(
-            <Fragment>
-                <td>
-               <select onChange={EventHandler}>
-                 <Dropdown project={project}/>
-               </select>
-                </td>
-                <SelectedElement name={selected}/>
-            </Fragment>
-        )
-    
+    useEffect(() => {
+        if (props.project_name && props.project_name != '') {
+            const SelectedValue = roles.filter((e) => e.project_name == props.project_name)
+            setProject(SelectedValue)
+        }
+    }, [props.project_name])
+
+    return (
+        <Fragment>
+            <td>
+                <select onChange={EventHandler}>
+                    <Dropdown project={project} />
+                </select>
+            </td>
+            <td>
+                <div className="permissioncontrol">
+                    <SelectedElement name={selected} />
+                </div>
+            </td>
+            <td style={{textAlign:"center"}}>
+                <FontAwesomeIcon icon={faSave} className="cursorPoint" />
+            </td>
+        </Fragment>
+    )
+
 
 }
 export default ProjectPermission;

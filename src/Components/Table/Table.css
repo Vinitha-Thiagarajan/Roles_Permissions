@@ -1,5 +1,5 @@
 .myTable {
-  width:100%;
+  width: calc(100% - 80px);
   max-width: 1600px;
   padding:0 3%;
   border: solid 1px whitesmoke;
@@ -17,6 +17,31 @@
   padding: 10px;
   text-align: left;
   text-shadow: 1px 1px 1px #fff;
+  }
+  .myTable thead tr th:nth-child(1) {
+    width: 10%;
+  }
+  .myTable thead tr th::nth-child(2) {
+    width: 15%;
+  }
+  .myTable thead tr th::nth-child(3) {
+    width: 25%;
+  }
+  .myTable thead tr th:nth-child(4) {
+    width: 35%;
+    text-align: center;
+   
+  }
+  .myTable thead tr th:nth-child(5) {
+    width: 15%;
+    text-align: center;
+   
+  }
+  .myTable thead tr th:nth-child(4) div {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 15px;
   }
   .myTable tbody td {
   border: solid 1px #D3D3D3;
@@ -65,4 +90,9 @@ select {
   display:block;
   color: #333;
   border: none;
+}
+.permissioncontrol{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }

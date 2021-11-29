@@ -1,10 +1,16 @@
 import React from "react";
-import "./styles.css";
-import Home from "./Home";
-import { Route, Switch, Redirect } from "react-router-dom";
+import './App.css';
+import Main from "./Pages"
+import {BrowserRouter as Router } from 'react-router-dom'; 
 
-export default function App() {
+
+function App() {
   return (
-    <Home/>
+    <Router>
+        <Main/>
+    </Router>
   );
 }
+
+
+export default App;

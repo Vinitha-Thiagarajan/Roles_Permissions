@@ -1,31 +1,30 @@
 
-import {useState,useEffect,Fragment} from "react";
+import { useState, useEffect, Fragment } from "react";
 import React from "react";
 import Value from "./Value";
-import roles from "../../datas/roles";
+import {roles} from "../../utils/mockdata";
 
 import '../Table/Table.css';
 
-const SelectedElement =(props) =>
-{   const [permission , setPermission] = useState([]);
-  
-    useEffect(()=>{
-        if(props.name && props.name!='')
-        {
-        const SelectedValue = roles.filter((e)=>e.name==props.name)
-        setPermission(SelectedValue[0].permission)
-    }
-    },[props.name]) 
+const SelectedElement = (props) => {
+    const [permission, setPermission] = useState([]);
 
-        return(
-            <Fragment>
-            {permission && Object.values(permission).map((e,i)=>{
-                return <Value permissions={e} 
-                 key={i}/>
+    useEffect(() => {
+        if (props.name && props.name != '') {
+            const SelectedValue = roles.filter((e) => e.name == props.name)
+            setPermission(SelectedValue[0].permission)
+        }
+    }, [props.name])
+
+    return (
+        <Fragment>
+            {permission && Object.values(permission).map((e, i) => {
+                return <Value permissions={e}
+                    key={i} />
             })}
-            </Fragment>
-        )
-    
+        </Fragment>
+    )
+
 
 }
 export default SelectedElement;
