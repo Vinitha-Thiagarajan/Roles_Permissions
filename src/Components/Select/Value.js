@@ -1,18 +1,16 @@
 import Checkbox from "../../UI/Checkbox/Checkbox"
-import CrossCheck from "../../UI/Checkbox/CrossCheck"
-import Disabled from "../../UI/Checkbox/Disabled"
 import React from "react";
 import '../Table/Table.css';
 
 const Value = (props) => {
     if (props.permissions == 'true') {
-        return <Checkbox />
+        return <Checkbox type="grant"/>
     }
     else if (props.permissions == 'false') {
-        return <CrossCheck />
+        return <Checkbox type="denied" />
     }
     else {
-        return <Disabled />
+        return <Checkbox type="disable" />
     }
 
 }

@@ -68,3 +68,65 @@ input[type="checkbox"]:disabled + label:after {
     height: 20px;
     background: #c5c1c1;
 }
+.cont {
+    font-size: 18px;
+    position: relative;
+    display: block;
+    margin-bottom: 15px;
+    padding-left: 30px;
+    cursor: pointer;
+    }
+    
+    .cont input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    }
+    
+    .cont__indicator {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 40px;
+    height: 20px;
+    background: #e6e6e6;
+    }
+    
+    .cont input:checked ~ .cont__indicator {
+    background: red;
+    }
+    
+    
+    .cont__indicator:after {
+    position: absolute;
+    display: none;
+    content: '';
+    }
+    
+    .cont input:checked ~ .cont__indicator:after {
+    display: block;
+    }
+    
+    .cont--checkbox .cont__indicator:after {
+        content: "x";
+        color: white;
+        /* The following positions my tick in the center, 
+         * but you could just overlay the entire box
+         * with a full after element with a background if you want to */
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%,-50%);
+        -moz-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+        transform: translate(-50%,-50%);
+    }
+
+    .control__indicator_disabled {
+        position: absolute;
+        top: 2px;
+        left: 0;
+        width: 40px;
+        height: 20px;
+        background: #b8b4b4;
+    }

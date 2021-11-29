@@ -1,12 +1,5 @@
-
-import { getThemeProps } from "@material-ui/styles";
 import * as React from "react";
-import ProjectPermission from "../Components/Table/ProjectPermission";
-import SelectedElement from "../Components/Select/SelectedElement";
 import '../Components/Table/Table.css';
-import {roles, projects} from "../utils/mockdata";
-import Checkbox from "./Checkbox/Checkbox";
-import CrossCheck from "./Checkbox/CrossCheck";
 
 const Dropdown = props => {
     return (
@@ -15,7 +8,6 @@ const Dropdown = props => {
             {props.project.map((result) => (<option>{result.name}</option>))}
         </>
     );
-
 }
 
 export default Dropdown;

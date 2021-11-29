@@ -5,7 +5,7 @@ import { roles, projects } from "../../utils/mockdata";
 import SelectedElement from "../Select/SelectedElement";
 import Dropdown from "../../UI/Dropdown";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSave } from '@fortawesome/free-solid-svg-icons'
+import { faSave, faTrashAlt } from '@fortawesome/free-solid-svg-icons'
 
 import './Table.css';
 
@@ -37,7 +37,8 @@ const ProjectPermission = (props) => {
                 </div>
             </td>
             <td style={{textAlign:"center"}}>
-                <FontAwesomeIcon icon={faSave} className="cursorPoint" />
+                <FontAwesomeIcon icon={faSave} color={"#259d1e"} className="facursorPoint" />
+                <FontAwesomeIcon icon={faTrashAlt} color={"#e70707"} className="facursorPoint" />
             </td>
         </Fragment>
     )

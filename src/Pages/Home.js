@@ -1,7 +1,7 @@
 import React from "react";
 import { Tabs, Tab, AppBar, Box } from "@material-ui/core";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCogs } from '@fortawesome/free-solid-svg-icons'
+import { faCogs, faPlusCircle } from '@fortawesome/free-solid-svg-icons'
 
 import Table from '../Components/Table/Table';
 import { projects } from '../utils/mockdata';
@@ -20,6 +20,9 @@ const Home = props => {
       <div className="heading">
         <h1>Roles and Permissions</h1>
         <div className="flexdisplay">
+        <div className="addBtn" onClick={()=>{history.push("/settings");}}>
+            <FontAwesomeIcon icon={faPlusCircle} style={{ marginRight: 7 }} /> Add Roles & Permissions
+          </div>
           <div className="addBtn" onClick={()=>{history.push("/settings");}}>
             <FontAwesomeIcon icon={faCogs} style={{ marginRight: 7 }} /> Settings
           </div>
@@ -27,7 +30,7 @@ const Home = props => {
         </div>
       </div>
 
-      <AppBar position="static" >
+      <AppBar position="static"  className="TabBar">
         <Tabs value={value} onChange={handleTabs}>
           {projects.map((result) => (<Tab label={result.name} />))}
         </Tabs>
