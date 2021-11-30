@@ -3,7 +3,12 @@ import { useState, useEffect, Fragment } from "react";
 import React from "react";
 import Value from "./Value";
 import {roles} from "../../utils/mockdata";
+import { faCogs, faTrashAlt } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEye, faEdit, faWrench, faTrash, faFilter } from '@fortawesome/free-solid-svg-icons';
 
+
+import CheckSwitch from "../../UI/Switch/CheckSwitch";
 import '../Table/Table.css';
 
 const SelectedRoles = (props) => {
@@ -15,7 +20,10 @@ const SelectedRoles = (props) => {
             setProject(SelectedValue)
         }
     }, [props.name])
-    
+    if(props.name=='None' || props.name==''){
+        return <div className="alert"><p>please enter project name!!!</p></div>
+    }
+
     return (
         <Fragment>
             
@@ -24,7 +32,9 @@ const SelectedRoles = (props) => {
       <thead>
       <tr>
           <th>Name </th>
+          <th>Status</th>
           <th>Actions</th>
+          
       </tr>
   </thead>
   <tbody>
@@ -32,11 +42,17 @@ const SelectedRoles = (props) => {
       return (<><tr>
               <td>{e.name}</td>
               <td>
-              <div className = "min-container">
-                          <div className="edit_button">edit</div>
-                          <div className="delete_button">delete</div>
-                          </div>
-                          </td></tr></>
+                <CheckSwitch/>
+                </td>
+              <td>
+              <div className="min-container">
+                                    <FontAwesomeIcon icon={faEdit} className="facursorPoint" />
+                            <FontAwesomeIcon icon={faTrashAlt} color={"#e70707"} className="facursorPoint" />
+                                    </div>
+                          </td>
+                          
+                                
+                                </tr></>
                           )})}
       
       </tbody>

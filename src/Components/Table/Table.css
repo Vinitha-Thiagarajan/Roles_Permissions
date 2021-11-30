@@ -47,8 +47,11 @@
   border: solid 1px #D3D3D3;
   color: #333;
   padding: 10px;
+  align-items: center;
+
   text-shadow: 1px 1px 1px #fff;
   }
+  
   .myTable-horizontal tbody td {
   border-left: none;
   border-right: none;
@@ -95,4 +98,7 @@ select {
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+.align{
+  text-align: center;
 }

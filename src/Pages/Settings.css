@@ -24,7 +24,17 @@
   cursor: pointer;
   }
   .min-container{
-    width: 100%;
+    width: 80%;
     display: flex;
     align-items: center;
+  }
+  .margin{
+    margin-left: 2em;
+  }
+  .alert{
+    font-weight: 200;
+    font-size: 1.7rem;
+    color: lightcoral;
+    width: 380px;
+  height: 45px;
   }

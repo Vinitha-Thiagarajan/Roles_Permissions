@@ -1,24 +1,22 @@
 import React from "react";
-import { Tabs, Tab, AppBar, Box } from "@material-ui/core";
+import { Tabs, Tab, AppBar, Box ,Select, MenuItem} from "@material-ui/core";
 import Dropdown from "../UI/Dropdown";
 import SelectedRoles from "../Components/Select/SelectedRoles";
 import { faCogs, faTrashAlt } from '@fortawesome/free-solid-svg-icons'
 import './Settings.css';
+import '../Components/Table/Table.css';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEdit, faWrench, faTrash, faFilter } from '@fortawesome/free-solid-svg-icons'
 import Table from '../Components/Table/Table';
 import { projects } from '../utils/mockdata';
 import { useHistory } from "react-router-dom";
+import CheckSwitch from "../UI/Switch/CheckSwitch";
+import UnCheckSwitch from "../UI/Switch/UncheckSwitch";
+import SelectDrop from "../Components/Select/SelectDrop";
 const Settings = props => {
     let history = useHistory();
     const [value, setValue] = React.useState(0)
-
-    const [selected, setSelected] = React.useState('');
-
-    const EventHandler = (event) => {
-        setSelected(event.target.value);
-    };
 
     const handleTabs = (e, val) => {
         setValue(val)
@@ -42,19 +40,26 @@ const Settings = props => {
                     <thead>
                         <tr>
                             <th>Name </th>
+                            <th>Status</th>
                             <th>Actions</th>
+                            
                         </tr>
                     </thead>
                     <tbody>
                         {projects.map((result) => {
-                            return (<><tr>
+                            return (<>
+                            <tr>
                                 <td>{result.name}</td>
+                                <td>
+                                  <CheckSwitch/>
+                                </td>
                                 <td>
                                     <div className="min-container">
                                     <FontAwesomeIcon icon={faEdit} className="facursorPoint" />
-                            <FontAwesomeIcon icon={faTrashAlt} color={"#e70707"} className="facursorPoint" />
+                                    <FontAwesomeIcon icon={faTrashAlt} color={"#e70707"} className="facursorPoint" />
                                     </div>
-                                </td></tr></>
+                                </td>
+                              </tr></>
                             )
                         })}
                     </tbody>
@@ -62,21 +67,20 @@ const Settings = props => {
             </>}
             </TabPanel>
 
-            <TabPanel value={value} index={1}>{
-                <>
-                    <select onChange={EventHandler}>
-                        <option>Select Project</option>
-                        {projects.map((result) => (<option>{result.name}</option>))}
-                    </select>
-                    <SelectedRoles name={selected} />
-                </>}</TabPanel>
+            <TabPanel value={value} index={1}>
+              {
+                    <SelectDrop/>
+                }
+                </TabPanel>
 
             <TabPanel value={value} index={2}>{<><table className='myTable myTable-horizontal'>
                 <thead>
                     <tr>
                         <th>Icon </th>
                         <th>Name</th>
+                        <th>Status</th>
                         <th>Actions</th>
+                        
                     </tr>
                 </thead>
                 <tbody>
@@ -84,51 +88,85 @@ const Settings = props => {
                         <td><FontAwesomeIcon icon={faEye} /></td>
                         <td>View</td>
                         <td>
-                            <div className="min-container">
+                         
+                          <UnCheckSwitch/>
+                          
+                        </td>
+                        <td>
+                            
+                            <div className="align">
                             <FontAwesomeIcon icon={faEdit} className="facursorPoint" />
                             <FontAwesomeIcon icon={faTrashAlt} color={"#e70707"} className="facursorPoint" />
                             </div>
+                            
                         </td>
+                        
+                       
                     </tr>
                     <tr>
                         <td><FontAwesomeIcon icon={faEdit} /></td>
                         <td>Edit</td>
                         <td>
-                            <div className="min-container">
+                          
+                          <CheckSwitch/>
+                         
+                        </td>
+                        <td>
+                        <div className="align">
                             <FontAwesomeIcon icon={faEdit} className="facursorPoint" />
                             <FontAwesomeIcon icon={faTrashAlt} color={"#e70707"} className="facursorPoint" />
                             </div>
                         </td>
+                        
                     </tr>
                     <tr>
                         <td><FontAwesomeIcon icon={faWrench} /></td>
                         <td>Settings</td>
                         <td>
-                            <div className="min-container">
+                          
+                          <UnCheckSwitch/>
+                          
+                        </td>
+                        <td>
+                            <div className="align">
                             <FontAwesomeIcon icon={faEdit} className="facursorPoint" />
                             <FontAwesomeIcon icon={faTrashAlt} color={"#e70707"} className="facursorPoint" />
                             </div>
+                            
                         </td>
+                        
                     </tr>
                     <tr>
                         <td><FontAwesomeIcon icon={faTrash} /></td>
                         <td>Delete</td>
                         <td>
-                            <div className="min-container">
+                          
+                          <CheckSwitch/>
+                        
+                        </td>
+                        <td>
+                            <div className="align">
                             <FontAwesomeIcon icon={faEdit} className="facursorPoint" />
                             <FontAwesomeIcon icon={faTrashAlt} color={"#e70707"} className="facursorPoint" />
                             </div>
                         </td>
+                        
                     </tr>
                     <tr>
                         <td><FontAwesomeIcon icon={faFilter} /></td>
                         <td>Filter</td>
                         <td>
-                            <div className="min-container">
+                         
+                          <UnCheckSwitch/>
+                         
+                        </td>
+                        <td>
+                            <div className="align">
                             <FontAwesomeIcon icon={faEdit} className="facursorPoint" />
                             <FontAwesomeIcon icon={faTrashAlt} color={"#e70707"} className="facursorPoint" />
                             </div>
                         </td>
+                        
                     </tr>
 
 
