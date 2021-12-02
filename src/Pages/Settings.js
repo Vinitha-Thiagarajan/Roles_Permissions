@@ -4,11 +4,14 @@ import Dropdown from "../UI/Dropdown";
 import SelectedRoles from "../Components/Select/SelectedRoles";
 import { faCogs, faTrashAlt } from '@fortawesome/free-solid-svg-icons'
 import './Settings.css';
+import '../Components/Table/NewTable.css';
+
 import '../Components/Table/Table.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEdit, faWrench, faTrash, faFilter } from '@fortawesome/free-solid-svg-icons'
-import Table from '../Components/Table/Table';
+
 import { projects } from '../utils/mockdata';
 import { useHistory } from "react-router-dom";
 import CheckSwitch from "../UI/Switch/CheckSwitch";
@@ -21,6 +24,7 @@ const Settings = props => {
     const handleTabs = (e, val) => {
         setValue(val)
     }
+
     return (
         <div>
             <div className="heading">
@@ -36,7 +40,7 @@ const Settings = props => {
             </AppBar>
 
             <TabPanel value={value} index={0}>{<>
-                <table className='myTable myTable-horizontal'>
+                <table className='myNewTable myNewTable-horizontal'>
                     <thead>
                         <tr>
                             <th>Name </th>
@@ -51,7 +55,10 @@ const Settings = props => {
                             <tr>
                                 <td>{result.name}</td>
                                 <td>
-                                  <CheckSwitch/>
+                                <div className="form-check form-switch">
+                                    <input className="form-check-input" type="checkbox" id="flexSwitchCheckDefault"/>
+                                        <label className="form-check-label" for="flexSwitchCheckDefault"> </label>
+                               </div> 
                                 </td>
                                 <td>
                                     <div className="min-container">
@@ -73,7 +80,7 @@ const Settings = props => {
                 }
                 </TabPanel>
 
-            <TabPanel value={value} index={2}>{<><table className='myTable myTable-horizontal'>
+            <TabPanel value={value} index={2}>{<><table className='myNewTable myNewTable-horizontal'>
                 <thead>
                     <tr>
                         <th>Icon </th>
@@ -88,13 +95,14 @@ const Settings = props => {
                         <td><FontAwesomeIcon icon={faEye} /></td>
                         <td>View</td>
                         <td>
-                         
-                          <UnCheckSwitch/>
-                          
+                        <div className="form-check form-switch">
+                                    <input className="form-check-input" type="checkbox" id="flexSwitchCheckDefault"/>
+                                        <label className="form-check-label" for="flexSwitchCheckDefault"> </label>
+                               </div> 
                         </td>
                         <td>
                             
-                            <div className="align">
+                            <div >
                             <FontAwesomeIcon icon={faEdit} className="facursorPoint" />
                             <FontAwesomeIcon icon={faTrashAlt} color={"#e70707"} className="facursorPoint" />
                             </div>
@@ -107,12 +115,13 @@ const Settings = props => {
                         <td><FontAwesomeIcon icon={faEdit} /></td>
                         <td>Edit</td>
                         <td>
-                          
-                          <CheckSwitch/>
-                         
+                        <div className="form-check form-switch">
+                                    <input className="form-check-input" type="checkbox" id="flexSwitchCheckDefault"/>
+                                        <label className="form-check-label" for="flexSwitchCheckDefault"> </label>
+                               </div> 
                         </td>
                         <td>
-                        <div className="align">
+                        <div >
                             <FontAwesomeIcon icon={faEdit} className="facursorPoint" />
                             <FontAwesomeIcon icon={faTrashAlt} color={"#e70707"} className="facursorPoint" />
                             </div>
@@ -123,12 +132,13 @@ const Settings = props => {
                         <td><FontAwesomeIcon icon={faWrench} /></td>
                         <td>Settings</td>
                         <td>
-                          
-                          <UnCheckSwitch/>
-                          
+                        <div className="form-check form-switch">
+                                    <input className="form-check-input" type="checkbox" id="flexSwitchCheckDefault"/>
+                                        <label className="form-check-label" for="flexSwitchCheckDefault"> </label>
+                               </div> 
                         </td>
                         <td>
-                            <div className="align">
+                            <div >
                             <FontAwesomeIcon icon={faEdit} className="facursorPoint" />
                             <FontAwesomeIcon icon={faTrashAlt} color={"#e70707"} className="facursorPoint" />
                             </div>
@@ -140,12 +150,13 @@ const Settings = props => {
                         <td><FontAwesomeIcon icon={faTrash} /></td>
                         <td>Delete</td>
                         <td>
-                          
-                          <CheckSwitch/>
-                        
+                        <div className="form-check form-switch">
+                                    <input className="form-check-input" type="checkbox" id="flexSwitchCheckDefault"/>
+                                        <label className="form-check-label" for="flexSwitchCheckDefault"> </label>
+                               </div> 
                         </td>
                         <td>
-                            <div className="align">
+                            <div>
                             <FontAwesomeIcon icon={faEdit} className="facursorPoint" />
                             <FontAwesomeIcon icon={faTrashAlt} color={"#e70707"} className="facursorPoint" />
                             </div>
@@ -156,12 +167,13 @@ const Settings = props => {
                         <td><FontAwesomeIcon icon={faFilter} /></td>
                         <td>Filter</td>
                         <td>
-                         
-                          <UnCheckSwitch/>
-                         
+                        <div className="form-check form-switch">
+                                    <input className="form-check-input" type="checkbox" id="flexSwitchCheckDefault"/>
+                                        <label className="form-check-label" for="flexSwitchCheckDefault"> </label>
+                               </div> 
                         </td>
                         <td>
-                            <div className="align">
+                            <div>
                             <FontAwesomeIcon icon={faEdit} className="facursorPoint" />
                             <FontAwesomeIcon icon={faTrashAlt} color={"#e70707"} className="facursorPoint" />
                             </div>

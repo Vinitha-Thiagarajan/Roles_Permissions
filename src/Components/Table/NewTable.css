@@ -1,0 +1,82 @@
+.myNewTable {
+    width: calc(100% - 80px);
+    max-width: 1600px;
+    padding:0 3%;
+    border: solid 1px whitesmoke;
+    border-collapse: collapse;
+    border-spacing: 0;
+    height:20rem;
+    font: normal 16px Arial, sans-serif;
+    margin-left:40px;
+    margin-top: 20px;
+    margin-right:40px;
+    }
+    .myNewTable thead th {
+    background-color: whitesmoke;
+    border: solid 1px whitesmoke;
+    color: 	black;
+    padding: 10px;
+    text-align: left;
+    width: 10%;
+    text-shadow: 1px 1px 1px #fff;
+    }
+   
+    .myNewTable tbody td {
+    border: solid 1px #D3D3D3;
+    color: #333;
+    padding: 10px;
+    align-items: center;
+  
+    text-shadow: 1px 1px 1px #fff;
+    }
+    
+    .myNewTable-horizontal tbody td {
+    border-left: none;
+    border-right: none;
+    }
+    .myNewTable tbody tr{
+    border: solid 1px #D3D3D3;
+    color: #333;
+    padding: 10px;
+    text-shadow: 1px 1px 1px #fff;
+    border-left: none;
+    border-right: none;
+  
+  }
+   
+  .button{
+  background-color: white;
+  color: black;
+  width: 230px;
+  height: 30px;
+  margin-left: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: solid 1px black;
+  
+    }
+  .SubHead{
+    padding: 0 4%;
+    color:rgb(0, 130, 206)
+  }
+  .black{
+    color:black;
+  }
+  select {
+    width: 195px;
+    font-family: inherit;
+    font-size: 15px;
+    display:block;
+    color: #333;
+    border: none;
+  }
+  .permissioncontrol{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .align{
+    text-align: center;
+  }

@@ -7,9 +7,10 @@ import { faCogs, faTrashAlt } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEdit, faWrench, faTrash, faFilter } from '@fortawesome/free-solid-svg-icons';
 
+import "bootstrap/dist/css/bootstrap.min.css";
 
 import CheckSwitch from "../../UI/Switch/CheckSwitch";
-import '../Table/Table.css';
+import '../Table/NewTable.css';
 
 const SelectedRoles = (props) => {
     const [project, setProject] = useState([]);
@@ -20,14 +21,14 @@ const SelectedRoles = (props) => {
             setProject(SelectedValue)
         }
     }, [props.name])
-    if(props.name=='None' || props.name==''){
+    if(props.name=='Projects' || props.name==''){
         return <div className="alert"><p>please enter project name!!!</p></div>
     }
 
     return (
         <Fragment>
             
-            <table className='myTable myTable-horizontal'>
+            <table className='myNewTable myNewTable-horizontal'>
                 
       <thead>
       <tr>
@@ -42,7 +43,10 @@ const SelectedRoles = (props) => {
       return (<><tr>
               <td>{e.name}</td>
               <td>
-                <CheckSwitch/>
+              <div className="form-check form-switch">
+                                    <input className="form-check-input" type="checkbox" id="flexSwitchCheckDefault"/>
+                                        <label className="form-check-label" for="flexSwitchCheckDefault"> </label>
+                               </div> 
                 </td>
               <td>
               <div className="min-container">
