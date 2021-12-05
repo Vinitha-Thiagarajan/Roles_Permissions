@@ -32,6 +32,7 @@ const Table = (props) => {
             key={data.id}
             id={data.id}
             name={data.name}
+            project={props.name}
             index={props.index}
         />
     ));
@@ -43,18 +44,8 @@ const Table = (props) => {
                     <thead>
                         <tr>
                             <th>Group/User </th>
-                            <th>Projects</th>
                             <th>Roles</th>
-                            <th>Permissions
-                                <div>
-                                    <span><FontAwesomeIcon icon={faEye} /></span>
-                                    <span><FontAwesomeIcon icon={faEdit} /></span>
-                                    <span><FontAwesomeIcon icon={faWrench} /></span>
-                                    <span><FontAwesomeIcon icon={faTrash} /></span>
-                                    <span><FontAwesomeIcon icon={faFilter} /></span>
-                                </div>
-                            </th>
-                            <th>
+                            <th style={{textAlign:"center"}}>
                                 Actions
                             </th>
                         </tr>

@@ -1,44 +1,51 @@
 import React from "react";
-import { Tabs, Tab, AppBar, Box } from "@material-ui/core";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCogs, faPlusCircle } from '@fortawesome/free-solid-svg-icons'
-
+import Roles from "./Popup/Roles"
 import Table from '../Components/Table/Table';
 import { projects } from '../utils/mockdata';
-import {useHistory} from "react-router-dom";
+import { useHistory } from "react-router-dom";
+import Tabs from "../Components/Tabs"
 const Home = props => {
   let history = useHistory();
-
+  const [open, setRoles] = React.useState(false);
   const [value, setValue] = React.useState(0)
   const handleTabs = (e, val) => {
     console.warn(val)
     setValue(val)
   }
-
+  const style = {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    width: 800,
+    bgcolor: 'background.paper',
+    border: '2px solid #000',
+    borderRadius: 5,
+    boxShadow: 24,
+    p: 4,
+  };
   return (
-    <div>
+    <div className="rolesContainer"> 
       <div className="heading">
-        <h1>Roles and Permissions</h1>
+        <h4>Roles and Permissions</h4>
         <div className="flexdisplay">
-        <div className="addBtn" onClick={()=>{history.push("/settings");}}>
+          <div className="addBtn" onClick={() => { setRoles(true) }}>
             <FontAwesomeIcon icon={faPlusCircle} style={{ marginRight: 7 }} /> Add Roles & Permissions
           </div>
-          <div className="addBtn" onClick={()=>{history.push("/settings");}}>
-            <FontAwesomeIcon icon={faCogs} style={{ marginRight: 7 }} /> Settings
+          <div className="addBtn" onClick={() => { history.push("/settings"); }}>
+            <FontAwesomeIcon icon={faCogs} style={{ marginRight: 7 }} /> Configuration Settings
           </div>
-          
+
         </div>
       </div>
-
-      <AppBar position="static"  className="TabBar">
-        <Tabs value={value} onChange={handleTabs}>
-          {projects.map((result) => (<Tab label={result.name} />))}
-        </Tabs>
-      </AppBar>
-
-      <TabPanel value={value} index={0}><Table index={value} /></TabPanel>
-      <TabPanel value={value} index={1}><Table index={value} /></TabPanel>
- 
+      <Tabs>
+        {projects.map((result, index) => (
+          <div key={index} label={result.name}>
+            <Table index={index} name={result.name}/>
+          </div>))}
+      </Tabs>
     </div>
   );
 }

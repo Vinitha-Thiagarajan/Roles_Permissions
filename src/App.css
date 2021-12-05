@@ -36,7 +36,9 @@
     transform: rotate(360deg);
   }
 }
-
+.rolesContainer{
+  padding: 10px;
+}
 .heading{
   display: flex;
   justify-content: space-between;

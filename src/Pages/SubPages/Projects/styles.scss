@@ -1,0 +1,59 @@
+.projectContainer {
+    .formContainer {
+        padding: 50px 0px;
+
+        .saveBtn {
+            max-width: 130px;
+        }
+    }
+    .tableTitle{
+        min-width: 300px;
+        max-width: 500px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 40px;
+        padding: 0px 20px;
+        border: 1px solid #ccc;
+        div{
+            font-weight: bold;
+        }
+    }
+    .headingList {
+        display         : flex;
+        height          : 50px;
+        justify-content : space-between;
+        align-items     : center;
+        min-width       : 300px;
+        max-width       : 500px;
+        background-color: #dfdfdf;
+        padding         : 0px 20px;
+        border-bottom: 1px solid #ccc;
+        .title {
+            text-decoration: underline;
+            cursor         : pointer;
+        }
+    }
+
+    .contentHolder {
+
+        min-width   : 300px;
+        max-width   : 500px;
+        border-right: 1px solid #ccc;
+        border-left : 1px solid #ccc;
+
+        .content {
+            display: flex;
+            height: 50px;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ccc;
+            padding: 0px 20px;
+        }
+        .contenttitle{
+            div{
+                font-weight: bold;
+            }
+        }
+    }
+}

@@ -1,11 +1,27 @@
 export const projects = [
   {
-    id: 0,
+    id: 100,
     name: "Dart",
+    modulelist:[
+      {
+        name:"dashboard"
+      },
+      {
+        name:"audit log"
+      }
+    ]
   },
   {
-    id: 1,
-    name: "Audience Report",
+    id: 101,
+    name: "Tardis",
+    modulelist:[
+      {
+        name:"configuration"
+      },
+      {
+        name:"admin"
+      }
+    ]
   }]
 export const roles = [
   {
@@ -16,70 +32,156 @@ export const roles = [
       edit: "disabled",
       update: "disabled",
       delete: "disabled",
-      filtered: "disabled",
+      filter: "disabled",
     }
   },
   {
     id: 1,
     name: "Support",
     project_name: "Dart",
-    permission: {
-      view: "true",
-      edit: "disabled",
-      update: "disabled",
-      delete: "true",
-      filtered: "false",
-    }
+    moduleList:[
+      {
+        name:"dashboard",
+        isenable:true,
+        permission: {
+          view: "true",
+          edit: "false",
+          update: "false",
+          delete: "true",
+          filter: "false",
+        }
+      },
+      {
+        name:"audit log",
+        isenable:true,
+        permission: {
+          view: "false",
+          edit: "true",
+          update: "true",
+          delete: "false",
+          filter: "true",
+        }
+      }
+    ]
+    
 
   },
   {
     id: 2,
     name: "Technical",
     project_name: "Dart",
-    permission: {
-      view: "false",
-      edit: "disabled",
-      update: "true",
-      delete: "false",
-      filtered: "true",
-    }
+    moduleList:[
+      {
+        name:"dashboard",
+        isenable:true,
+        permission: {
+          view: "false",
+          edit: "true",
+          update: "false",
+          delete: "true",
+          filter: "false",
+        }
+      },
+      {
+        name:"audit log",
+        isenable:true,
+        permission: {
+          view: "true",
+          edit: "true",
+          update: "true",
+          delete: "false",
+          filter: "false",
+        }
+      }
+    ]
 
   },
   {
     id: 3,
     name: "Lead",
     project_name: "Dart",
-    permission: {
-      view: "disabled",
-      edit: "true",
-      update: "false",
-      delete: "true",
-      filtered: "disabled",
-    }
+    moduleList:[
+      {
+        name:"dashboard",
+        isenable:false,
+        permission: {
+          view: "false",
+          edit: "true",
+          update: "false",
+          delete: "true",
+          filter: "false",
+        }
+      },
+      {
+        name:"audit log",
+        isenable:true,
+        permission: {
+          view: "true",
+          edit: "true",
+          update: "true",
+          delete: "false",
+          filter: "false",
+        }
+      }
+    ]
 
   },
   {
     id: 4,
     name: "Admin",
-    project_name: "Audience Report",
-    permission: {
-      view: "true",
-      edit: "false",
-      update: "disabled",
-      delete: "true",
-      filtered: "true",
-    }
+    project_name: "Tardis",
+    moduleList:[
+      {
+        name:"configuration",
+        isenable:true,
+        permission: {
+          view: "false",
+          edit: "true",
+          update: "false",
+          delete: "true",
+          filter: "false",
+        }
+      },
+      {
+        name:"admin",
+        isenable:true,
+        permission: {
+          view: "true",
+          edit: "true",
+          update: "true",
+          delete: "false",
+          filter: "false",
+        }
+      }
+    ]
   },
   {
     id: 5,
     name: "HR",
-    project_name: "Audience Report",
-    permission: {
-      view: "disabled",
-      edit: "disabled",
-      update: "true",
-      delete: "true",
-      filtered: "false",
-    }
+    project_name: "Tardis",
+    moduleList:[
+      {
+        name:"configuration",
+        isenable:true,
+        permission: {
+          view: "false",
+          edit: "false",
+          update: "false",
+          delete: "false",
+          filter: "false",
+        }
+      },
+      {
+        name:"admin",
+        isenable:true,
+        permission: {
+          view: "true",
+          edit: "true",
+          update: "true",
+          delete: "true",
+          filter: "true",
+        }
+      }
+    ]
   }
 ]
