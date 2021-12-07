@@ -1,17 +1,17 @@
 import './styles.css';
 import React, { useState } from "react";
 
-const Modal = ({ handleClose, show, children }) => {
+const Modal = ({ handleClose, show, children,Title }) => {
   const showHideClassName = show ? "modal display-block" : "modal display-none";
 
   return (
     <div className={showHideClassName}>
-      <section className="modal-main">
+      <div className="modal-main">
+      <Title/>
+      <section>
         {children}
-        <button type="button" className="mclose" onClick={handleClose}>
-          Close
-        </button>
       </section>
+      </div>
     </div>
   );
 };

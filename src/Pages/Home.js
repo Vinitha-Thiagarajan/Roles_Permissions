@@ -15,6 +15,18 @@ const Home = props => {
     console.warn(val)
     setValue(val)
   }
+  const handleClose= () => setRoles(false)
+  const Title =() =>{
+    return(<>
+    <div className ="min-container">
+      <h3 className="title">Assign Role</h3>
+      <button className="button_change" onClick={handleClose}>X</button>
+      </div>
+      <hr></hr>
+      </>
+    )
+  }
+ 
   const style = {
     position: 'absolute',
     top: '50%',
@@ -47,7 +59,7 @@ const Home = props => {
             <Table index={index} name={result.name} />
           </div>))}
       </Tabs>
-      <Modal show={open} handleClose={() => setRoles(false)}>
+      <Modal show={open} handleClose={handleClose} Title={Title}>
         <Roles />
       </Modal>
     </div>

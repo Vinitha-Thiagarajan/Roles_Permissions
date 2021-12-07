@@ -66,3 +66,21 @@
 .TabBar{
   background-color: #2c2d38 !important;
 }
+.min-container{
+  width: 100%;
+  display: flex;
+}
+.title{
+ margin-left: 20px;
+  margin-top: 15px;
+
+  
+}
+.button_change{
+  margin-left: 370px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border-style: hidden;
+  background-color: white;
+  color: black;
+}

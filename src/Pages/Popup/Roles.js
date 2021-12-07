@@ -24,31 +24,37 @@ const Roles = props => {
         setRoles(e.target.value)
     }
     return (
-        <div>
-            <div className="rolesheading">Create Roles</div>
-             <div>
-                 <select onChange={handleUChange}>
+        <div className="background">
+            
+             <div className="adjust_width">
+             <div className="rolesheading">Group/User</div>
+                 <select class="form-select" onChange={handleUChange}>
                     {Dummy_Name.map((rec,index)=>{
                         return <option key={index}>{rec.name}</option>
                     })}
                  </select>
+                 <div className="label">User names</div>
              </div>
-             <div>
-                 <select onChange={handlePChange}>
+             <div className="adjust_width" >
+             <div className="rolesheading">Project</div>
+                 <select class="form-select" onChange={handlePChange}>
                     {projects.map((rec,index)=>{
                         return <option key={"project"+index}>{rec.name}</option>
                     })}
                  </select>
+                 <div className="label">Project Names</div>
              </div>
-             <div>
-                 <select onChange={handleRChange}>
+             <div className="adjust_width">
+             <div className="rolesheading">Roles</div>
+                 <select class="form-select" onChange={handleRChange}>
                     {roleslist.map((rec,index)=>{
                         return <option key={"roles"+index}>{rec.name}</option>
                     })}
                  </select>
+                 <div className="label">List of Roles</div>
              </div>
-             <div>
-                 <Button text="Save" OnClickBtn={()=>{}} />
+             <div className="saveButton">
+                 <Button className="button" text="Save" OnClickBtn={()=>{}} />
              </div>
         </div>
     );
