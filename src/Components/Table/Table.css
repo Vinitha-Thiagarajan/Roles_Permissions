@@ -89,3 +89,73 @@ select {
   height: 40px;
   padding: 10px 0px;
 }
+.roledetails{
+  display: flex;
+  align-items: center;
+}
+.viewlink{
+  padding-left: 80px;
+  font-size: 13px;
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.tableexpand .contenttitle{
+  display: flex;
+  height: 40px;
+  border-bottom: 1px solid #ccc;
+  align-items: center;
+  padding: 10px;
+}
+.tableexpand .contenttitle .ctitle{
+  width: 300px;
+  font-weight: bold;
+}
+.tableexpand .contenttitle .cstatus{
+  width: 150px;
+  font-weight: bold;
+}
+.tableexpand .contenttitle .cpermission{
+  width: 500px;
+}
+.tableexpand .contenttitle .cpermission div{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.tableexpand .content{
+  display: flex;
+  height: 40px;
+  border-bottom: 1px solid #ccc;
+  align-items: center;
+  padding: 10px;
+}
+.tableexpand .content .ctitle{
+  width: 300px;
+}
+.tableexpand .content .cstatus{
+  width: 150px;
+}
+.tableexpand .content .cpermission{
+  width: 500px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.correcticon {
+  height: 20px;
+  background: #56c156;
+  width: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.timesicon{
+  height: 20px;
+  background: #e7391d;
+  width: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

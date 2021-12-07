@@ -185,3 +185,24 @@ export const roles = [
     ]
   }
 ]
+export const Dummy_Name = [{
+  id: 1,
+  name: 'All Users'
+},
+{
+  id: 2,
+  name: 'Group'
+},
+{
+  id: 3,
+  name: 'Evie'
+},
+{
+  id: 4,
+  name: 'Lari'
+},
+{
+  id: 5,
+  name: 'Maris'
+},
+];

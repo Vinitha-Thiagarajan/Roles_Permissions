@@ -1,30 +1,8 @@
 import { Fragment } from 'react';
 import TableElement from './TableElement';
 import React from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEye, faEdit, faWrench, faTrash, faFilter } from '@fortawesome/free-solid-svg-icons'
 import './Table.css';
-const Dummy_Name = [{
-    id: 1,
-    name: 'All Users'
-},
-{
-    id: 2,
-    name: 'Group'
-},
-{
-    id: 3,
-    name: 'Evie'
-},
-{
-    id: 4,
-    name: 'Lari'
-},
-{
-    id: 5,
-    name: 'Maris'
-},
-];
+import {Dummy_Name} from "../../utils/mockdata"
 
 const Table = (props) => {
     const nameList = Dummy_Name.map((data) => (

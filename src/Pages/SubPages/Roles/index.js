@@ -5,7 +5,7 @@ import TextBox from "../../../Components/TextBox";
 import Button from "../../../Components/Button";
 import Tabs from "../../../Components/Tabs"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEdit, faWrench, faSave, faTrash, faFilter, faEye, faTrashAlt } from '@fortawesome/free-solid-svg-icons'
+import { faEdit, faWrench, faSave, faTrash, faFilter, faEye, faTrashAlt, faCheck, faTimes } from '@fortawesome/free-solid-svg-icons'
 const Roles = props => {
     const [selected, setSelected] = useState('');
     const [module, setmodule] = useState([]);
@@ -150,19 +150,17 @@ const RoleList = (props) => {
                                             <div className="mTitle">{module.name}</div>
                                             <div className="mStatus">
                                                 <div className="form-check form-switch">
-                                                    <input className="form-check-input" value={module.isenable} type="checkbox" name={`${module.name.replace(/\s/g, '')}_${mindex}`} id={`${module.name.replace(/\s/g, '')}_${mindex}`} />
+                                                    <input className="form-check-input" checked={module.isenable} type="checkbox" name={`${module.name.replace(/\s/g, '')}_${mindex}`} id={`${module.name.replace(/\s/g, '')}_${mindex}`} />
                                                     <label className="form-check-label" for="flexSwitchCheckChecked"></label>
                                                 </div>
                                             </div>
                                             <div className="mPermission">
-                                                {Object.keys(module.permission).map((rec, index) => {
+                                                {Object.values(module.permission).map((rec, index) => {
                                                     return (
                                                         <div key={index}>
-                                                            <div className="form-check">
-                                                                <input className="form-check-input" type="checkbox" value="" name={`${rec}_${module.name.replace(/\s/g, '')}_${index}`} id={`${rec}_${module.name.replace(/\s/g, '')}_${index}`} />
-                                                                <label className="form-check-label" for="flexCheckDefault">
-
-                                                                </label>
+                                                            <div key={index}>
+                                                                {rec == "true" ? <div className="correcticon"><FontAwesomeIcon size={"sm"} icon={faCheck} color={"#fff"} /></div>
+                                                                    : <div className="timesicon"><FontAwesomeIcon size={"sm"} icon={faTimes} color={"#fff"} /></div>}
                                                             </div>
                                                         </div>
                                                     )

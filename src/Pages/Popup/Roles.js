@@ -1,73 +1,55 @@
 import React, { useState } from "react";
-import { Select, MenuItem, TextField, FormControl, InputLabel, Button } from "@material-ui/core";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCogs, faPlusCircle } from '@fortawesome/free-solid-svg-icons'
-import { projects, roles } from '../../utils/mockdata';
+import Button from "../../Components/Button";
+import {Dummy_Name, roles, projects} from "../../utils/mockdata"
+
 import "./Roles.scss"
 const Roles = props => {
     const [user, setUser] = useState("");
     const [project, setProject] = useState("")
-    const [roles, setRoles] = useState("")
-
+    const [rolesval, setRoles] = useState("");
+    const [roleslist, setRolesList] = useState([]);
+    const [update, setUpdate] = useState(false)
+    const handlePChange=(e)=>{
+        let selProject= e.target.value;
+        setProject(selProject);
+        const SelectedValue = roles.filter((e) => e.project_name == selProject)
+        setRolesList(SelectedValue);
+    }
+    const handleUChange =(e)=>{
+        setUser(e.target.value)
+    }
+    const handleRChange =(e)=>{
+        setRoles(e.target.value)
+    }
     return (
         <div>
             <div className="rolesheading">Create Roles</div>
-            <div className="controlpopup">
-                <FormControl fullWidth>
-                    <InputLabel id="demo-simple-select-label">Group/User</InputLabel>
-                    <Select
-                        labelId="demo-simple-select-label"
-                        id="demo-simple-select"
-                        value={user}
-                        label="Group/User"
-                        onChange={(event) => { setUser(event.target.value) }}
-                    >
-                        <MenuItem value={"Vinoth"}>Vinoth</MenuItem>
-                        <MenuItem value={"Vinitha"}>Vinitha</MenuItem>
-                        <MenuItem value={"Priya"}>Priya</MenuItem>
-                    </Select>
-                </FormControl>
-            </div>
-            <div className="controlpopup">
-                <FormControl fullWidth>
-                    <InputLabel id="demo-simple-select-label">Projects</InputLabel>
-                    <Select
-                        labelId="demo-simple-select-label"
-                        id="demo-simple-select"
-                        value={project}
-                        label="Group/User"
-                        onChange={(event) => { setProject(event.target.value) }}
-                    >
-                        {projects && projects.map((rec, index) => {
-                            return <MenuItem key={"projects" + index} value={rec.name}>{rec.name}</MenuItem>
-                        })}
-
-                    </Select>
-                </FormControl>
-            </div>
-            <div className="controlpopup">
-                <FormControl fullWidth>
-                    <InputLabel id="demo-simple-select-label">Roles</InputLabel>
-                    <Select
-                        labelId="demo-simple-select-label"
-                        id="demo-simple-select"
-                        value={roles}
-                        label="Group/User"
-                        onChange={(event) => { setRoles(event.target.value) }}
-                    >
-                        {roles && roles.map((rec, index) => {
-                            return <MenuItem key={"roles" + index} value={rec.name}>{rec.name}</MenuItem>
-                        })}
-
-                    </Select>
-                </FormControl>
-            </div>
-            <div className="btncontainerpopup">
-                <Button variant="contained" color="success">
-                    Save
-                </Button>
-                <Button variant="outlined" onClick={()=>props.onClose()}>Cancel</Button>
-            </div>
+             <div>
+                 <select onChange={handleUChange}>
+                    {Dummy_Name.map((rec,index)=>{
+                        return <option key={index}>{rec.name}</option>
+                    })}
+                 </select>
+             </div>
+             <div>
+                 <select onChange={handlePChange}>
+                    {projects.map((rec,index)=>{
+                        return <option key={"project"+index}>{rec.name}</option>
+                    })}
+                 </select>
+             </div>
+             <div>
+                 <select onChange={handleRChange}>
+                    {roleslist.map((rec,index)=>{
+                        return <option key={"roles"+index}>{rec.name}</option>
+                    })}
+                 </select>
+             </div>
+             <div>
+                 <Button text="Save" OnClickBtn={()=>{}} />
+             </div>
         </div>
     );
 }

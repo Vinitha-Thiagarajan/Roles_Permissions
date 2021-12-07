@@ -6,6 +6,7 @@ import Table from '../Components/Table/Table';
 import { projects } from '../utils/mockdata';
 import { useHistory } from "react-router-dom";
 import Tabs from "../Components/Tabs"
+import Modal from "../Components/Modal";
 const Home = props => {
   let history = useHistory();
   const [open, setRoles] = React.useState(false);
@@ -27,7 +28,7 @@ const Home = props => {
     p: 4,
   };
   return (
-    <div className="rolesContainer"> 
+    <div className="rolesContainer">
       <div className="heading">
         <h4>Roles and Permissions</h4>
         <div className="flexdisplay">
@@ -43,22 +44,15 @@ const Home = props => {
       <Tabs>
         {projects.map((result, index) => (
           <div key={index} label={result.name}>
-            <Table index={index} name={result.name}/>
+            <Table index={index} name={result.name} />
           </div>))}
       </Tabs>
+      <Modal show={open} handleClose={() => setRoles(false)}>
+        <Roles />
+      </Modal>
     </div>
   );
 }
 
-function TabPanel(props) {
-  const { children, value, index } = props
-  return (
-    <div>
-      {value === index && <h1>
-        {children}
-      </h1>}
-    </div>
-  )
-}
 
 export default Home;
