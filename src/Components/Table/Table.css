@@ -123,7 +123,6 @@ select {
   justify-content: space-around;
   align-items: center;
 }
-
 .tableexpand .content{
   display: flex;
   height: 40px;

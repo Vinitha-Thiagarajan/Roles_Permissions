@@ -7,6 +7,8 @@ import { projects } from '../utils/mockdata';
 import { useHistory } from "react-router-dom";
 import Tabs from "../Components/Tabs"
 import Modal from "../Components/Modal";
+
+import "../Components/Modal/styles.css";
 const Home = props => {
   let history = useHistory();
   const [open, setRoles] = React.useState(false);
@@ -16,6 +18,7 @@ const Home = props => {
     setValue(val)
   }
   const handleClose= () => setRoles(false)
+
   const Title =() =>{
     return(<>
     <div className ="min-container">

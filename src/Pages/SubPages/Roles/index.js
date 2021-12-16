@@ -1,9 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { projects, roles } from '../../../utils/mockdata';
 import "./styles.scss"
+import 'react-confirm-alert/src/react-confirm-alert.css'; 
+import { confirmAlert } from "react-confirm-alert";
 import TextBox from "../../../Components/TextBox";
 import Button from "../../../Components/Button";
-import Tabs from "../../../Components/Tabs"
+import Tabs from "../../../Components/Tabs";
+import Modal from "../../../Components/Modal";
+import EditRole from "../../Popup/EditRole";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEdit, faWrench, faSave, faTrash, faFilter, faEye, faTrashAlt, faCheck, faTimes } from '@fortawesome/free-solid-svg-icons'
 const Roles = props => {
@@ -12,6 +16,7 @@ const Roles = props => {
     const [value, setValue] = useState("");
     const [roleproject, setroleproject] = useState([]);
     const [update, setUpdate] = useState(false);
+
 
     const projectHandler = (event) => {
         setSelected(event.target.value);
@@ -110,6 +115,30 @@ const Roles = props => {
 }
 const RoleList = (props) => {
     const [selectedRole, setSelectedRole] = useState(false);
+    const [selected, setSelected] = useState('');
+    const [open, setRoles] = React.useState(false);
+
+    const Delete = () => {
+        
+        if(window.confirm("Are you sure want to delete?"))
+        {
+       }
+      }
+    
+
+    const Title =() => {
+        return(<>
+        <div className ="min-container">
+          <h3 className="title">Edit Roles</h3>
+          <button className="button_change" onClick={handleClose}>X</button>
+          </div>
+          <hr></hr>
+          </>
+        )
+      }
+
+    const [edit,setEdit]= useState(false);
+    const handleClose = () => setRoles(false);
 
     return (
         <div>
@@ -125,8 +154,13 @@ const RoleList = (props) => {
                                 <div className="title" onClick={() => { setSelectedRole(rec.name) }}>{rec.name}</div>
                                 <div>
                                     <div className="min-container">
-                                        <FontAwesomeIcon icon={faEdit} className="facursorPoint" />
-                                        <FontAwesomeIcon icon={faTrashAlt} color={"#e70707"} className="facursorPoint" />
+                                        <div onClick={() => { setRoles(true) }}>
+                                        <div onClick={() => { setSelectedRole(rec.name) }}>
+                                        <FontAwesomeIcon onClick={() => { setEdit(rec.id) }} icon={faEdit} className="facursorPoint" />
+                                        </div>
+                                        </div>              
+                                        <FontAwesomeIcon onClick={() => Delete()} icon={faTrashAlt} color={"#e70707"} className="facursorPoint" />
+                                      
                                     </div>
                                 </div>
                             </div>
@@ -170,6 +204,13 @@ const RoleList = (props) => {
                                     )
                                 })}
                             </div> || ""}
+
+                            {edit == rec.id && 
+                                <Modal show={open} handleClose={handleClose} Title={Title}>
+                                    
+                                    <EditRole Name={rec.name} Id={rec.id} ModuleList={rec.modulelist}/>
+                                    
+                                </Modal> || ""}
                         </>
                     )
 

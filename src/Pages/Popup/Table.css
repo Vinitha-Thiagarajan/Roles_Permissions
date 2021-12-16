@@ -1,0 +1,159 @@
+.myTable {
+    width: 800px;
+    max-width: 1600px;
+    padding:0 3%;
+    border: solid 1px whitesmoke;
+    border-collapse: collapse;
+    border-spacing: 0;
+    height:20rem;
+    font: normal 16px Arial, sans-serif;
+    }
+    .myTable thead th {
+    background-color: whitesmoke;
+    border: solid 1px whitesmoke;
+    color: 	black;
+    padding: 10px;
+    text-align: left;
+    text-shadow: 1px 1px 1px #fff;
+    }
+    .myTable thead tr th:nth-child(1) {
+      width: 10%;
+    }
+    .myTable thead tr th::nth-child(2) {
+      width: 40%;
+    }
+    .myTable thead tr th::nth-child(3) {
+      width: 40%;
+    }
+    
+    .myTable thead tr th:nth-child(4) div {
+      margin-top: 10px;
+      display: flex;
+      justify-content: space-around;
+      font-size: 15px;
+    }
+    .myTable tbody td {
+    border: solid 1px #D3D3D3;
+    color: #333;
+    padding: 10px;
+    text-shadow: 1px 1px 1px #fff;
+    }
+    .myTable-horizontal tbody td {
+    border-left: none;
+    border-right: none;
+    }
+    .myTable tbody tr{
+    border: solid 1px #D3D3D3;
+    color: #333;
+    padding: 10px;
+    text-shadow: 1px 1px 1px #fff;
+    border-left: none;
+    border-right: none;
+  
+  }
+   
+  .button{
+  background-color: white;
+  color: black;
+  width: 230px;
+  height: 30px;
+  margin-left: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: solid 1px black;
+  
+    }
+  .SubHead{
+    padding: 0 4%;
+    color:rgb(0, 130, 206)
+  }
+  .black{
+    color:black;
+  }
+  select {
+    width: 195px;
+    font-family: inherit;
+    font-size: 15px;
+    display:block;
+    color: #333;
+    border: none;
+  }
+  .permissioncontrol{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .dashboardSelect{
+    height: 40px;
+    padding: 10px 0px;
+  }
+  .roledetails{
+    display: flex;
+    align-items: center;
+  }
+  .viewlink{
+    padding-left: 80px;
+    font-size: 13px;
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  .tableexpand1 .contenttitle1{
+    display: flex;
+    height: 40px;
+    border-bottom: 1px solid #ccc;
+    align-items: center;
+    padding: 10px;
+  }
+  .tableexpand1 .contenttitle1 .ctitle1{
+    width: 300px;
+    font-weight: bold;
+  }
+  .tableexpand1 .contenttitle1 .cstatus1{
+    width: 150px;
+    font-weight: bold;
+  }
+  .tableexpand1 .contenttitle1 .cpermission1{
+    width: 500px;
+  }
+  .tableexpand1 .contenttitle1 .cpermission1 div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .tableexpand1 .content1{
+    display: flex;
+    height: 40px;
+    align-items: center;
+    
+  }
+  .tableexpand1 .content1 .ctitle1{
+    width: 300px;
+  }
+  .tableexpand1 .content1 .cstatus1{
+    width: 150px;
+  }
+  .tableexpand1 .content1 .cpermission1{
+    width: 500px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .correcticon1 {
+    height: 20px;
+    background: #56c156;
+    width: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .timesicon1{
+    height: 20px;
+    background: #e7391d;
+    width: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

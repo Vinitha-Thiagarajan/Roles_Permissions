@@ -1,6 +1,6 @@
-.rolesContainer {
-    .formContainer {
-        padding: 0px 0px;
+.rolesContainer1 {
+    .formContainer1{
+        padding: 20px 0px;
         .selectWrapper {
             display: flex;
 
@@ -80,7 +80,7 @@
         align-items: center;
         height: 40px;
         padding: 0px 20px;
-        border: 1px solid #ccc;
+        
         div{
             font-weight: bold;
         }
@@ -94,7 +94,7 @@
         max-width       : 950px;
         background-color: #dfdfdf;
         padding         : 0px 20px;
-        border-bottom: 1px solid #ccc;
+        
         .title {
             text-decoration: underline;
             cursor         : pointer;
@@ -104,17 +104,8 @@
 
         min-width   : 650px;
         max-width   : 950px;
-        border-right: 1px solid #ccc;
-        border-left : 1px solid #ccc;
 
-        .content {
-            display: flex;
-            height: 50px;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid #ccc;
-            padding: 0px 20px;
-        }
+       
         .contenttitle{
             
             .ctitle{
@@ -142,7 +133,6 @@
             padding: 10px;
             min-width: 500px;
             max-width: 950px;
-            border: 1px solid #ccc;
             padding: 0px 20px;
             align-items: center;
             height: 45px;
@@ -160,6 +150,14 @@
                 display: flex;
                 justify-content: space-around;
             }
+
         }
+        .tableexpand .content{
+            display: flex;
+            height: 40px;
+            border-bottom: 1px solid #ccc;
+            align-items: center;
+            padding: 10px;
+          }
     }
 }

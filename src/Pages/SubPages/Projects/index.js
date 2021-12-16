@@ -5,12 +5,38 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEdit, faTrashAlt, faSave } from '@fortawesome/free-solid-svg-icons'
 import TextBox from "../../../Components/TextBox";
 import Module from "../../../Components/Module";
-import Button from "../../../Components/Button"
+import Button from "../../../Components/Button";
+import EditProject from "../../Popup/EditProject"
+import Modal from "../../../Components/Modal";
+
+import "../../../App.css";
+import "../../../Components/Modal/styles.css";
+
 const Projects = props => {
     const [value, setValue] = useState("");
     const [listvalue, setListValue] = useState([]);
     const [selectedProject, setSelectedProject] = useState(false);
     const [actionProject, setActionProject] = useState(false);
+    const [edit,setEdit]= useState(false);
+    const [open, setRoles] = React.useState(false);
+    const handleClose = () => setRoles(false);
+
+    const Delete = () => {
+        
+    if(window.confirm("Are you sure want to delete?"))
+    {
+   }
+  }
+    const Title =() => {
+        return(<>
+        <div className ="min-container">
+          <h3 className="title">Edit Projects</h3>
+          <button className="button_change" onClick={handleClose}>X</button>
+          </div>
+          <hr></hr>
+          </>
+        )
+      }
 
     return (
         <div className="projectContainer">
@@ -42,8 +68,10 @@ const Projects = props => {
                                     <div className="title" onClick={() => { setSelectedProject(result.id) }}>{result.name}</div>
                                     <div>
                                         <div className="min-container">
-                                            <FontAwesomeIcon icon={faEdit} className="facursorPoint" />
-                                            <FontAwesomeIcon icon={faTrashAlt} color={"#e70707"} className="facursorPoint" />
+                                            <div onClick={() => { setRoles(true) }}>
+                                            <FontAwesomeIcon onClick={() => { setEdit(result.id) }} icon={faEdit} className="facursorPoint" />
+                                            </div>
+                                            <FontAwesomeIcon  onClick={() => Delete()} icon={faTrashAlt} color={"#e70707"} className="facursorPoint" />
                                         </div>
                                     </div>
                                 </div>
@@ -57,13 +85,22 @@ const Projects = props => {
                                             <div className="content" key={mindex}>
                                                 <div>{module.name}</div>
                                                 <div>
-                                                    <FontAwesomeIcon icon={faEdit} className="facursorPoint" />
+                                                    <FontAwesomeIcon icon={faEdit}  className="facursorPoint" />
+                                                    
                                                     <FontAwesomeIcon icon={faTrashAlt} color={"#e70707"} className="facursorPoint" />
+                                                    
                                                 </div>
                                             </div>
                                         )
                                     })}
                                 </div> || ""}
+
+                                {edit == result.id && 
+                                <Modal show={open} handleClose={handleClose} Title={Title}>
+                                    
+                                    <EditProject Name={result.name} Id={result.id} ModuleList={result.modulelist}/>
+                                    
+                                </Modal> || ""}
                             </Fragment>
                         )
                     })}

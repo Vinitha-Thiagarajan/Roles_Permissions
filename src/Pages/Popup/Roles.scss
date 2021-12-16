@@ -19,3 +19,69 @@
     margin-left:10px ;
     margin-bottom: 10px;
 }
+.padding{
+    padding: 0px 10px;
+}
+.space{
+    margin-bottom: 15px;
+}
+.min-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  .click_button{
+    border-radius: 7px;
+    color: white;
+    background-color: #2c2d38;;
+    width: 90px;
+    justify-content: center;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    margin-left: 200px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    
+  }
+  .tableexpand .contenttitle{
+    display: flex;
+    height: 40px;
+    align-items: center;
+    padding: 10px;
+  }
+  .tableexpand .contenttitle .ctitle{
+    width: 300px;
+    font-weight: bold;
+  }
+  .tableexpand .contenttitle .cstatus{
+    width: 150px;
+    font-weight: bold;
+  }
+  .tableexpand .contenttitle .cpermission{
+    width: 500px;
+  }
+  .tableexpand .contenttitle .cpermission div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .tableexpand .content{
+    display: flex;
+    height: 40px;
+    
+    align-items: center;
+    padding: 10px;
+  }
+  .tableexpand .content .ctitle{
+    width: 300px;
+  }
+  .tableexpand .content .cstatus{
+    width: 150px;
+  }
+  .tableexpand .content .cpermission{
+    width: 500px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }

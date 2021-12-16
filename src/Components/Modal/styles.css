@@ -10,11 +10,14 @@
 .modal-main {
   position:fixed;
   background: white;
-  width: 40%;
+  width: auto;
   height: auto;
   top:50%;
   left:50%;
   transform: translate(-50%,-50%);
+}
+.edit{
+  width:10%
 }
 
 .display-block {
@@ -29,4 +32,7 @@
   position: absolute;
   top: -30px;
   right: 0px;
+}
+.center{
+  text-align: center;
 }

@@ -76,8 +76,10 @@
 
   
 }
+
 .button_change{
-  margin-left: 370px;
+  margin-left: 380px;
+  margin-right: 20px;
   margin-top: 10px;
   border-radius: 5px;
   border-style: hidden;
