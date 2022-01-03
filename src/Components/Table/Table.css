@@ -30,7 +30,7 @@
     margin-top: 10px;
     display: flex;
     justify-content: space-around;
-    font-size: 15px;
+    font-size: var(--fontstyle);
   }
   .myTable tbody td {
   border: solid 1px #D3D3D3;
@@ -75,7 +75,7 @@ border: solid 1px black;
 select {
   width: 195px;
   font-family: inherit;
-  font-size: 15px;
+  font-size: var(--fontstyle);
   display:block;
   color: #333;
   border: none;
@@ -95,7 +95,7 @@ select {
 }
 .viewlink{
   padding-left: 80px;
-  font-size: 13px;
+  font-size: var(--fontstyle);
   color: blue;
   text-decoration: underline;
   cursor: pointer;

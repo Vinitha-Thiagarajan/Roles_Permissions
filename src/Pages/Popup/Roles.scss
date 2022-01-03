@@ -1,5 +1,5 @@
 .rolesheading{
-    font-size: 15px;
+    font-size: var(--fontstyle);
     margin-bottom: 5px;
     margin-top: 15px;
 }
@@ -15,7 +15,7 @@
 }
 .label{
     color: rgb(170, 167, 167);
-    font-size: 14px;
+    font-size: var(--fontstyle);
     margin-left:10px ;
     margin-bottom: 10px;
 }
@@ -33,7 +33,7 @@
   .click_button{
     border-radius: 7px;
     color: var(--color);
-    background-color: var(--tabbutton);;
+    background-color: var(--container-color);;
     width: 90px;
     justify-content: center;
     margin-right: 20px;

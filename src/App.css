@@ -1,21 +1,18 @@
 :root{
  --background-color: white;
- --tabbutton:#2c2d38;
+ --container-color:#2c2d38;
  --color:rgb(193, 152, 247);
  --fontstyle:inherit;
- 
-
-}
-div {
-  background-color: var(--background-color);
-  
+ --fontFamily:"sans-serif"
 }
 
-div {
-  color: var(--color);
-}
 .App {
   text-align: center;
+  
+}
+#root{
+  font-family: var(--fontFamily) !important;
+  background-color: var(--background-color);
 }
 
 .App-logo {
@@ -30,7 +27,7 @@ div {
 }
 
 .App-header {
-  background-color: var(--tabbutton);
+  background-color: var(--container-color);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -68,7 +65,7 @@ div {
 }
 .addBtn{
     padding: 10px 20px;
-    background-color: var(--tabbutton);
+    background-color: var(--container-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -98,5 +95,5 @@ div {
   border-radius: 5px;
   border-style: hidden;
   background-color: var(--color);
-  color: var(--tabbutton);
+  color: var(--container-color);
 }

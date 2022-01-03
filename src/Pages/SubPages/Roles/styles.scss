@@ -93,6 +93,8 @@
         min-width       : 300px;
         max-width       : 950px;
         padding         : 0px 20px;
+        background-color:  var(--container-color);
+        color: var(--color);
         border-bottom: 1px solid #ccc;
         .title {
             text-decoration: underline;

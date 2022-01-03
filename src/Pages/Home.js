@@ -13,19 +13,7 @@ import { colour } from "../utils/mockdata";
 const Home = props => {
   let history = useHistory();
   const [open, setRoles] = React.useState(false);
-  const [value, setValue] = React.useState(0)
-  const handleTabs = (e, val) => {
-    console.warn(val)
-    setValue(val)
-  }
   const handleClose= () => setRoles(false)
-
-
-  const HandleAction = () =>{
-    setColor('orange');
-    settextColor('green')
-
-  }
 
   const Title =() =>{
     return(<>
@@ -98,9 +86,6 @@ const Home = props => {
       <Modal show={open} handleClose={handleClose} Title={Title}>
         <Roles />
       </Modal>
-      <p>
-        <button onClick={() =>{HandleAction()}}>change color</button>
-      </p>
     </div>
   );
 }
