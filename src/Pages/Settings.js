@@ -4,7 +4,7 @@ import { useHistory } from "react-router-dom";
 import Tabs from "../Components/Tabs"
 import ProjectsTab from "./SubPages/Projects"
 import RolesTab from "./SubPages/Roles"
-import PermissionsTab from "./SubPages/Permissions"
+import CustomTab from "./SubPages/CustomisedTheme"
 
 var tablist = [
     {
@@ -12,12 +12,15 @@ var tablist = [
     },
     {
         name: "Roles"
+    },
+    {
+        name: "Customised Themes"
     }
 ]
 const checkComponent ={
     0:<ProjectsTab />,
     1:<RolesTab/>,
-    2:<PermissionsTab/>
+    2:<CustomTab/>
 }
 const Settings = props => {
     let history = useHistory();
