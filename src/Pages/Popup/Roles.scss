@@ -32,8 +32,8 @@
   }
   .click_button{
     border-radius: 7px;
-    color: white;
-    background-color: #2c2d38;;
+    color: var(--color);
+    background-color: var(--tabbutton);;
     width: 90px;
     justify-content: center;
     margin-right: 20px;

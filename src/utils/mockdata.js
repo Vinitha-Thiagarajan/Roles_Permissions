@@ -206,3 +206,10 @@ export const Dummy_Name = [{
   name: 'Maris'
 },
 ];
+
+export const colour = [{
+  bgcolor:'orange',
+  textcolor:'yellow'
+},
+
+];

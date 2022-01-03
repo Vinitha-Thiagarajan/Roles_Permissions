@@ -1,14 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCogs, faPlusCircle } from '@fortawesome/free-solid-svg-icons'
+import { faCogs, faExchangeAlt, faPlusCircle } from '@fortawesome/free-solid-svg-icons'
 import Roles from "./Popup/Roles"
 import Table from '../Components/Table/Table';
 import { projects } from '../utils/mockdata';
 import { useHistory } from "react-router-dom";
 import Tabs from "../Components/Tabs"
 import Modal from "../Components/Modal";
-
+import "../App.css";
 import "../Components/Modal/styles.css";
+import { colour } from "../utils/mockdata";
 const Home = props => {
   let history = useHistory();
   const [open, setRoles] = React.useState(false);
@@ -18,6 +19,12 @@ const Home = props => {
     setValue(val)
   }
   const handleClose= () => setRoles(false)
+
+  const HandleAction = () =>{
+    setColor('orange');
+    settextColor('green')
+
+  }
 
   const Title =() =>{
     return(<>
@@ -29,7 +36,30 @@ const Home = props => {
       </>
     )
   }
- 
+  const [prev, setPrev] = React.useState(false);
+  useEffect (() => {
+    const color = getComputedStyle(document.documentElement).getPropertyValue('--background-color');
+  },[]);
+  useEffect (() => {
+    const textcolor = getComputedStyle(document.documentElement).getPropertyValue('--color');
+  },[]);
+
+
+  const setColor=(color)=>{
+    setPrev(!prev);
+    document.documentElement.style.setProperty('--background-color',color)
+    document.documentElement.style.setProperty('--fontstyle','italic')
+    
+  }
+
+  const settextColor=(color)=>{
+    setPrev(!prev);
+    if(prev==false)
+    {
+    document.documentElement.style.setProperty('--color',color)
+    }
+
+  }
   const style = {
     position: 'absolute',
     top: '50%',
@@ -45,7 +75,9 @@ const Home = props => {
   return (
     <div className="rolesContainer">
       <div className="heading">
+        
         <h4>Roles and Permissions</h4>
+       
         <div className="flexdisplay">
           <div className="addBtn" onClick={() => { setRoles(true) }}>
             <FontAwesomeIcon icon={faPlusCircle} style={{ marginRight: 7 }} /> Add Roles & Permissions
@@ -65,6 +97,9 @@ const Home = props => {
       <Modal show={open} handleClose={handleClose} Title={Title}>
         <Roles />
       </Modal>
+      <p>
+        <button onClick={() =>{HandleAction()}}>change color</button>
+      </p>
     </div>
   );
 }
