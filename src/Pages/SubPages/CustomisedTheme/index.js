@@ -3,10 +3,10 @@ import { SketchPicker } from "react-color";
 import TextBox from "../../../Components/TextBox";
 
 const CustomisedTheme = (props) => {
-  const [value, setValue] = useState("");
-  const [fontFamily, setfontFamily] = useState("");
-  const [color, setColor] = useState("");
-  const [containercolor, setContainercolor] = useState("");
+  const [value, setValue] = useState("14px");
+  const [fontFamily, setfontFamily] = useState("sans-serif");
+  const [color, setColor] = useState("#fff");
+  const [containercolor, setContainercolor] = useState("#2c2d38;");
   const [txtcolor, setTxtcolor] = useState("");
 
 
@@ -24,7 +24,7 @@ const CustomisedTheme = (props) => {
   }, []);
 
   const Handler = () => {
-    const custom = { backgroundColor: color, fontSize: value, fontFamily:fontFamily, containerColor:containercolor, textColor:txtcolor  };
+    const custom = { backgroundColor: color, fontSize: value, fontFamily: fontFamily, containerColor: containercolor, textColor: txtcolor };
     document.documentElement.style.setProperty('--background-color', color);
     document.documentElement.style.setProperty('--fontstyle', value);
     document.documentElement.style.setProperty('--fontFamily', fontFamily);
@@ -39,42 +39,52 @@ const CustomisedTheme = (props) => {
         <h5>Create Customised Themes</h5>
         <div>
           <div>
-            <span>Background Color</span>
+            <div>Background Color:</div>
             <SketchPicker
               color={color}
               onChangeComplete={(color) => {
                 setColor(color.hex);
               }}
             />
-            <span>Container Color</span>
+            <div style={{height:20}}></div>
+            <div>Container Color:</div>
             <SketchPicker
               color={containercolor}
               onChangeComplete={(color) => {
                 setContainercolor(color.hex);
               }}
             />
-            <span>Text Color</span>
+             <div style={{height:20}}></div>
+            <div>Text Color:</div>
             <SketchPicker
               color={txtcolor}
               onChangeComplete={(color) => {
                 setTxtcolor(color.hex);
               }}
             />
-
-            <TextBox
-              value={value}
-              placeHolder="Font size"
-              setValue={setValue}
-            />
-            <TextBox
-              value={fontFamily}
-              placeHolder="Font Family"
-              setValue={setfontFamily}
-            />
+             <div style={{height:20}}></div>
+            <div>
+              <div>Font Size:</div>
+              <TextBox
+                value={value}
+                placeHolder="Font size"
+                setValue={setValue}
+              />
+            </div>
+            <div style={{height:20}}></div>
+            <div>
+              <div>Font Family:</div>
+              <TextBox
+                value={fontFamily}
+                placeHolder="Font Family"
+                setValue={setfontFamily}
+              />
+            </div>
           </div>
-          <div style={{width:200}}>
+          <div style={{height:20}}></div>
+          <div style={{ width: 200 }}>
             <div className="addBtn" onClick={Handler}>
-               Update Themes
+              Update Themes
             </div>
           </div>
         </div>

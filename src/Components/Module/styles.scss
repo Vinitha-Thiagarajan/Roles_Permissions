@@ -1,0 +1,11 @@
+.li-name{
+    display: flex;
+    align-items: center;
+}
+.li-remove{
+    font-size: 10px;
+    margin-left: 15px;
+    color: red;
+    text-decoration: underline;
+    cursor: pointer;
+}

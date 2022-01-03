@@ -7,16 +7,13 @@
         .tab-list-item {
             display: inline-block;
             list-style: none;
-            margin-bottom: -1px;
-            padding: 0.5rem 0.75rem;
+            padding: 0.75rem 1.75rem;
             color:  var(--color);
-            border: 1px solid var(--container-color);
           }
           
           .tab-list-active {
-            background-color: var( --background-color);
-            border: 1px solid var(--container-color);
-            color:  var(--color);
+            background-color: #f3eeee;
+            color:  #000;
           }
       }
 }

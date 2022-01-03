@@ -5,7 +5,7 @@ import TextBox from "../TextBox"
 import Button from "../Button"
 import { faPlusCircle } from '@fortawesome/free-solid-svg-icons'
 
-const Module = ({ listvalue, setListValue, projectname }) => {
+const Module = ({ listvalue, setListValue, projectname, remove }) => {
     const [value, setValue] = useState("");
     const [update, setUpdate] = useState(false);
     const MultiAdd = () => {
@@ -16,7 +16,9 @@ const Module = ({ listvalue, setListValue, projectname }) => {
             setUpdate(!update)
         }
     }
-
+    const removeLi=(name)=>{
+        remove(name)
+    }
     return (
         <div>
             <div className="d-flex flex-row align-items-center">
@@ -26,7 +28,9 @@ const Module = ({ listvalue, setListValue, projectname }) => {
             <ul>
                 {listvalue.map((rec, index) => {
                     return (
-                        <li key={index}>{rec}</li>
+                        <li key={index}>
+                          <div className="li-name"><span>{rec}</span><div onClick={()=>removeLi(rec)} className="li-remove">Remove</div></div>  
+                            </li>
                     )
                 })}
             </ul>

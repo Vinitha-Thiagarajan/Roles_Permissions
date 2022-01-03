@@ -37,6 +37,11 @@ const Projects = props => {
           </>
         )
       }
+    
+    const removeList =(rec)=>{
+        let filterrec = listvalue.filter((e)=>e != rec);
+        setListValue(filterrec);
+    }
 
     return (
         <div className="projectContainer">
@@ -47,7 +52,7 @@ const Projects = props => {
                         <TextBox value={value} placeHolder="Project Name" setValue={setValue} />
                     </div>
                     <div>
-                        <Module projectname={value} listvalue={listvalue} setListValue={setListValue} />
+                        <Module projectname={value} listvalue={listvalue} setListValue={setListValue} remove={(name)=>removeList(name)} />
                     </div>
                     <div className="saveBtn">
                         <Button text={"Submit"} OnClickBtn={() => { }} image={faSave} />

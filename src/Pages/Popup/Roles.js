@@ -33,7 +33,6 @@ const Roles = props => {
                         return <option key={index}>{rec.name}</option>
                     })}
                  </select>
-                 <div className="label">User names</div>
              </div>
              <div className="adjust_width" >
              <div className="rolesheading">Project</div>
@@ -42,7 +41,7 @@ const Roles = props => {
                         return <option key={"project"+index}>{rec.name}</option>
                     })}
                  </select>
-                 <div className="label">Project Names</div>
+                
              </div>
              <div className="adjust_width">
              <div className="rolesheading">Roles</div>
@@ -51,7 +50,6 @@ const Roles = props => {
                         return <option key={"roles"+index}>{rec.name}</option>
                     })}
                  </select>
-                 <div className="label">List of Roles</div>
              </div>
              <div className="saveButton">
                  <Button className="button" text="Save" OnClickBtn={()=>{}} />
