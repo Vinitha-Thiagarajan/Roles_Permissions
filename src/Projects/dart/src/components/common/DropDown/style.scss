@@ -1,0 +1,283 @@
+
+.drop-down-holder {
+  max-width: 280px;
+  min-width: 230px;
+  .drop-down-textbox {
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 11px 21px 11px 18px;
+    border-radius: 7px;
+    height: 41px;
+    margin-top: 12px;
+    cursor: pointer;
+  }
+  .drop-select-value {
+    color: #5a5b63 !important;
+    font-size: 12px;
+    font-family: "Poppins";
+    font-weight: 400;
+    font-style: normal;
+  }
+  .drop-placeholder {
+    color: #b6b7bf !important;
+    font-size: 12px;
+    font-family: "Poppins";
+    font-weight: 400;
+    font-style: normal;
+  }
+  .drop-title {
+    font-size: 15px;
+    color: #fff;
+    font-family: "Poppins";
+    font-weight: 400;
+    font-style: normal;
+  }
+  .drop-selection {
+    background-color: #78be87;
+    width: 21px;
+    height: 19px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .drop-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .tickgreen {
+    width: 8px;
+    height: 5.8px;
+  }
+  .dropimg {
+    margin-left: 16px;
+  }
+  
+  .dropdownlist {
+    width: 100%;
+    max-width: 280px;
+    min-width: 230px;
+    max-height: 270px;
+    overflow: scroll;
+    background-color: #fff;
+    position: absolute;
+    top: 90px;
+    z-index: 9999;
+    border-radius: 3px;
+    box-shadow: 0px 0px 2px 0px #e5e5e5;
+    .dropdownli {
+      height: 45px;
+      border-bottom: 1px solid #f8f0f0;
+      margin-left: 5px;
+      margin-right: 4px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      .dropdowntxt {
+        padding-left: 32px;
+        font-family: "Poppins";
+        font-weight: 400;
+        font-size: 12px;
+        color: #3f3f46;
+      }
+      .dropselected {
+        display: none;
+      }
+    }
+    .active {
+      background-color: #f17f21;
+      margin: 0px !important;
+      padding-left: 5px;
+      padding-right: 4px;
+      justify-content: space-between;
+      .dropdowntxt {
+        color: #fff;
+      }
+      .dropselected {
+        display: block !important;
+        padding-right: 14px;
+      }
+    }
+  
+    .active:nth-last-child(1) {
+      border-bottom-left-radius: 3px;
+      border-bottom-right-radius: 3px;
+    }
+    .dropdownli:nth-last-child(1) {
+      border-bottom: none;
+    }
+    .triangle {
+      right: 25px;
+      left: inherit;
+      bottom: 100%;
+      width: 0;
+      height: 0;
+      border-left: 9px solid transparent;
+      border-right: 9px solid transparent;
+      border-bottom: 9px solid #ffffff;
+      position: absolute;
+    }
+  }
+  
+  .DropDownDate {
+    .drop-down-textbox {
+      margin-top: 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .dropdownlist {
+      width: 100%;
+      max-width: 230px;
+      min-width: 230px;
+      max-height: 270px;
+      overflow: scroll;
+      background-color: #fff;
+      position: absolute;
+      top: 90px;
+      z-index: 9999;
+      border-radius: 3px;
+      box-shadow: 0px 0px 2px 0px #e5e5e5;
+      border: 1px solid #ccc;
+    }
+  }
+}
+
+
+.drop-down-holder-audit{
+  height: 72px;
+  max-width: 370px;
+  min-width: 370px;
+  border: 1px solid #D3D5E1;
+  border-radius: 7px;
+  position: relative;
+  .drop-title{
+    position: absolute;
+    background-color: #F9F7F5;
+    top: -9px;
+    left: 33px;
+    color: #F17F21;
+    padding: 0px 10px;
+    font-size: 12px;
+    font-family: "Poppins";
+    font-weight: 400;
+    font-style: normal;
+  }
+  .drop-down-textbox {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 11px 21px 11px 43px;
+    border-radius: 7px;
+    height: 41px;
+    margin-top: 12px;
+    cursor: pointer;
+  }
+  .drop-select-value {
+    color: #5a5b63 !important;
+    font-size: 18px;
+    font-family: "Poppins";
+    font-weight: 400;
+    font-style: normal;
+  }
+  .drop-placeholder {
+    color: #5A5B63 !important;
+    font-size: 18px;
+    font-family: "Poppins";
+    font-weight: 400;
+    font-style: normal;
+  }
+ 
+  .drop-selection {
+    background-color: #78be87;
+    width: 21px;
+    height: 19px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .drop-icons {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  .tickgreen {
+    width: 8px;
+    height: 5.8px;
+  }
+  .dropimg {
+    margin-left: 16px;
+    width: 11px;
+  }
+  
+  .dropdownlist {
+    width: 100%;
+    max-width: 370px;
+    min-width: 370px;
+    max-height: 270px;
+    overflow: scroll;
+    background-color: #fff;
+    position: absolute;
+    top: 72px;
+    z-index: 9999;
+    border-radius: 3px;
+    box-shadow: 0px 0px 2px 0px #e5e5e5;
+    .dropdownli {
+      height: 45px;
+      border-bottom: 1px solid #f8f0f0;
+      margin-left: 5px;
+      margin-right: 4px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      .dropdowntxt {
+        padding-left: 32px;
+        font-family: "Poppins";
+        font-weight: 400;
+        font-size: 12px;
+        color: #3f3f46;
+      }
+      .dropselected {
+        display: none;
+      }
+    }
+    .active {
+      background-color: #f17f21;
+      margin: 0px !important;
+      padding-left: 5px;
+      padding-right: 4px;
+      justify-content: space-between;
+      .dropdowntxt {
+        color: #fff;
+      }
+      .dropselected {
+        display: block !important;
+        padding-right: 14px;
+      }
+    }
+  
+    .active:nth-last-child(1) {
+      border-bottom-left-radius: 3px;
+      border-bottom-right-radius: 3px;
+    }
+    .dropdownli:nth-last-child(1) {
+      border-bottom: none;
+    }
+    .triangle {
+      right: 25px;
+      left: inherit;
+      bottom: 100%;
+      width: 0;
+      height: 0;
+      border-left: 9px solid transparent;
+      border-right: 9px solid transparent;
+      border-bottom: 9px solid #ffffff;
+      position: absolute;
+    }
+  }
+}

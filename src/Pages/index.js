@@ -3,7 +3,8 @@ import { Route } from "react-router-dom";
 import { SecureRoute, Security, LoginCallback } from '@okta/okta-react';
 import Home from './Home';
 import Settings from './Settings';
-
+import Tardis from '../Projects/tardis-ui/src'
+import Dart from '../Projects/dart/src'
 
 function Production() {
     const config ={
@@ -19,6 +20,8 @@ function Production() {
         <Security {...config}>
             <Route path="/implicit/callback" component={LoginCallback} />
             <SecureRoute exact path="/" component={Home} />
+            <Route path="/tardis/*" component={Tardis} />
+            <Route path="/dart/*" component={Dart} />
             <SecureRoute exact path="/settings" component={Settings} />
         </Security>
     )

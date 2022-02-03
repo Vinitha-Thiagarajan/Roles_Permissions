@@ -13,7 +13,6 @@
 #root{
   font-family: var(--fontFamily) !important;
   background-color: var(--background-color);
-  padding: 10px;
 }
 
 .App-logo {
@@ -34,7 +33,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: var(--fontstyle);
   color:var(--color);
 }
 

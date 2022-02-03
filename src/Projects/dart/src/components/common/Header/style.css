@@ -1,0 +1,124 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.header-left {
+}
+
+.header-right {
+}
+
+.header-title {
+  justify-content: center;
+  font-size: 21px;
+  margin: 0;
+  font-weight: normal;
+  letter-spacing: 0.3px;
+  display: flex;
+  align-items: center;
+}
+.traceid-header {
+  border-left: 1px solid #dddddd;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 0px 10px;
+  display: flex;
+  align-items: center;
+  font-size: 17px;
+  color: #6d7580;
+}
+.traceid-header img {
+  margin-right: 10px;
+}
+.header-right-ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-right-ul-li {
+  display: inline;
+  cursor: pointer;
+  margin: 0px 5px;
+}
+.header-right-ul-li a {
+  border-radius: 5px;
+  padding: 10px;
+}
+.header-right-ul-li-bell {
+}
+.header-right-ul-li-user {
+  border-radius: 5px;
+  padding: 10px;
+  background: #6b7bc7;
+}
+.header-title-icon {
+  padding-right: 20px;
+}
+
+.card-header-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.card-header-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-header-left-icon {
+  background: #e0e3fa;
+  border-radius: 5px;
+  padding: 15px 10px;
+  display: inline-flex;
+  margin-right: 30px;
+}
+.card-header-left-icon img {
+  height: 25px;
+  width: 25px;
+}
+
+.card-header-left-text {
+  font-size: 20px;
+  color: #000000;
+}
+
+.card-header-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-header-right .legend,
+.card-header-right .legendtwo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-header-right .legendmargin{
+  margin-right: 20px;
+}
+.card-header-right .legend .boxone {
+  width: 9px;
+  height: 9px;
+  background-color: #c2adfb;
+  margin-right: 6px;
+}
+
+.card-header-right .legendtwo .dotted-line {
+  border-top: 3px dotted #c2adfb;
+  background-color: #ffffff;
+  height: 1px;
+  width: 19px;
+  margin-left: 10px;
+  margin-right: 5px;
+}

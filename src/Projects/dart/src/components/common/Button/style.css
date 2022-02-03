@@ -1,0 +1,21 @@
+.button-container{
+    background-color: rgb(241, 127, 33);
+    width: 122px;
+    height: 41px;
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 34px;
+}
+.attach{
+    margin-right: 11px;
+}
+.title{
+    font-size: 12px;
+    font-family: "Poppins";
+    font-weight: 400;
+    font-style: normal;
+    color: #fff;
+}

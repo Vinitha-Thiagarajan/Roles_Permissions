@@ -1,0 +1,143 @@
+.table-audit {
+    width          : 100%;
+    border-collapse: separate;
+    border-spacing : 0 20px;
+}
+
+tbody tr td {
+    padding-top   : 2.3% !important;
+    padding-bottom: 2.3% !important;
+}
+
+thead tr {
+    background-color: #fff;
+}
+
+.table td,
+.table th {
+    border        : 0px !important;
+    vertical-align: top !important;
+}
+
+.table th {
+    height: 45px;
+}
+
+.table-audit tbody tr {
+    background-color: #fcfcfc;
+    filter          : drop-shadow(0px 9px 18px rgba(199, 196, 196, 0.161));
+}
+
+.datecol,
+.daterow {
+    min-width   : 190px !important;
+    padding-left: 3% !important;
+    font-style  : normal;
+    font-weight : 325;
+    font-size   : 13px;
+    line-height : 16px;
+    color       : #172b4d;
+}
+
+.copydiv {
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+
+    img {
+        width : 20px;
+        cursor: pointer;
+    }
+}
+
+.jsoncell {
+    font-size     : 13px;
+    line-height   : 19px;
+    letter-spacing: 0.2px;
+    color         : #858282;
+    cursor        : pointer;
+    white-space   : nowrap;
+    overflow      : hidden;
+    text-overflow : ellipsis;
+    width         : 45vw;
+}
+
+.statuscell {
+    display    : flex;
+    align-items: center;
+}
+
+.dot {
+    width        : 12px;
+    height       : 12px;
+    border-radius: 50%;
+    margin-right : 10px;
+}
+
+.green {
+    background-color: #2dce98;
+}
+
+.red {
+    background-color: #f53c56;
+}
+
+.yellow {
+    background-color: #f17f21;
+}
+
+.sortcontainer {
+    display    : flex;
+    align-items: center;
+}
+
+.sortcontainer .sort {
+    display        : flex;
+    flex-direction : column;
+    padding-left   : 10px;
+    justify-content: space-between;
+    height         : 14px;
+}
+
+.sortcontainer .sort img {
+    cursor: pointer;
+}
+
+.modified {
+    .desccell {
+        display    : flex;
+        align-items: center;
+        flex-wrap  : wrap
+    }
+
+    .jsoncell {
+        font-size     : 13px;
+        line-height   : 19px;
+        letter-spacing: 0.2px;
+        color         : #858282;
+        margin-right  : 30px;
+        white-space   : nowrap;
+        overflow      : hidden;
+        text-overflow : ellipsis;
+        width         : 23vw;
+    }
+
+    .containercell {
+        display    : flex;
+        align-items: center;
+        margin-top : 15px;
+    }
+}
+
+.filteralign {
+    display        : flex;
+    justify-content: space-between;
+    width          : calc(100% - 100px);
+    flex-wrap      : wrap;
+
+    #myForm {
+        display        : flex;
+        align-items    : center;
+        justify-content: space-between;
+    }
+}

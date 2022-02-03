@@ -1,0 +1,80 @@
+.table-custom {
+    width: 100%;
+}
+tbody tr td {
+    padding-top: 4% !important;
+    padding-bottom: 4% !important;
+}
+thead tr {
+    background-color: #f9f7f5;
+}
+.table td,
+.table th {
+    border: 0px !important;
+    vertical-align: middle !important;
+}
+.table th {
+    height: 45px;
+}
+.table-custom tbody tr:nth-of-type(odd) {
+    background-color: #ffffff;
+}
+.table-custom tbody tr:nth-of-type(even) {
+    background-color: #f9f9f9;
+}
+.datecol,
+.daterow {
+    min-width: 190px !important;
+    padding-left:3% !important;
+}
+.sortcontainer{
+    display: flex;
+    align-items: center;
+}
+.sortcontainer .sort {
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+    justify-content: space-between;
+    height: 14px
+}
+.sortcontainer .sort div{
+    cursor: pointer;
+}
+.anomaly .search{
+    padding: 15px;
+    background: #ffffff;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.searchcontainer .searchimg{
+    margin-left: 33px;
+    padding-right: 29px;
+    border-right: 1px solid #E7E7E7;
+}
+.searchcontainer .searchclear{
+    cursor: pointer;
+    margin-right: 35px;
+}
+.searchcontainer input{
+    width: 86%;
+    border: none !important;
+    height: 40px;
+    font-family: "Poppins";
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    padding-left: 16px;
+}
+.searchcontainer input::placeholder{
+    font-size: 18px;
+    color: #C4C4C4;
+    padding-left: 16px;
+    font-family: "Poppins";
+    font-weight: 400;
+    font-style: normal;
+}
+.searchcontainer input:focus{
+    outline: none !important;
+    outline-offset: 0px !important;
+}

@@ -1,0 +1,112 @@
+.progressbar {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  color: #849397;
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+.progressbar > li {
+  position: relative;
+  display: table-cell;
+  text-align: center;
+  font-size: 0.8em;
+}
+.progressbar > li:before {
+  display: flex;
+  content: attr(data-step);
+  margin: 0 auto;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  margin-bottom: 0.25em;
+  border-radius: 100%;
+  position: relative;
+  z-index: 1000;
+  padding: 0px;
+  border: 8px solid #f17f21;
+  background: #fff;
+  font-size: 12px;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+}
+.progressbar > li:after {
+  /* content: "";
+  position: absolute;
+  display: block;
+  background: #dfe3e4;
+  width: 100%;
+  height: 0.5em;
+  top: 1.25em;
+  left: 50%;
+  margin-left: 1.5em\9; */
+  content: "";
+  position: absolute;
+  display: block;
+  background: #f17f21;
+  width: 100%;
+  height: 3px;
+  top: 1.25em;
+  left: 50%;
+  margin-left: 1.5em\9;
+}
+.progressbar > li:last-child:after {
+  display: none;
+}
+.progressbar > li.is-complete {
+  color: #2ecc71;
+}
+.progressbar > li.is-complete:before,
+.progressbar > li.is-complete:after {
+  color: #fff;
+  background: #2ecc71;
+}
+.progressbar > li.is-active {
+  color: #3498db;
+}
+.progressbar > li.is-active:before {
+  color: #fff;
+  background: #3498db;
+}
+
+/**
+   * Needed for IE8
+   */
+.progressbar__last:after {
+  display: none !important;
+}
+
+/**
+   * Size Extensions
+   */
+.progressbar--medium {
+  font-size: 1.5em;
+}
+
+.progressbar--large {
+  font-size: 2em;
+}
+
+.progressbar-text {
+  color: #858282;
+  word-break: break-word;
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-size: 13px;
+}
+.progressbar-val {
+  color: #000000;
+  word-break: break-word;
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  font-size: 14px;
+}

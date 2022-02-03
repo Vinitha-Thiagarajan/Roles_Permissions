@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="37" height="36" viewBox="0 0 37 36">
+  <g id="Group_4200" data-name="Group 4200" transform="translate(-676 -452)">
+    <g id="Rectangle_1604" data-name="Rectangle 1604" transform="translate(676 452)" fill="#edf8f4" stroke="#008559" stroke-width="1.5">
+      <rect width="37" height="36" rx="18" stroke="none"/>
+      <rect x="0.75" y="0.75" width="35.5" height="34.5" rx="17.25" fill="none"/>
+    </g>
+    <path id="foursquare-check-in" d="M0,68.783l3.653,3.66,7.014-7.007L9.66,64.443l-6.007,6-2.66-2.66Z" transform="translate(689 401.557)" fill="#008559"/>
+  </g>
+</svg>
