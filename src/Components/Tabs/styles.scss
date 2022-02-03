@@ -1,22 +1,29 @@
-.tabs{
-    padding:25px;
-    .tab-list {
-        padding-left: 0;
-        background-color: var(--container-color);
-        font-size: var(--fontstyle);
-        .tab-list-item {
-            display: inline-block;
-            list-style: none;
-            padding: 0.75rem 1.75rem;
-            color:  var(--color);
-          }
-          
-          .tab-list-active {
-            background-color: #f3eeee;
-            color:  #000;
-          }
-      }
-}
+.rolesContainer {
+  .tabs {
+    padding: 25px;
 
-  
-  
+    .tab-list {
+      padding    : 0px !important;
+      background-color: var(--container-color);
+      display         : flex;
+      min-height          : 35px;
+      align-items     : center;
+      border          : none !important;
+      .tab-list-item {
+        display   : inline-block;
+        list-style: none;
+        padding: 8px 15px;
+        color     : var(--color);
+        font-size       : var(--fontstyle) !important;
+      }
+
+      .tab-list-active {
+        background-color: #f3eeee;
+        color           : #000;
+        border          : 1px solid var(--container-color) !important;
+        margin          : 0px !important;
+        font-size       : var(--fontstyle) !important;
+      }
+    }
+  }
+}
