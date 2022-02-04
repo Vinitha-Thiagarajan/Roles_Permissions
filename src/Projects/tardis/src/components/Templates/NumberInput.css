@@ -1,0 +1,15 @@
+.numberInput {
+  width: 100px;
+  font-size: 10px;
+  height: 40px !important;
+  padding: 0.4em 0.6em;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border: 1px solid #ccc !important;
+}
+
+.numberInput__label {
+  font-weight: bold;
+  font-size: 11px;
+  padding: 0.2em 0.1em;
+}

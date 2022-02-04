@@ -1,0 +1,12 @@
+@import "../../assets/constant/color";
+@import "../../assets/constant/mixin";
+.nfcontainer{
+    @include center-align ;
+    background-color: "#ffffff";
+    height: 100vh;
+    .pagenotfound{
+        display: flex;
+        justify-content:center;
+        align-items: center;
+    }
+}

@@ -1,0 +1,38 @@
+.controls {
+  .source2 {
+    .select-search__input {
+      height: 50px;
+    }
+  }
+  .isoptional-container {
+    margin-top: 20px;
+    .radio-container {
+      padding-left: 0px;
+      .radio-btn-group {
+        padding-left: 0px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  #maincontent:not(.fullscreen) {
+    .SourceMappage {
+      .container-filter {
+        #sourcedd {
+          width: 290px;
+        }
+        #childsourcedd {
+          width: 290px;
+        }
+        #isoptionaldd {
+          width: 160px;
+        }
+        .addbtn {
+          width: 165px;
+          margin-left: 0px;
+        }
+      }
+    }
+  }
+}

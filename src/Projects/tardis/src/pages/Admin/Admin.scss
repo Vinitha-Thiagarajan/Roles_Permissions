@@ -1,0 +1,23 @@
+
+@import "../../assets/constant/color";
+@import "../../assets/constant/mixin";
+#maincontent:not(.fullscreen) {
+  .AdminPage {
+    .container-filter {
+  
+      #userdd {
+        width: 340px;
+      }
+      #groupdd {
+        width: 340px;
+      }
+      .addbtn {
+        width: 243px;
+        margin-left: 0px;
+      }
+    }
+  }
+}
+.AdminPage {
+  
+}

@@ -1,0 +1,256 @@
+@import "../../assets/constant/color";
+@import "../../assets/constant/mixin";
+
+@mixin responsivepie {
+  .pieholder {
+    .pie {
+      border-right: none !important;
+      width: 100% !important;
+      min-width: 100% !important;
+      .piechart {
+        margin-left: 0px !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        .legend-bottom {
+          margin: 50px 0px 30px 25px;
+        }
+      }
+      .title{
+        span {
+          width: 100%;
+        }
+      }
+    }
+    .donut-container {
+      width: 100% !important;
+    }
+  }
+}
+
+.Chart-page {
+  .quickaccess {
+    padding: 40px 35px;
+    .titlequick {
+      text-transform: uppercase;
+      font-size: 12px;
+      color: $color-gray;
+      font-weight: 500;
+      font-family: "Roboto-Regular";
+    }
+  }
+}
+.particular-page {
+  .container-title{
+    flex-wrap: wrap;
+    .title {
+      span{
+        min-width:0px;
+      }
+    }
+  }
+  .options {
+    margin-right: 0px;
+    width: 125px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    background-color: $color-fade-white;
+    border-radius: 5px;
+    justify-content: space-between;
+    cursor: pointer;
+    font-weight: 500;
+    font-family: "Roboto-Regular";
+    font-size: 12px;
+    color: $color-black;
+  }
+  .options img {
+    width: 13px;
+    width: 15px;
+    margin-right: 10px;
+  }
+  .submitbtn {
+    background-color: $color-blue;
+    height: 40px;
+    margin-left: 20px;
+    min-width: 80px;
+  }
+  .date-holder {
+    margin-left: 20px;
+    .filter-date {
+      height: 40px;
+      border-radius: 5px;
+      border: 1px solid $color-puregray;
+      padding: 10px;
+    }
+  }
+
+  .pieholder {
+    display: flex;
+    flex-wrap: wrap;
+    .pie {
+      min-width: 300px;
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+      margin-top: 30px;
+      border-right: 1px solid $color-fade2-white;
+      .piechart {
+        margin-left: 10%;
+      }
+      .title {
+        @include flex-start-align;
+        margin-bottom: 40px;
+        margin-left: 15px;
+        .trendsoure {
+          width: 35px;
+          height: 35px;
+          border-radius: 50%;
+          background-color: $color-title-white;
+          margin-right: 10px;
+          svg {
+            width: 13px;
+            @include svg_fill_black;
+          }
+        }
+        span {
+          font-size: 16px;
+          color: $color-black;
+          width: 239px;
+          padding-right: 10px;
+          word-break: break-word;
+        }
+      }
+    }
+    .donut-container {
+      margin-top: 35px;
+      width: calc(100% - 300px);
+      .title {
+        margin-left: 60px;
+        display: flex;
+        justify-content: space-between;
+        margin-right: 45px;
+        
+      }
+      .donut {
+        min-width: 640px;
+        padding: 40px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        svg {
+          min-width: 350px;
+        }
+        #donuttooltip {
+          position: absolute;
+          width: auto;
+          height: auto;
+          padding: 10px;
+          background-color: $color-black;
+          -webkit-border-radius: 10px;
+          -moz-border-radius: 10px;
+          border-radius: 10px;
+          -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+          -mox-box-shadow: 4px 4px 4px 10px rgba(0, 0, 0, 0.4);
+          box-shadow: 4px 4px 10px rbga(0, 0, 0, 0.4);
+          pointer-events: none;
+          color: $color-purewhite;
+        }
+        #donuttooltip.tooltiphidden {
+          opacity: 0;
+        }
+        #donuttooltip p {
+          margin: 0;
+          font-family: sans-serif;
+          font-size: 16px;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+  
+}
+.export-container {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 30px;
+  .exportbtn {
+    @include center-align;
+    background-color: $color-blue;
+    color: $color-purewhite;
+    padding: 8px;
+    border-radius: 4px;
+    font-size: 13px;
+    width: 100px;
+    cursor: pointer;
+  }
+  .exportbtn:hover {
+    border: none;
+    color: $color-purewhite;
+    padding: 9px;
+    background-color: $color-blue;
+  }
+}
+.export-page {
+  padding-bottom: 50px;
+  @include responsivepie;
+  .pieholder {
+  .donut-container {
+    margin-top: 35px;
+    width: calc(100% - 300px);
+    .title {
+      margin-left: 60px;
+      display: flex;
+      justify-content: space-between;
+      margin-right: 45px;
+      
+    }
+    .donut {
+      min-width: 640px;
+      padding: 40px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      svg {
+        min-width: 350px;
+      }
+      #donuttooltip {
+        position: absolute;
+        width: auto;
+        height: auto;
+        padding: 10px;
+        background-color: $color-black;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+        -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+        -mox-box-shadow: 4px 4px 4px 10px rgba(0, 0, 0, 0.4);
+        box-shadow: 4px 4px 10px rbga(0, 0, 0, 0.4);
+        pointer-events: none;
+        color: $color-purewhite;
+      }
+      #donuttooltip.tooltiphidden {
+        opacity: 0;
+      }
+      #donuttooltip p {
+        margin: 0;
+        font-family: sans-serif;
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+  }
+}
+}
+@media screen and (max-width: 1400px) {
+    .particular-page {
+      @include responsivepie;
+    }
+}
+.nosource{
+  @include center-align;
+  height: 200px;
+}
+

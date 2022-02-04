@@ -1,0 +1,25 @@
+@import "../../assets/constant/color";
+@import "../../assets/constant/mixin";
+.DetailPage{
+    .container-title{
+    padding-bottom: 50px;
+    .export {
+        .exportbtn {
+          @include center-align;
+          background-color: $color-blue;
+          color: $color-purewhite;
+          padding: 8px;
+          border-radius: 4px;
+          font-size: 13px;
+          width: 100px;
+          cursor: pointer;
+        }
+        .exportbtn:hover {
+          border: none;
+          color: $color-purewhite;
+          padding: 9px;
+          background-color: $color-blue;
+        }
+      }
+    }
+}

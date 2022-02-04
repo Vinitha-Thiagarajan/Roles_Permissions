@@ -1,0 +1,55 @@
+@import "../../assets/constant/color";
+@import "../../assets/constant/mixin";
+.sidebar {
+    width: 60px;
+    background-color: $color-blue;
+    position: fixed;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    top: 0px;
+    z-index: 100500;
+    .sidemenuholder{
+      flex-direction: column;
+      @include center-align;
+      width: 60px;
+    div {
+        @include center-align;
+        height: 40px;
+        width: 40px;
+        cursor: pointer;
+        margin: 20px 0px;
+        img{
+            width: 30px;
+        }
+        .autowidth{
+            width: auto;
+        }
+    }
+    .selection{
+        background-color: $color-darkblue !important;
+        border-radius: 4px  !important;
+        padding: 10px
+    }
+    .fillwhite{
+        background-color: $color-blue;
+        border-radius: 10px;
+        color: $color-purewhite;
+        .menuimg {
+            width: 21px;
+            height: 21px;
+            @include svg_fill_white;
+          }
+          .menufileimg {
+            width: 21px;
+            height: 21px;
+            path {
+              stroke: $color-purewhite;
+            }
+            circle {
+              fill: $color-purewhite;
+            }
+          }
+    }
+  }
+}

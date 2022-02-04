@@ -1,0 +1,80 @@
+.Testcase {
+    .container-filter {
+        justify-content: flex-start !important;
+        height: 100% !important;
+        display: block !important;
+    }
+
+    #sourcedd {
+        max-width: 340px;
+    }
+
+    .addbtn {
+        max-width       : 120px;
+        background-color: #3976EB;
+    }
+
+    .dddisable {
+        background-color: #dde0e1 !important
+    }
+
+    .Classification {
+        width      : 100%;
+        padding-top: 30px;
+        display: flex;
+        align-items: center;
+
+        .radiocontainer {
+            display: flex;
+            width: 250px;
+            
+        }
+        .radiocontainer > div > div > div > div:nth-child(2)
+        {
+          padding: 1px !important;
+        }
+        .radiocontainer > div > div {
+            padding: 10px 16px !important;
+        }
+       
+        
+    }
+    .crongenerate{
+        .crontxt {
+            height       : 43px;
+            width        : 250px;
+            margin-top   : 20px;
+            border       : 1px solid #ccc;
+            border-radius: 5px;
+            padding-left : 10px;
+            font-size: 16px;
+        }
+        .cronholder{
+            display: flex;
+            .utctime{
+                margin-left: 10px;
+                border: 1px solid #d9d9d9;
+                height: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 13px;
+                padding: 0px 10px;
+            }
+        }
+        
+    }
+    .savebtn{
+        height: 40px;
+        width: 120px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #3976eb;
+        border-radius: 5px;
+        margin-top: 10px;
+        color: #fff;
+        cursor: pointer;
+    }
+
+}

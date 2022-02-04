@@ -1,0 +1,377 @@
+@import "../assets/constant/mixin";
+@import "../assets/constant/color";
+
+@mixin main_position {
+  top: 120px;
+  left: 280px;
+  right: 50px;
+  bottom: 0px;
+}
+@mixin back_to_position {
+    top: 0;
+    left: 60px;
+    right: 0;
+    bottom: 0;
+}
+@mixin sidehide {
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+}
+.tardis-container {
+  min-width: 1024px;
+}
+.page {
+  min-height: 99vh !important;
+  background-color: $color-purewhite;
+  border-radius: 10px 10px 0px 0px;
+  padding: 60px 30px 30px 30px;
+  min-width: 700px;
+}
+.centeralign {
+  @include center-align;
+}
+
+main {
+  position: absolute;
+  z-index: 3;
+  @include main_position; 
+}
+
+.paddzero {
+  padding: 0px !important;
+}
+
+@keyframes fullscreenanimation {
+  0% {
+    @include main_position; 
+  }
+
+  100% {
+    @include back_to_position;
+  }
+}
+@keyframes originalscreenanimation {
+  0% {
+    @include back_to_position;
+  }
+
+  100% {
+    @include main_position; 
+  }
+}
+.fullscreen {
+  position: fixed;
+  z-index: 100500;
+  border-radius: 0px;
+  animation-name: fullscreenanimation;
+  animation-duration: 0.5s;
+  @include back_to_position;
+  overflow-y: auto;
+  .page {
+    border-radius: 0px;
+    min-height: 100vh !important;
+  }
+}
+.originalscreen {
+  animation-name: originalscreenanimation;
+  animation-duration: 0.5s;
+}
+
+@keyframes sideopenanimation {
+  0% {
+    top: 0px;
+    left: -50px;
+    right: 0px;
+    bottom: 0px;
+  }
+
+  100% {
+   @include sidehide;
+    display: block;
+  }
+}
+@keyframes sidecloseanimation {
+  0% {
+    @include sidehide;
+  }
+
+  100% {
+    top: 0px;
+    left: -70px;
+    right: 0px;
+    bottom: 0px;
+  }
+}
+.sideopen {
+  z-index: 100500;
+  animation-name: sideopenanimation;
+  animation-duration: .5s;
+  @include sidehide;
+}
+.sideclose {
+  animation-name: sidecloseanimation;
+  animation-duration: .5s;
+}
+.displaynone{
+  display: none;
+}
+.displayblock{
+  display: block !important;
+}
+//filter container
+.container-filter,.titleleft {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 10px;
+  .options {
+    width: 100%;
+    margin-right: 20px;
+    height: 45px;
+    @include spacebetween-align;
+    padding-left: 30px;
+    background-color: $color-fade-white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    font-family: "Roboto-Regular";
+    font-size: 12px;
+    color: $color-black;
+  }
+  .searchop {
+    padding-left: 15px !important;
+  }
+  .searchop img:first-child {
+    filter: invert(1);
+    width: 12px;
+  }
+  .options img {
+    width: 13px;
+    width: 15px;
+    margin-right: 10px;
+  }
+}
+
+.modal-main {
+  .modal-title {
+    @include spacebetween-align;
+    .title-left {
+      font-weight: 500;
+      font-family: "Roboto-Medium";
+    }
+
+    .title-close img {
+      width: 15px;
+      cursor: pointer;
+    }
+    .detailimg {
+      width: 35px;
+      height: 35px;
+      background: $color-blue;
+      border-radius: 35px;
+      margin-right: 20px;
+    }
+    .detailimg img {
+      height: 15px;
+    }
+  }
+  
+  .modal-content {
+    display: flex;
+    .addform-container {
+      width: 100%;
+    }
+    .controls {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      margin: 30px 0px;
+      font-weight: 400;
+      font-family: "Roboto-Regular";
+      font-size: 12px;
+    }
+    .controls span {
+      color: $color-lightgray;
+      font-size: 12px;
+    }
+  }
+  .modaladdbtn {
+    height: 35px;
+    background-color: $color-blue;
+    color: $color-purewhite;
+    font-weight: 500;
+    font-family: "Roboto-Regular";
+    cursor: pointer;
+    width: 100%;
+    margin: 0px !important;
+  }
+}
+
+input:focus {
+  outline: none;
+}
+textarea:focus {
+  outline: none;
+}
+select:focus {
+  outline: none;
+}
+
+#snackbar {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: $color-defalut-tooltip;
+  color: $color-purewhite;
+  text-align: center;
+  border-radius: 4px;
+  padding: 16px;
+  position: fixed;
+  z-index: 500000;
+  right: 10px;
+  bottom: 30px;
+  font-size: 17px;
+}
+
+#snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+.redclr {
+  background-color: $color-red-btn !important;
+  color:$color-purewhite !important;
+}
+
+input:disabled {
+  background-color: $color-white !important;
+}
+
+@media screen and (max-width: 1440px) {
+  #maincontent:not(.fullscreen) {
+    .container-filter {
+      display: flex;
+      padding: 40px 10px 0px 10px;
+      flex-wrap: wrap;
+      height: 140px;
+      justify-content: flex-start;
+    }
+  }
+}
+
+.modal-main {
+  .modal-content {
+    .controls {   
+      .c1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 50%;
+        height: 100%;
+        padding-bottom: 3px;
+      }
+      .c2 {
+        width: 50%;
+        padding-bottom: 3px;
+        padding-left: 16px;
+      }
+      textarea {
+        resize: none;
+        margin-top: 5px;
+        border: 1px solid $color-puregray;
+        border-radius: 3px;
+        padding: 10px;
+        color: $color-black;
+        font-family: "Roboto-Regular";
+        :focus {
+          border: 1px solid $color-puregray;
+        }
+      }
+      .ddfailure {
+        width: 190px;
+        margin: 0 auto;
+        padding: 0px 10px;
+        background: $color-purewhite;
+        border-radius: 3px;
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        cursor: pointer;
+        height: 40px;
+        @include spacebetween-align;
+        margin-top: 5px;
+      }
+      .status{
+        margin: 0px;
+      }
+      .ddfailure span {
+        color: $color-black;
+      }
+      .ddfailure img {
+        height: 6px;
+      }
+
+      .logdate {
+        width: 190px;
+        .react-datepicker-wrapper {
+          width: 100%;
+          margin-top: 5px;
+          input {
+            width: 100%;
+            height: 40px;
+            padding: 0px 10px;
+            border-radius: 3px;
+            border: 1px solid rgba(0, 0, 0, 0.15);
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+  
+}

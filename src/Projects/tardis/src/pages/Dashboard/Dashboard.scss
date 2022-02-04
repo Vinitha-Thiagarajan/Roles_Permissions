@@ -1,0 +1,277 @@
+@import "../../assets/constant/color";
+@import "../../assets/constant/mixin";
+.fullscreen {
+    .Dashboradpage {
+        margin-top: 0px !important;
+        .dashborad-control {
+            display: none !important;
+        }
+    }
+}
+.Dashboradpage {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-top: 65px;
+    .emptytable {
+        display: flex;
+        justify-content: center;
+        margin: 70px;
+    }
+    .container-title {
+        width: 100%;
+        flex-wrap: wrap;
+        height: 90px;
+        align-items: flex-start;
+        .dashborad-control {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            @include center-align;
+            .react-datepicker {
+                position: absolute;
+                right: 80%;
+                top: 40px;
+            }
+            svg {
+                height: 25px;
+                cursor: pointer;
+                @include svg_fill_white;
+            }
+            .calendar {
+                @include center-align;
+                margin-left: 20px;
+                background-color: $color-darkblue;
+                border-radius: 40px;
+                height: 40px;
+                font-size: 14px;
+                color: $color-purewhite;
+                cursor: pointer;
+                .lable {
+                    padding-left: 25px;
+                    padding-right: 10px;
+                }
+                .plus {
+                    @include center-align;
+                    width: 40px;
+                    border-radius: 40px;
+                    height: 40px;
+                    background-color: $color-notify-orange;
+                    color: $color-black;
+                    span {
+                        font-size: 25px;
+                    }
+                }
+            }
+        }
+        .titleleft {
+            padding: 0px !important;
+            @include flex-start-align;
+            #sourcedd {
+                width: 220px;
+                margin-right: 35px;
+            }
+            .title {
+                font-size: 22px;
+                color: $color-black;
+                font-family: "Roboto-Medium";
+                width: 190px;
+            }
+        }
+        .titleright {
+            display: flex;
+            height: 45px;
+            .holder {
+                @include center-align;
+                color: $color-black;
+                font-family: "Roboto-Regular";
+                .statuscircle {
+                    width: 100% !important;
+                    padding: 5px 8px !important;
+                    border-radius: 10px !important;
+                    @include center-align;
+                    font-size: 12px;
+                }
+                .statustxt {
+                    margin-left: 10px;
+                }
+                .success {
+                    color: $color-purewhite;
+                    background-color: $color-green;
+                }
+                .failure {
+                    color: $color-purewhite;
+                    background-color: $color-red;
+                }
+                .delay {
+                    color: $color-purewhite;
+                    background-color: $color-notify-orange;
+                }
+            }
+            .margin40 {
+                margin-right: 40px;
+            }
+            .margin20 {
+                margin-right: 20px;
+            }
+        }
+    }
+    .table-container {
+        padding: 15px 10px 25px 10px;
+        display: flex;
+        flex-direction: row;
+        .leftheader {
+            border-right: 1px solid $color-fade2-white;
+            margin-right: 20px;
+            width: 235px;
+            .space {
+                width: 100%;
+                height: 41px;
+                padding-left: 5px;
+                font-family: "Roboto-Medium";
+            }
+            .headerleft {
+                width: 220px;
+                height: 46px;
+                margin-bottom: 5px;
+                padding: 15px 5px !important;
+                font-size: 14px;
+                font-family: "Roboto-Regular";
+                color: $color-black;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+                margin-right: 20px;
+                border-bottom: 1px solid $color-fade2-white;
+                a {
+                    text-decoration: underline;
+                    cursor: pointer;
+                }
+            }
+        }
+        .header {
+            @include flex-start-align;
+            font-size: 10px;
+            .dataholder {
+                min-width: 48px;
+                display: flex;
+                justify-content: flex-start;
+                .date {
+                    @include center-align;
+                    margin-right: 5px;
+                    white-space: pre;
+                    .line {
+                        width: 7px;
+                        height: 1px;
+                        background-color: $color-puregray;
+                        margin-left: 3px;
+                    }
+                }
+            }
+        }
+        .container {
+            display: flex;
+            .content {
+                width: 100%;
+                margin-top: 30px;
+                .statusrow {
+                    @include flex-start-align;
+                    width: 100%;
+                    margin-bottom: 5px;
+                    height: 46px;
+                    border-bottom: 1px solid $color-purewhite;
+                    .status {
+                        margin-right: 18px;
+                        img {
+                            width: 30px;
+                        }
+                        .complete {
+                            border: 1px solid $color-dash-green;
+                            border-radius: 50%;
+                            padding: 1px;
+                        }
+                        .failed {
+                            border: 1px solid $color-dash-red;
+                            border-radius: 50%;
+                            padding: 1px;
+                        }
+                        .delay {
+                            border: 1px solid $color-dash-yellow;
+                            border-radius: 50%;
+                            padding: 1px;
+                        }
+                    }
+                    .emptycol {
+                        margin-right: 18px;
+                        img {
+                            width: 30px;
+                            visibility: hidden;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#createdash {
+    .controls{
+        flex-direction: column;
+    }
+    .sourceadddropdown {
+        width: 100%;
+        padding: 0px 10px;
+        background: $color-purewhite;
+        border-radius: 3px;
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        cursor: pointer;
+        height: 40px;
+        @include spacebetween-align;
+        margin-top: 5px;
+      }
+    
+      .sourceadddropdown span {
+        color: $color-black;
+      }
+      .sourceadddropdown img {
+        height: 6px;
+      }
+    .options {
+        width: 100%;
+        margin-right: 20px;
+        height: 40px;
+        @include spacebetween-align;
+        padding-left: 30px;
+        background-color: $color-fade-white;
+        border-radius: 5px;
+        margin-top: 3px;
+        cursor: pointer;
+        font-weight: 500;
+        font-family: "Roboto-Regular";
+        font-size: 12px;
+        color: $color-black;
+    }
+    .searchop {
+        padding-left: 15px !important;
+    }
+    .searchop img:first-child {
+        filter: invert(1);
+        width: 12px;
+    }
+    .options img {
+        width: 13px;
+        width: 15px;
+        margin-right: 10px;
+    }
+    
+}
+.margintop20 {
+    margin-top: 20px;
+}
+.dropdown {
+    .detailbtn {
+        span {
+            color: $color-purewhite !important;
+        }
+    }
+}

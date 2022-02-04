@@ -1,0 +1,46 @@
+@import "../../assets/constant/color";
+.slackrow{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+  .slackchannel{
+    display: inline-flex;
+    padding: 10px;
+    background-color: $color-fade-white;
+    border-radius: 4px;
+    margin: 5px;
+    font-size: 14px;
+
+    img{
+        width: 8px !important;
+        margin-left: 10px;
+        filter: invert(0) !important;
+        cursor: pointer;
+    }
+  }
+  .slackchanneladd{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    background-color: $color-fade-white;
+    border-radius: 4px;
+    margin: 5px;
+    font-size: 14px;
+    svg{
+      font-size: 16px;
+      cursor: pointer;
+    }
+    input{
+      height: 25px;
+      background-color: $color-fade-white;
+      border:none;
+      padding-left:0px;
+      font-size: 14px;
+    }
+    input:focus{
+        border:none;
+    }
+  }
+}

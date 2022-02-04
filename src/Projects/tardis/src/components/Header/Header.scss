@@ -1,0 +1,164 @@
+
+@import "../../assets/constant/color";
+@import "../../assets/constant/mixin";
+.top-container {
+  width: 100%;
+  height: 350px;
+  background-color: $color-blue;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  .profilecontainer {
+    @include flex-end-align;
+    width: 280px;
+    padding: 20px;
+    height: 100%;
+    flex-direction: column;
+     #ProfileCanvas {
+      background-color: $color-blue;
+    }
+    .profile {
+      height: 260px;
+      width: 220px;
+      flex-direction: column;
+      color: $color-purewhite;
+      position: absolute;
+      z-index: 2;
+      top: 75px;
+      left: 30px;
+      span{
+        text-transform: capitalize;
+      };
+      .avatar {
+        min-width: 75px;
+        height: 75px;
+        border-radius: 50%;
+        background-color: $color-notify-orange;
+        @include center-align;
+        font-size: 30px;
+        color: $color-purewhite;
+      }
+    }
+    .profile img {
+      width: 75px;
+    }
+    .profile span {
+      padding-top: 25px;
+      font-weight: 500;
+      font-family: "Roboto-Regular";
+    }
+    .profilemenus {
+      width: 100%;
+      @include center-align;
+      flex-direction: row;
+      cursor: pointer;
+      z-index: 3;
+    }
+    .profilemenu {
+      flex-direction: row;
+      width: 120px;
+      cursor: pointer;
+      color: $color-purewhite;
+      font-size: 12px;
+      padding: 0px 20px;
+      margin: 0px;
+      height: 100%;
+    }
+    .profilemenu span {
+      font-weight: 400;
+      font-family: "Roboto-Regular";
+    }
+    .profilemenu img {
+      height: 13px;
+      margin-right: 7px;
+    }
+  }
+  .righttopcontainer {
+    @include center-align;
+    margin-top: 40px;
+    margin-right: 50px;
+    height: 35px;
+    .rttimezone {
+      flex-direction: row;
+      height: 30px;
+      font-size: 10px;
+      color: $color-purewhite;
+      background-color: $color-darkblue;
+      padding: 0px 7px 0px 7px;
+      border-radius: 3px;
+      font-weight: 400;
+      font-family: "Roboto-Regular";
+      width: 175px;
+      display: flex;
+      justify-content: space-between;
+      li{
+        color: $color-black;
+      }
+    }
+    .rttimezonearrow {
+      height: 100%;
+      //padding: 0px 7px;
+      background-color: $color-darkblue;
+      margin-left: 25px;
+      cursor: pointer;
+      border-radius: 0px 3px 3px 0px;
+      display: flex;
+    }
+    .rttimezonearrow img {
+      width: 10px;
+    }
+    .rtholder {
+      padding: 0px 10px;
+      cursor: pointer;
+      font-weight: 400;
+      font-family: "Roboto-Regular";
+      font-size: 11px;
+      color:$color-purewhite;
+      
+    }
+    .rtholder img {
+      width: 7px;
+      margin-left: 4px;
+      margin-top: 2px;
+    }
+    .rtname {
+      font-size: 10px;
+      color: $color-purewhite;
+    }
+    .rtprofile {
+      @include spacebetween-align;
+      flex-direction: row;
+      height: 35px;
+      border-radius: 20px;
+      background-color: $color-darkblue;
+      #profiledd{
+        span{
+          text-transform: capitalize;
+        }
+      }
+      .avatar {
+        min-width: 33px;
+        height: 33px;
+        border-radius: 50%;
+        background-color: $color-notify-orange;
+        @include center-align;
+        font-size: 15px;
+        color: $color-purewhite;
+      }
+    }
+    .righttopimg {
+      width: 33px;
+    }
+    .rtnotify {
+      width: 35px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 30px;
+      cursor: pointer;
+    }
+    .rtnotify img {
+      width: 16px;
+    }
+  }
+}

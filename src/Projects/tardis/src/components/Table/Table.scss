@@ -1,0 +1,260 @@
+@import "../../assets/constant/color";
+@import "../../assets/constant/mixin";
+.tablescroll {
+  overflow-y: hidden;
+  padding-right: 10px;
+  padding-left: 10px;
+  overflow-x: auto;
+  .maintable {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 20px;
+  }
+  .detailtable {
+    margin-top: -20px;
+    width: 100%;
+    height: 110px;
+  }
+  .detailsubtable{
+    width: 100%;
+    height: 60px;
+   
+  }
+  table input {
+    height: 30px;
+    width: 100%;
+    padding-left: 10px;
+    border-radius: 4px;
+    border: 0.5px solid $color-lightgray;
+    font-size: 11px;
+    font-family: "Roboto-Regular";
+    background-color: $color-purewhite;
+  }
+  table input:focus {
+    
+    border: 0.5px solid $color-gray;
+    outline: none;
+    
+  }
+  tbody tr {
+    height: 60px;
+    box-shadow: 0px 1px 7px $color-fade3-white;
+    font-weight: 500;
+    font-family: "Roboto-Regular";
+    font-size: 11px;
+  }
+  thead th {
+    text-align: left;
+    font-size: 10px;
+    font-weight: 500;
+    font-family: "Roboto-Medium";
+    color: $color-gray;
+    padding: 0px 5px
+  }
+  .hidden_row {
+    display: none;
+  }
+  tbody tr td {
+    padding: 0px 10px;
+  }
+  .editholder{
+    width: 20px;
+    height: 20px;
+    border: 1px solid $color-black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  .deleteholder{
+    width: 20px;
+    height: 20px;
+    border: 1px solid $color-red-btn;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  .actioncontainer{
+    display: flex !important
+  }
+  .editimg {
+    height: 10px;
+    //padding-right: 5px;
+  }
+  .closetd{
+    display: none;
+    height: 13px;
+  }
+  .downarr {
+    height: 15px;
+    transform: rotate(360deg);
+  }
+  .uparr {
+    height: 15px;
+    transform: rotate(180deg);
+  }
+  .downarrd {
+    height: 15px;
+    transform: rotate(360deg);
+  }
+  .uparrd {
+    height: 15px;
+    transform: rotate(180deg);
+  }
+  @-moz-keyframes spin {
+    100% {
+      -moz-transform: rotate(180deg);
+    }
+  }
+  @-webkit-keyframes spin {
+    100% {
+      -webkit-transform: rotate(180deg);
+    }
+  }
+  @keyframes spin {
+    100% {
+      -webkit-transform: rotate(180deg);
+      transform: rotate(180deg);
+    }
+  }
+  @-moz-keyframes spin360 {
+    100% {
+      -moz-transform: rotate(360deg);
+    }
+  }
+  @-webkit-keyframes spin360 {
+    100% {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+  @keyframes spin360 {
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  .rowarrow {
+    background-color: $color-fade-white;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+  }
+  .rowsubarrow
+  {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+  .detailimg {
+    width: 35px;
+    height: 35px;
+    background: $color-blue;
+    border-radius: 35px;
+  }
+  .detailimg img {
+    height: 15px;
+    width:35px;
+  }
+  tbody tr td:last-child {
+    cursor: pointer;
+    min-width: 60px;
+  }
+  
+  tbody tr td:nth-child(1) {
+   padding-left: 13px;
+  }
+  .detailcontainer {
+    @include spacebetween-align;
+  }
+  .detailcontainerwithpadd{
+    @include spacebetween-align;
+    height: 40px;
+    padding:10px 5px;
+    input{
+      width:300px;
+    }
+  }
+  .detailcontainer select {
+    padding: 5px 10px;
+    border-radius: 3px;
+    margin: 0px 10px;
+  }
+  .detailcontainer input {
+    width: 170px;
+  }
+  .detailname {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 15px;
+    min-width: 100px;
+  }
+  .detailbuttons {
+    @include flex-end-align;
+    margin: 0px 10px;
+  }
+  .nametitle {
+    font-size: 10px;
+    color: $color-lightgray;
+    margin-bottom: 5px;
+  }
+  .editcontent {
+    box-shadow: none;
+  }
+  .detailtab{
+    .tab-list{
+      .tab-list-active {
+        background-color: #3976eb;
+        color: white;
+        font-size: 12px;
+      }
+    }
+    .tab-content{
+      padding-bottom: 10px;
+      .hidden_row {
+        display: none;
+      }
+    }
+
+  }
+  .buttonInsidecalc {
+    position: relative;
+    width: 130px;
+    margin: 0px 10px;
+  }
+  .buttonInsidecalc input {
+    width: 130px;
+  }
+  .calendaricon {
+    position: absolute;
+    top: 4px;
+    bottom: 4px;
+    right: 4px;
+    border: none;
+    height: 22px;
+    width: 22px;
+    border-radius: 5px;
+    cursor: pointer;
+    @include center-align;
+  }
+  .calendaricon img {
+    height: 12px;
+  }
+  .failuredd {
+    width: 170px;
+    border: 1px solid $color-puregray;
+    padding: 7px 10px;
+    border-radius: 3px;
+    margin: 0px 10px;
+    @include spacebetween-align;
+  }
+  .failuredd img {
+    width: 8px;
+  }
+}

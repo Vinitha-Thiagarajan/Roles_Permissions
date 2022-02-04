@@ -1,0 +1,88 @@
+@import "../../assets/constant/color";
+@import "../../assets/constant/mixin";
+
+.bottom-container {
+  width: 100%;
+  background-color: $color-white;
+  min-height: calc(100vh - 350px);
+  .sidemenu {
+    display: flex;
+    flex-wrap: wrap;
+    width: 280px;
+    padding: 20px;
+    .menu {
+      @include center-align;
+      flex-direction: column;
+      width: 110px;
+      height: 80px;
+      
+      cursor: pointer;
+      position: relative;
+      color: $color-black;
+    }
+    .menu span {
+      font-size: 12px;
+      font-weight: 500;
+      font-family: "Roboto-Regular";
+    }
+    .menuimg {
+      width: 21px;
+      height: 21px;
+      margin-bottom: 10px;
+      @include svg_fill_black;
+    }
+    .menufileimg {
+      width: 21px;
+      height: 21px;
+      margin-bottom: 10px;
+      path {
+        stroke: $color-fill-svg;
+      }
+      circle {
+        fill: $color-notify-orange;
+      }
+    }
+    .btm-menu {
+      width: 280px;
+      margin-top: 40px;
+      font-size: 11px;
+    }
+    .notifydot {
+      width: 7px;
+      height: 7px;
+      background-color: $color-notify-orange;
+      border-radius: 4px;
+      position: absolute;
+      right: 25px;
+      top: 5px;
+    }
+    .btm-menu span {
+      cursor: pointer;
+      font-weight: 400;
+      font-family: "Roboto-Regular";
+      color: $color-gray;
+    }
+    .selectionmenu {
+      background-color: $color-blue;
+      border-radius: 10px;
+      color: $color-white;
+      .menuimg {
+        @include svg_fill_white;
+      }
+      .menufileimg {
+        width: 21px;
+        height: 21px;
+        margin-bottom: 10px;
+        path {
+          stroke: $color-white;
+        }
+        circle {
+          fill: $color-white;
+        }
+      }
+    }
+    .dividerlabel {
+      padding: 0px 10px;
+    }
+  }
+}

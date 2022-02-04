@@ -1,0 +1,834 @@
+@import "../../../assets/constant/color";
+@import "../../../assets/constant/mixin";
+
+@mixin dot {
+  width        : 6px;
+  height       : 6px;
+  border-radius: 3px;
+  margin-right : 3px;
+  margin-top   : 1px;
+}
+
+@mixin btn {
+  border       : 1px solid $color-lightgray;
+  color        : $color-gray;
+  padding      : 8px;
+  border-radius: 4px;
+  font-size    : 13px;
+  cursor       : pointer;
+}
+
+@mixin select {
+  border   : 0.5px solid $color-lightgray;
+  font-size: 11px;
+  height   : 30px;
+}
+
+.tablescroll {
+  .sourceinput60 {
+    width : 60px !important;
+    margin: 0px 7px !important;
+  }
+
+  .sourceinput120 {
+    width : 120px !important;
+    margin: 0px 7px !important;
+
+    input {
+      width : 80% !important;
+      border: none;
+    }
+  }
+
+  #SLACK-CHANNEL,
+  #TIMESTAMP,
+  #SOURCEDATE,
+  #LAST-RUN,
+  #STATICTICS,
+  #REPORT,
+  #COMMENTS,
+  #STATUS,
+  #FAILURE-REASONS,
+  .textAlign {
+    text-align: center;
+  }
+
+  .sourceinput160 {
+    width : 17% !important;
+    margin: 0px 7px !important;
+    height: 40px !important;
+  }
+
+  .sourceinput200 {
+    width : 200px !important;
+    margin: 0px 7px !important;
+
+    input {
+      width : 80% !important;
+      border: none;
+    }
+  }
+
+  .reddot {
+    @include dot;
+    background-color: $color-red;
+  }
+
+  .greendot {
+    @include dot;
+    background-color: $color-green;
+  }
+
+  .action-td-container {
+    @include spacebetween-align;
+
+    .edit-action {
+      cursor: pointer;
+    }
+  }
+
+  .fieldholder {
+    margin-top: 20px;
+
+    .detailbtn {
+      height: 30px;
+    }
+  }
+
+  .norecord {
+    text-align: center;
+    font-size : 14px;
+  }
+
+  .customselect {
+    width: 75px !important;
+    @include select;
+  }
+
+  .customselect130 {
+    width: 135px !important;
+    @include select;
+    margin: 0px 7px !important;
+  }
+
+  .select190 {
+    width: 190px !important;
+  }
+
+  .foucscell {
+    text-decoration: underline;
+    cursor         : pointer;
+  }
+
+  .cellholder {
+    @include center-align;
+
+    .cell {
+      width : 25px;
+      height: 25px;
+      @include center-align;
+      border-radius   : 50%;
+      background-color: $color-fade-white;
+      color           : $color-gray;
+      margin          : 0px 5px;
+    }
+
+    .selected {
+      background-color: $color-green !important;
+      color           : $color-purewhite;
+    }
+
+    .trendbtn {
+      @include center-align;
+      @include btn;
+      width: 65px;
+    }
+
+    .trendbtn:not(.disable):hover {
+      border          : none;
+      padding         : 9px;
+      color           : $color-purewhite;
+      background-color: $color-blue;
+    }
+
+    .disable {
+      border          : none;
+      color           : $color-gray;
+      background-color: $color-fade-white;
+      cursor          : default;
+    }
+
+    .exportbtn {
+      @include center-align;
+      background-color: $color-blue;
+      color           : $color-purewhite;
+      padding         : 8px;
+      border-radius   : 4px;
+      font-size       : 13px;
+      cursor          : pointer;
+      width           : 100px;
+    }
+
+    .exportbtn:hover {
+      border          : none;
+      padding         : 9px;
+      color           : $color-purewhite;
+      background-color: $color-blue;
+    }
+  }
+
+  .filerow {
+    height       : 70px;
+    padding-right: 30px;
+  }
+
+  .checkboxtd {
+    width       : 40px;
+    padding     : 0px;
+    padding-left: 0px !important;
+
+    .filecheck {
+      width       : 25px;
+      margin-left : 5px;
+      margin-right: 0px;
+    }
+
+    svg {
+      .shp0 {
+        fill: $color-fade-white;
+      }
+    }
+  }
+
+  .width200 {
+    width: 200px;
+  }
+
+  .sourcenametd {
+    width       : 150px;
+    padding-left: 30px;
+  }
+
+  .sourcevaluetd {
+    width: 300px;
+  }
+
+  .detailstext {
+    width  : 200px;
+    padding: 10px;
+  }
+
+  .validationRow__row {
+    display: table;
+    width  : 100%;
+
+    .downarr {
+      height   : 15px;
+      transform: rotate(360deg);
+    }
+
+    .uparr {
+      height   : 15px;
+      transform: rotate(180deg);
+    }
+  }
+
+  .validationRow__cell {
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    height         : 100%;
+    width          : 100%;
+  }
+
+  .validationRow__cell--caps {
+    text-transform: uppercase;
+  }
+
+  .validationRow__cellLabel {
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    text-align     : center;
+    width          : 20px;
+    height         : 20px;
+    border-radius  : 50%;
+    color          : white;
+    padding-top    : 1px;
+    margin-left    : 5px;
+
+    &--green {
+      @extend .validationRow__cellLabel;
+      background-color: #35B27D;
+    }
+    &--red {
+      @extend .validationRow__cellLabel;
+      background-color: #F53C56;
+    }
+    &--grey {
+      @extend .validationRow__cellLabel;
+      background-color: #8591A3;
+    }
+
+    &--percent {
+      width : 30px;
+      height: 30px;
+    }
+  }
+  .commonPercent{
+    width: auto !important;
+    min-width: 30px;
+    height: 30px;
+    padding: 0px 4px;
+  }
+  .validationTable {
+    width      : 100%;
+    display    : flex;
+    flex-flow  : column nowrap;
+    line-height: 1.5;
+    flex       : 1 1 auto;
+    overflow   : auto;
+    padding    : 1rem 2rem 0 2.4rem;
+    cursor     : default;
+  }
+
+  .validationTable__headers {
+    width        : 100%;
+    display      : flex;
+    flex-flow    : row nowrap;
+    min-height   : 30px;
+    color        : #9BA1AC;
+    margin-bottom: 0.4rem;
+  }
+
+  .validationTable__row {
+    @extend .validationTable__headers;
+    min-height    : 20px;
+    color         : #172B4D;
+    padding-bottom: 1.2rem;
+    margin-bottom : 1.2rem;
+    border-bottom : 1px solid#F3F3F3;
+  }
+
+  .validationTable__cell {
+    border-radius: 2px;
+    display      : flex;
+    flex-flow    : row nowrap;
+    flex-grow    : 1;
+    flex-basis   : 0;
+    align-items  : center;
+    word-break   : break-word;
+    hyphens      : auto;
+    margin       : 0 0.2rem;
+  }
+
+  .validationTable__headerExpectation {
+    @extend .validationTable__cell;
+    padding  : 0.4rem 1.3rem;
+    min-width: 60%;
+  }
+
+  .validationTable__headerResults {
+    @extend .validationTable__cell;
+    text-align     : center;
+    justify-content: center;
+    max-width      : 160px;
+  }
+
+  .validationTable__headerArguments {
+    @extend .validationTable__cell;
+    text-align     : center;
+    justify-content: center;
+    max-width      : 160px;
+  }
+
+  .validationTable__expectation {
+    @extend .validationTable__headerExpectation;
+    border    : 1px solid #E6EAF0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    b{
+      font-weight: bold;
+      color: #000;
+    }
+  }
+
+  .validationTable__results {
+    @extend .validationTable__headerResults;
+  }
+
+  .validationTable__results--fail {
+    border-radius   : 2px;
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+    width           : 80px;
+    height          : 30px;
+    background-color: #F53C56;
+    color           : #ffffff;
+    margin-left: 20px;
+  }
+
+  .validationTable__results--success {
+    @extend .validationTable__results--fail;
+    background-color: #35B27D;
+    margin-left: 20px;
+  }
+
+  .validationTable__arguments {
+    @extend .validationTable__headerArguments;
+  }
+
+  .validationTable__arguments--button {
+    font-size       : 11px;
+    width           : 80px;
+    height          : 30px;
+    border-radius   : 2px;
+    background-color: #ffffff;
+    border          : 1px solid #7764E4;
+    color           : #7764E4;
+    cursor          : pointer;
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+    box-shadow      : 0px 3px 6px 0px rgba(44, 40, 40, 0.11);
+  }
+
+  .validationModal {
+    position        : fixed;
+    top             : 0;
+    left            : 0;
+    height          : 100%;
+    width           : 100%;
+    z-index         : 100000;
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+    background-color: rgba(40, 49, 66, 0.85);
+  }
+
+  .validationModal__modal {
+    position        : relative;
+    background-color: #ffffff;
+    border-top      : 15px solid #3976EB;
+    min-width       : 500px;
+    max-width       : 700px;
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+    flex-direction  : column;
+    padding         : 2rem 3.2rem 3rem 3.2rem;
+  }
+
+  .validationModal__header {
+    display : flex;
+    width   : 100%;
+    position: relative;
+  }
+
+  .validationModal__iconBg {
+    background-color: #3976EB;
+    width           : 50px;
+    height          : 50px;
+    border-radius   : 50%;
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+    margin-right    : 1rem;
+
+    img {
+      // width: 30px;
+      height     : 27px;
+      margin-left: 2px;
+    }
+  }
+
+  .validationModal__close {
+    position: absolute;
+    right   : 0;
+    top     : 15px;
+    width   : 18px;
+    height  : 18px;
+  }
+
+  .validationModal__info {
+    display        : flex;
+    width          : 100%;
+    margin         : 1.5rem 0 2.5rem 0;
+    justify-content: space-between;
+    align-items    : center;
+  }
+
+  .validationModal__expectation {
+    border-radius: 2px;
+    display      : flex;
+    flex-flow    : row nowrap;
+    flex-grow    : 1;
+    flex-basis   : 0;
+    align-items  : center;
+    word-break   : break-word;
+    hyphens      : auto;
+    padding      : 0.7rem 1.3rem;
+    border       : 1px solid #E6EAF0;
+
+  }
+
+  .validationModal__result {
+    border-radius   : 2px;
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+    width           : 80px;
+    height          : 37px;
+    background-color: #F53C56;
+    color           : #ffffff;
+    margin-left     : 1rem;
+  }
+
+  .validationModal__description {
+    width: 100%;
+  }
+}
+
+.permissondetail {
+
+  // display: flex;
+  // flex-wrap: wrap;
+  // justify-content: space-between;
+  .row {
+    padding        : 10px;
+    display        : flex;
+    align-items    : center;
+    justify-content: space-between;
+
+    .title {
+      padding       : 5px;
+      text-transform: capitalize;
+      font-size     : 15px;
+      width         : 300px;
+      overflow-wrap : break-word;
+    }
+
+    .status {
+      display    : flex;
+      align-items: center;
+
+      .item {
+        padding  : 10px 40px;
+        font-size: 12px;
+
+        .icontick {
+          margin-right: 5px;
+          color       : $color-green;
+        }
+
+        .iconclose {
+          margin-right: 5px;
+          color       : $color-red-btn;
+        }
+      }
+    }
+  }
+}
+
+.testcasecontainer {
+  padding-top : 30px;
+  padding-left: 35px;
+
+  form {
+    display   : flex;
+    margin-top: 30px;
+
+    .valuecontainer {
+      display   : inline-block;
+      width     : 220px;
+      margin    : 0px 10px;
+      margin-top: -18px;
+    }
+
+    .t-activetd {
+      min-width      : 100px;
+      display        : flex;
+      justify-content: center;
+      height         : 32px;
+      align-items    : center;
+    }
+
+    .t-action {
+      min-width      : 100px;
+      display        : flex;
+      justify-content: space-around;
+      padding        : 0px 10px;
+
+      .t-edit {
+        background-color: #70788f;
+        width           : 32px;
+        height          : 32px;
+        border-radius   : 50%;
+        display         : flex;
+        justify-content : center;
+        align-items     : center;
+        cursor          : pointer;
+
+        img {
+          width: 12px;
+        }
+      }
+
+      .t-delete {
+        background-color: #f53c56;
+        width           : 32px;
+        height          : 32px;
+        border-radius   : 50%;
+        display         : flex;
+        justify-content : center;
+        align-items     : center;
+        cursor          : pointer;
+
+        img {
+          width: 12px;
+        }
+      }
+
+      .t-update {
+        height         : 32px;
+        cursor         : pointer;
+        border-radius  : 50%;
+        background     : green;
+        width          : 32px;
+        display        : flex;
+        justify-content: center;
+        align-items    : center;
+
+        img {
+          width: 15px;
+        }
+      }
+
+      .t-add {
+        height         : 32px;
+        cursor         : pointer;
+        border-radius  : 50%;
+        background     : green;
+        width          : 32px;
+        display        : flex;
+        justify-content: center;
+        align-items    : center;
+
+        img {
+          width: 15px;
+        }
+      }
+    }
+  }
+}
+
+.testcasesource {
+  width : 17% !important;
+  margin: 0px 7px !important;
+
+  input {
+    height       : 40px !important;
+    padding-left : 10px;
+    border-radius: 4px;
+    border       : 0.5px solid #a6adbb;
+    font-size    : 11px;
+    font-family  : "Roboto-Regular";
+    overflow     : hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.testbtnholder {
+  padding-top: 60px;
+
+  .testaddbtn {
+    width          : 143px;
+    height         : 45px;
+    background     : #3976eb;
+    border-radius  : 6px;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    margin-left    : 40px;
+    margin-bottom  : 60px;
+    font-style     : normal;
+    font-weight    : normal;
+    font-size      : 14px;
+    line-height    : 19px;
+    color          : #ffffff;
+
+    span {
+      padding-left  : 13px;
+      text-transform: uppercase;
+    }
+
+    img {
+      width: 16px;
+    }
+  }
+}
+
+.ddholder {
+  position: relative;
+  display : inline-block;
+  margin  : 0px 10px;
+  width   : 100%;
+
+  .testdd {
+    max-width       : 220px;
+    margin-right    : 20px;
+    min-width       : 120px;
+    height          : 40px;
+    position        : relative;
+    overflow        : hidden;
+    background-color: white;
+    border          : 1px solid #ccc;
+    border-radius   : 2px;
+    box-sizing      : border-box;
+    color           : #333;
+    cursor          : default;
+    outline         : none;
+    display         : flex;
+    justify-content : space-between;
+    align-items     : center;
+    padding         : 0px 8px;
+    transition      : all 200ms ease;
+
+    span {
+      width        : 100%;
+      overflow     : hidden;
+      text-overflow: ellipsis
+    }
+  }
+
+  .popholder {
+    width           : 100%;
+    max-height      : 195px;
+    background-color: #ffffff;
+    position        : absolute;
+    z-index         : 9999 !important;
+
+    .testddmenu:after {
+      position     : absolute;
+      right        : 14%;
+      top          : 4px;
+      width        : 0;
+      height       : 0;
+      content      : "";
+      border-left  : 10px solid transparent;
+      border-right : 10px solid transparent;
+      border-bottom: 16px solid #3976eb;
+    }
+
+    .testddmenu {
+      background   : #3976eb;
+      border-radius: 3px;
+      box-sizing   : border-box;
+      margin-top   : 15px;
+      max-height   : 175px;
+      overflow-y   : auto;
+      width        : calc(100% - 20px);
+      z-index      : 1000;
+
+      div {
+        height        : 39px;
+        display       : flex;
+        align-items   : center;
+        padding-left  : 10px;
+        padding-right : 10px;
+        font-style    : normal;
+        font-weight   : normal;
+        font-size     : 12px;
+        line-height   : 18px;
+        letter-spacing: 0.2px;
+        color         : #ffffff;
+      }
+
+      .isSelected {
+        background: #336cdb !important;
+      }
+    }
+  }
+
+  .popholderlarger {
+    width           : 190%;
+    max-height      : 195px;
+    background-color: #ffffff00;
+    position        : absolute;
+    z-index         : 9999 !important;
+
+    .testddmenu:after {
+      position     : absolute;
+      left         : 10%;
+      top          : 4px;
+      width        : 0;
+      height       : 0;
+      content      : "";
+      border-left  : 10px solid transparent;
+      border-right : 10px solid transparent;
+      border-bottom: 16px solid #3976eb;
+    }
+
+    .testddmenu {
+      background   : #3976eb;
+      border-radius: 3px;
+      box-sizing   : border-box;
+      margin-top   : 15px;
+      max-height   : 175px;
+      overflow-y   : auto;
+      width        : calc(100% - 20px);
+      z-index      : 1000;
+
+      div {
+        height        : 39px;
+        display       : flex;
+        align-items   : center;
+        padding-left  : 10px;
+        padding-right : 10px;
+        font-style    : normal;
+        font-weight   : normal;
+        font-size     : 12px;
+        line-height   : 18px;
+        letter-spacing: 0.2px;
+        color         : #ffffff;
+      }
+
+      .isSelected {
+        background: #336cdb !important;
+      }
+    }
+  }
+}
+
+.react-switch {
+  .react-switch-handle {
+    top             : 1.5px !important;
+    //background-color: #35b27d !important;
+    box-shadow      : none !important;
+  }
+
+  .react-switch-bg {
+    border          : 1px solid #a6adbb !important;
+    background-color: #ffffff !important;
+  }
+}
+
+.react-switch-disable {
+  .react-switch-handle {
+    top             : 1.5px !important;
+    background-color: #b0bdb8 !important;
+    box-shadow      : none !important;
+  }
+
+  .react-switch-bg {
+    border          : 1px solid #ccc !important;
+    background-color: #f8f8fb !important;
+  }
+}
+
+#exportmodal {
+  display: none;
+}

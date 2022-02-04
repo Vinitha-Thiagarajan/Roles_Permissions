@@ -1,0 +1,55 @@
+@import "../../../../assets/constant/color";
+@import "../../../../assets/constant/mixin";
+#maincontent:not(.fullscreen) {
+  .Slackpage {
+    .container-filter {
+      #isactivedd{
+        width: 120px;
+      }
+      #sourcedd {
+        width: 240px;
+      }
+      #alertdd {
+        width: 180px;
+      }
+      #slackdd {
+        width: 180px;
+      }
+      .addbtn {
+        width: 165px;
+        margin-left: 0px;
+      }
+    }
+  }
+}
+.controls {
+  .source1 {
+    .slack {
+      .select-search__input {
+        height: 40px;
+      }
+    }
+  }
+}
+.slackadd{
+  width: 15px;
+  @include svg_fill_white;
+}
+
+.topspace{
+  margin-top: -30px;;
+  .tagcontainer{
+  
+    width: 100%;
+    min-height: 150px;
+    margin: 10px 0px 30px 0px;
+    border: 1px solid $color-puregray;
+    border-radius: 4px;
+    padding: 10px;
+  
+  }
+  .labelspan{
+    color: $color-lightgray;
+    font-size: 12px;
+  }
+}

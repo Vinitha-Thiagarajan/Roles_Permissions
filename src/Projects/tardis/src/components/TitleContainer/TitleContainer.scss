@@ -1,0 +1,122 @@
+@import "../../assets/constant/color";
+
+@mixin title_option {
+  font-size: 16px;
+  padding-left: 10px;
+  cursor: pointer;
+  font-weight: 500;
+  font-family: "Roboto-Regular";
+}
+
+.container-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 10px;
+  .title-left {
+    display: flex;
+    .Maintennace,
+    .Dashborad {
+      img {
+        height: 14px;
+      }
+    }
+    .Permissions,
+    .Profile {
+      img {
+        height: 20px;
+        width: 13px;
+      }
+    }
+    .Integration,
+    .Configuration,
+    .Map,
+    .Configurations,
+    .Support {
+      img {
+        height: 16px;
+      }
+    }
+
+    .File {
+      img {
+        height: 17px;
+      }
+    }
+
+    .Chart {
+      img {
+        height: 16px;
+        width: 15px;
+      }
+    }
+  }
+  .backoption {
+    width: 100%;
+  }
+  .backoption img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+  .backoption span {
+    @include title_option;
+    color: $color-black;
+  }
+  .title {
+    width: 100%;
+    cursor: default;
+  }
+  .title img {
+    height: 14px;
+    filter: invert(36%) sepia(89%) saturate(2041%) hue-rotate(208deg) brightness(98%) contrast(88%);
+  }
+  .title span {
+    @include title_option;
+    color: $color-blue;
+    cursor: default;
+    min-width: 200px;
+  }
+  .cursorpointer {
+    cursor: pointer;
+    .dot {
+      width: 4px;
+      margin: 4px;
+      height: 4px;
+      background: $color-black;
+      -moz-border-radius: 5px;
+      -webkit-border-radius: 5px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  }
+  .expand path:first-child {
+    transform: translateY(770px) translateX(-770px);
+  }
+  .expand path:nth-child(2) {
+    transform: translateY(-770px) translateX(770px);
+  }
+
+  .collapse path:first-child {
+    transform: translateY(0px) translateX(0px);
+  }
+  .collapse path:nth-child(2) {
+    transform: translateY(0px) translateX(0px);
+  }
+
+  .fullscreenicon {
+    width: 40px;
+  }
+  .fullscreenicon svg {
+    height: 20px;
+    cursor: pointer;
+  }
+  .title-divder {
+    padding: 0px 10px;
+  }
+  .title-divder > span {
+    width: 0.5px;
+    height: 16px;
+    background-color: $color-lightgray;
+  }
+}

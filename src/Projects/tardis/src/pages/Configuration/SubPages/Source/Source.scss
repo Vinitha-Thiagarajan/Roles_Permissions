@@ -1,0 +1,118 @@
+@import "../../../../assets/constant/color";
+@import "../../../../assets/constant/mixin";
+.isactive {
+  padding: 15px 0px;
+  @include flex-start-align;
+}
+
+.controls {
+  .source1 {
+    width: 50%;
+    height: 100%;
+    .select-search__input {
+      height: 50px;
+    }
+  }
+  .source2 {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    .select-search__input {
+      height: 50px;
+    }
+  }
+  .paddingdiv {
+    padding: 10px 0px;
+    .extraheight {
+      height: 15px;
+    }
+  }
+  .timezonearrow {
+    height: 100%;
+    padding: 0px 10px;
+    background-color: $color-darkblue;
+    margin-left: 25px;
+    cursor: pointer;
+    border-radius: 0px 3px 3px 0px;
+  }
+  .description-container {
+    padding-bottom: 5px;
+    margin-left: 20px;
+  }
+  .addtimepicker {
+    width: 190px;
+    height: 40px;
+    margin-top: 5px;
+
+    input {
+      height: 37px;
+      width: 85%;
+      border: none;
+    }
+  }
+  .activecnt {
+    margin-top: 7px;
+  }
+  .sourceaddtzdropdown {
+    width: 190px;
+    padding: 0px 0px 0px 10px;
+    background: $color-purewhite;
+    border-radius: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    height: 40px;
+    @include spacebetween-align;
+    margin-top: 5px;
+    .opendropdown {
+      font-size: 11px !important;
+    }
+    img {
+      width: 10px;
+    }
+  }
+  .sourceadddropdown {
+    width: 190px;
+    padding: 0px 10px;
+    background: $color-purewhite;
+    border-radius: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    height: 40px;
+    @include spacebetween-align;
+    margin-top: 5px;
+  }
+
+  .sourceadddropdown span {
+    color: $color-black;
+  }
+  .sourceadddropdown img {
+    height: 6px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  #maincontent:not(.fullscreen) {
+    .Sourcepage {
+      .container-filter {
+        #sourcedd {
+          width: 260px;
+        }
+        #typedd {
+          width: 165px;
+        }
+        #isactivedd {
+          width: 160px;
+        }
+        #Dashdd {
+          width: 170px;
+        }
+        .addbtn {
+          width: 130px;
+          margin-left: 0px;
+        }
+      }
+    }
+  }
+}

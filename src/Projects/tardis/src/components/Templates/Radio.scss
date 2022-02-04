@@ -1,0 +1,22 @@
+.t-radioholder{
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid #ccc !important;
+  margin-bottom: 5px;
+  margin-top: 5px ;
+  padding-left: 5px;
+  border-radius: 4px;
+
+  .t-radiocontainer{
+    display: flex;
+    align-items: center;
+    width: 110px;
+    .radio{
+      width: 20px !important;
+    }
+    label{
+      padding-left: 5px;
+      padding-top: 3px;
+    }
+  }
+}

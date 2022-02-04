@@ -1,0 +1,36 @@
+.MaintenancePage {
+  .container-filter{
+    .react-datepicker-wrapper{
+      height: 45px;
+      width: 100%;
+      margin-right: 30px;  
+      .react-datepicker__input-container::after{
+        background-image: none;
+      }
+    }
+    
+  }
+}
+#maincontent:not(.fullscreen) {
+    .MaintenancePage {
+      .container-filter {
+        .range-container{
+          width:  220px;
+          .logdate {
+            width: 220px;
+          }
+        }
+        #sourcedd {
+          width: 300px;
+        }
+        #failturedd {
+          width: 200px;
+        }
+        
+        .addbtn {
+          width: 165px;
+          margin-left: 0px;
+        }
+      }
+    }
+  }

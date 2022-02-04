@@ -1,0 +1,100 @@
+@import "../../../../assets/constant/color";
+@import "../../../../assets/constant/mixin";
+
+.Overallpage {
+    .date-holder {
+        margin-left: 20px;
+        .filter-date {
+            height: 40px;
+            border-radius: 5px;
+            border: 1px solid $color-puregray;
+            padding: 10px;
+            width: 120px;
+        }
+    }
+    .options {
+        margin-right: 0px;
+        width: 125px;
+        height: 45px;
+        display: flex;
+        align-items: center;
+        padding-left: 15px;
+        background-color: $color-fade-white;
+        border-radius: 5px;
+        justify-content: space-between;
+        cursor: pointer;
+        font-weight: 500;
+        font-family: "Roboto-Regular";
+        font-size: 12px;
+        color: $color-black;
+    }
+    .options img {
+        width: 13px;
+        width: 15px;
+        margin-right: 10px;
+    }
+    .submitbtn {
+        background-color: $color-blue;
+        height: 40px;
+        margin-left: 20px;
+        min-width: 80px;
+    }
+
+    .piechart {
+        min-width: 500px;
+        display: flex;
+        margin: 10px 0px 50px 0px;
+        justify-content: space-around;
+        align-items: center;
+        #donuttooltip {
+            position: absolute;
+            width: auto;
+            height: auto;
+            padding: 10px;
+            background-color: $color-black;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            border-radius: 10px;
+            -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+            -mox-box-shadow: 4px 4px 4px 10px rgba(0, 0, 0, 0.4);
+            box-shadow: 4px 4px 10px rbga(0, 0, 0, 0.4);
+            pointer-events: none;
+            color: $color-purewhite;
+        }
+        #donuttooltip.tooltiphidden {
+            opacity: 0;
+        }
+        #donuttooltip p {
+            margin: 0;
+            font-family: sans-serif;
+            font-size: 16px;
+            line-height: 20px;
+        }
+    }
+    .export-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        align-items: center;
+        margin: 50px 20px 10px 20px;
+
+        .exportbtn {
+            @include center-align;
+            background-color: $color-blue;
+            color: $color-purewhite;
+            padding: 8px;
+            border-radius: 4px;
+            font-size: 13px;
+            width: 100px;
+            cursor: pointer;
+            margin-left: 10px;
+            height: 35px;
+        }
+        .exportbtn:hover {
+            border: none;
+            color: $color-purewhite;
+            padding: 9px;
+            background-color: $color-blue;
+        }
+    }
+}

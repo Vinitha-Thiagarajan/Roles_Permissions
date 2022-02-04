@@ -1,0 +1,26 @@
+@import "../../assets/constant/color";
+@import "../../assets/constant/mixin";
+.nfcontainer{
+    @include center-align ;
+    height: 100vh;
+    .pagenotfound{
+        text-align: center;
+        margin-bottom:20%;
+        .statuscode{
+            font-size: 80px;
+        }
+        .labletxt{
+            font-size: 30px;
+        }
+        .cellholder {
+            @include center-align ;
+            margin-top: 20px;
+            .goback{
+                padding: 10px 20px;
+                border-radius: 4px;
+                border: 1px solid $color-puregray;
+                cursor: pointer;
+            }
+        }
+    }
+}

@@ -1,0 +1,70 @@
+@import "../../../assets/constant/color";
+@import "../../../assets/constant/mixin";
+.pagination {
+  @include spacebetween-align;
+  margin-top: 30px;
+  padding: 0px 10px;
+  margin-bottom: 40px;
+  .leftpaginiation {
+    font-weight: 400;
+    font-family: "Roboto-Regular";
+    font-size: 12px;
+    color: $color-gray;
+    position: relative;
+  }
+  .leftpaginiation select {
+    margin: 0px 5px;
+    border: 1px solid $color-gray;
+    font-size: 10px;
+    padding: 1px 0px;
+    color: $color-gray;
+    margin-right: 10px;
+    height: 18px;
+  }
+
+  .leftpaginiation label:after {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NiA0MiIgd2lkdGg9IjY2IiBoZWlnaHQ9IjQyIj4KCTxkZWZzPgoJCTxjbGlwUGF0aCBjbGlwUGF0aFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgaWQ9ImNwMSI+CgkJCTxwYXRoIGQ9Ik0tMzIxMCAtMTI4TDYzMCAtMTI4TDYzMCAyMjE0TC0zMjEwIDIyMTRaIiAvPgoJCTwvY2xpcFBhdGg+Cgk8L2RlZnM+Cgk8c3R5bGU+CgkJdHNwYW4geyB3aGl0ZS1zcGFjZTpwcmUgfQoJCS5zaHAwIHsgZmlsbDogI2ZmZmZmZiB9IAoJPC9zdHlsZT4KCTxnIGlkPSJQYWdlIDEiIGNsaXAtcGF0aD0idXJsKCNjcDEpIj4KCQk8cGF0aCBpZD0iUGF0aCA2MCIgY2xhc3M9InNocDAiIGQ9Ik02NC40NCA0LjkzTDYyLjM0IDIuODJDNjEuNjggMi4xNiA2MC44MSAxLjc5IDU5Ljg3IDEuNzlDNTguOTMgMS43OSA1OC4wNSAyLjE2IDU3LjM5IDIuODJMMzMuNDggMjYuNzNMOS41NSAyLjc5QzguODkgMi4xMyA4LjAxIDEuNzcgNy4wNyAxLjc3QzYuMTMgMS43NyA1LjI1IDIuMTMgNC42IDIuNzlMMi41IDQuODlDMS4xMyA2LjI1IDEuMTMgOC40NyAyLjUgOS44NEwzMSAzOC40NEMzMS42NiAzOS4xIDMyLjUzIDM5LjU2IDMzLjQ4IDM5LjU2TDMzLjQ5IDM5LjU2QzM0LjQzIDM5LjU2IDM1LjMxIDM5LjEgMzUuOTcgMzguNDRMNjQuNDQgOS45MUM2NS4xIDkuMjYgNjUuNDYgOC4zNSA2NS40NiA3LjQxQzY1LjQ2IDYuNDggNjUuMSA1LjU4IDY0LjQ0IDQuOTNaIiAvPgoJPC9nPgo8L3N2Zz4=");
+    background-size: 9px;
+    background-position: center;
+    background-repeat: no-repeat;
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: calc(50% - 9px);
+    left: 60px;
+    width: 14px;
+    height: 17px;
+    background-color: $color-blue;
+    pointer-events: none;
+  }
+  .rightpaginiation {
+    display: flex;
+
+    .prev,
+    .pageno,
+    .next {
+      width: 25px;
+      height: 25px;
+      border-radius: 15px;
+      @include center-align;
+      border: 0.5px solid $color-pagination;
+      margin: 0px 3px;
+      font-size: 11px;
+      color: $color-blue;
+      cursor: pointer;
+      font-weight: 400;
+      font-family:"Roboto-Regular";
+    }
+    .prev img {
+      width: 6px;
+    }
+    .next img {
+      width: 6px;
+    }
+    .selectedpageno {
+      background-color: $color-blue;
+      border: 1px solid $color-blue;
+      color: $color-purewhite;
+    }
+  }
+}

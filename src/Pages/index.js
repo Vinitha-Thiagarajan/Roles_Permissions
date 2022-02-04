@@ -3,7 +3,7 @@ import { Route } from "react-router-dom";
 import { SecureRoute, Security, LoginCallback } from '@okta/okta-react';
 import Home from './Home';
 import Settings from './Settings';
-import Tardis from '../Projects/tardis-ui/src'
+import Tardis from '../Projects/tardis/src'
 import Dart from '../Projects/dart/src'
 
 function Production() {

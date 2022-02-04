@@ -1,0 +1,95 @@
+@import "../../assets/constant/color";
+@import "../../assets/constant/mixin";
+.ProfilePage {
+    .profiledetails {
+        margin-top: 40px;
+        @include flex-start-align;
+        flex-wrap: wrap;
+        .avatar {
+            min-width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: $color-lightgray;
+            @include center-align;
+            font-size: 50px;
+            color: $color-purewhite;
+            margin-right: 50px;
+        }
+        .profileinput-holder {
+            display: flex;
+            margin-left: 10px;
+        }
+        .themes{
+            margin-top:30px;
+            width: 100%;
+            span{
+                margin: 10px;
+                font-size: 14px;
+            }
+            .permission{
+                border: 1px solid $color-profile;
+                margin: 10px;
+                padding: 5px;
+                margin-bottom: 30px;
+            }
+        .DashHolder {
+            display: flex;
+            flex-wrap: wrap;
+            .DashList {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 100px;
+                width: 200px;
+                border: 2px dotted $color-profile;
+                padding: 10px;
+                font-size: 13px;
+                margin: 10px;
+                .TitleContainer {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    .btn {
+                        background-color: $color-blue;
+                        margin: 0px;
+                        width: 75px;
+                        height: 25px;
+                    }
+                    .deactive{
+                        background-color: $color-deactive !important;
+                    }
+                }
+                .Bottom {
+                    display: flex;
+                    justify-content: flex-end;
+                    img {
+                        width: 12px;
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+        .tz{
+            margin: 20px 0px;
+            display: flex;
+            flex-direction: column;
+            #timezones{
+                padding: 10px;
+                margin: 10px;
+                border: 1px solid $color-profile;
+            }
+        }
+    }
+    }
+    .btncontainer{
+        display: flex;
+        margin-top:10px;
+        .blueclr{
+            background-color: $color-blue;
+            width:140px;
+        }
+        .clearbtncolor{
+            width:120px;
+        }
+    }
+}

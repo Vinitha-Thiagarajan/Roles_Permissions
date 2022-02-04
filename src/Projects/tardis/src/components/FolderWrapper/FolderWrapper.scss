@@ -1,0 +1,177 @@
+
+@import "../../assets/constant/color";
+@import "../../assets/constant/mixin";
+.folder-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-left: -15px;
+  margin-top: 5px;
+  
+  .folder-container.selected {
+    width: 245px;
+    padding: 20px 10px;
+    cursor: pointer;
+    .topcontainer {
+      width: 100%;
+      height: 20px;
+      background-color: $color-blue;
+      position: relative;
+      border-top-left-radius: 20px;
+      .whitecontainer {
+        position: absolute;
+        width: 160px;
+        height: 20px;
+        background-color: $color-blue;
+        right: 0px;
+        border-top: 20px solid #ffffff;
+        border-left: 20px solid transparent;
+      }
+    }
+    .main-container {
+      width: 100%;
+      height: 140px;
+      background-color: $color-blue;
+      border-radius: 0px 20px 20px 20px;
+      .first-container {
+        @include flex-start-align;
+        padding: 20px;
+        .imgholder {
+          width: 45px;
+          height: 45px;
+          background-color: $color-purewhite;
+          border-radius: 50%;
+          margin-right: 10px;
+          svg {
+            width: 20px;
+          }
+        }
+        span {
+          font-weight: 500;
+          color: $color-purewhite;
+          font-family: "Roboto-Regular";
+          font-size: 14px;
+        }
+      }
+      .second-container {
+        @include spacebetween-end;
+        padding: 7px 20px;
+        color: $color-purewhite;
+        .folderview {
+          display: flex;
+          flex-direction: column;
+
+          .folder {
+            font-size: 8px;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.6);
+          }
+          .viewname {
+            font-size: 12px;
+          }
+        }
+        .knowmore {
+          font-size: 9px;
+          color: rgba(255, 255, 255, 0.6);
+          svg {
+            width: 10px;
+            margin-left: 10px;
+            path {
+              fill: rgba(255, 255, 255, 0.6);
+            }
+          }
+        }
+      }
+    }
+  }
+  .folder-container.selected:hover {
+    .topcontainer {
+      background-color: $color-darkblue;
+      .whitecontainer {
+        background-color: $color-darkblue;
+      }
+    }
+    .main-container {
+      background-color: $color-darkblue;
+    }
+
+  }
+  .folder-container.unselected {
+    width: 260px;
+    padding: 20px 15px;
+    .topcontainer {
+      width: 100%;
+      height: 20px;
+      background-color: $color-white;
+      position: relative;
+      border-top-left-radius: 20px;
+      .whitecontainer {
+        position: absolute;
+        width: 160px;
+        height: 20px;
+        background-color: $color-white;
+        right: 0px;
+        border-top: 20px solid $color-purewhite;
+        border-left: 20px solid transparent;
+      }
+    }
+    .main-container {
+      width: 100%;
+      height: 140px;
+      background-color: $color-white;
+      border-radius: 0px 20px 20px 20px;
+      .first-container {
+        @include flex-start-align;
+        padding: 20px;
+        .imgholder {
+          width: 45px;
+          height: 45px;
+          background-color: $color-purewhite;
+          border-radius: 50%;
+          margin-right: 10px;
+          svg {
+            width: 20px;
+          }
+        }
+        span {
+          font-weight: 500;
+          color: $color-black;
+          font-family: "Roboto-Regular";
+          font-size: 14px;
+        }
+      }
+      .second-container {
+        @include spacebetween-end;
+        padding: 7px 20px;
+        color: $color-black;
+        .folderview {
+          display: flex;
+          flex-direction: column;
+
+          .folder {
+            font-size: 8px;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            color: $color-black;
+          }
+          .viewname {
+            font-size: 12px;
+          }
+        }
+        .knowmore {
+          font-size: 9px;
+          color: $color-black;
+          cursor: pointer;
+          svg {
+            width: 10px;
+            margin-left: 10px;
+            path {
+              fill: $color-black;
+            }
+          }
+        }
+      }
+    }
+  }
+}

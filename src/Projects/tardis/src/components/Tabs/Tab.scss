@@ -1,0 +1,20 @@
+@import "../../assets/constant/color";
+.tab-list {
+  border-bottom: 2px solid $color-tab-br;
+  padding-left: 0;
+}
+
+.tab-list-item {
+  display: inline-block;
+  list-style: none;
+  margin-bottom: -2px;
+  padding: 0.5rem 0.75rem;
+  font-size: 10px;
+  font-family: "Roboto-Regular";
+  cursor:pointer;
+}
+
+.tab-list-active {
+  background-color: $color-purewhite;
+  border-bottom: 2px solid $color-blue;
+}

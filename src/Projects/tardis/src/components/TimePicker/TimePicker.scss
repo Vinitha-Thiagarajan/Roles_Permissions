@@ -1,0 +1,14 @@
+@import "../../assets/constant/color";
+.CustomTimePicker {
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 3px;
+}
+.rc-time-picker-panel{
+  z-index:103000 !important;
+}
+.rc-time-picker-clear{
+  display: none;
+}
+.rc-time-picker-input[disabled] {
+  color: $color-black;
+}

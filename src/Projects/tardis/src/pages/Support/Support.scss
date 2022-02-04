@@ -1,0 +1,65 @@
+@import "../../assets/constant/color";
+.Support-page {
+  .formcontainer {
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 400px;
+    padding: 5px 30px;
+    flex-direction: column;
+    .formdesign{
+          width: 30px;
+    }
+    .heading {
+      font-weight: 500;
+      color: $color-black;
+      font-family: "Roboto-Medium";
+      span {
+        font-size: 12px;
+        font-family: "Roboto-Regular";
+      }
+      h3{
+        margin: 10px 0px;
+        font-weight: 500;
+        color: $color-black;
+      }
+    }
+    .inputcontainer {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      padding-top: 35px;
+    }
+    .btncontainer {
+      font-weight: 500;
+      font-family: "Roboto-Regular";
+      padding-top: 20px;
+      .supportbtn {
+        display: flex;
+        flex-direction: row;
+        background-color: $color-blue;
+        width: 150px;
+        font-size: 9px;
+        text-transform: uppercase;
+        margin: 0px 0px;
+      }
+      .content {
+        font-size: 7px;
+        padding-left: 15px;
+        line-height: 11px;
+        color:$color-lightgray;
+      }
+    }
+    .usermanual{
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      padding: 30px 0px;
+      font-size: 12px;
+      a{
+        color:$color-blue
+      }
+    }
+  }
+}
