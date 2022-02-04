@@ -1,6 +1,6 @@
 import { all, call, put, takeLatest } from 'redux-saga/effects';
-import { fetchDV } from '../../Projects/tardis-ui/src/utils'
-import query from '../../Projects/tardis-ui/src/assets/constant/query'
+import { fetchDV } from '../../Projects/tardis/src/utils'
+import query from '../../Projects/tardis/src/assets/constant/query'
 import types from './types'
 
 export function* fetchList() {

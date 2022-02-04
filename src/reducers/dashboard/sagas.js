@@ -1,8 +1,8 @@
 import { all, call, put, takeLatest, select } from 'redux-saga/effects';
 import types from './types'
-import { fetch } from '../../Projects/tardis-ui/src/utils'
-import query from '../../Projects/tardis-ui/src/assets/constant/query'
-import { PageController } from '../../Projects/tardis-ui/src/pages/Dashboard/Components/Controller'
+import { fetch } from '../../Projects/tardis/src/utils'
+import query from '../../Projects/tardis/src/assets/constant/query'
+import { PageController } from '../../Projects/tardis/src/pages/Dashboard/Components/Controller'
 
 const getdashboard = state => state.dashboard;
 

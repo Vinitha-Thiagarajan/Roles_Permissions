@@ -1,6 +1,6 @@
 import { all, call, put, takeLatest, select } from 'redux-saga/effects';
-import { fetch, paginationFilter } from '../../Projects/tardis-ui/src/utils'
-import query from '../../Projects/tardis-ui/src/assets/constant/query'
+import { fetch, paginationFilter } from '../../Projects/tardis/src/utils'
+import query from '../../Projects/tardis/src/assets/constant/query'
 import types from './types'
 
 const getsource = state => state.source;

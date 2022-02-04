@@ -1,8 +1,8 @@
 import { all, call, put, takeLatest } from 'redux-saga/effects';
 import types from './types'
 import moment from 'moment'
-import { fetch, fetchDV } from '../../Projects/tardis-ui/src/utils'
-import query from '../../Projects/tardis-ui/src/assets/constant/query'
+import { fetch, fetchDV } from '../../Projects/tardis/src/utils'
+import query from '../../Projects/tardis/src/assets/constant/query'
 
 export function* GetSourceList(source,logdate){
     let sourceArr = [];
