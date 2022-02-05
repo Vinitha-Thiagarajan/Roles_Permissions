@@ -6,7 +6,7 @@
     .export {
         .exportbtn {
           @include center-align;
-          background-color: $color-blue;
+          background-color:$color-background;
           color: $color-purewhite;
           padding: 8px;
           border-radius: 4px;
@@ -18,7 +18,7 @@
           border: none;
           color: $color-purewhite;
           padding: 9px;
-          background-color: $color-blue;
+          background-color: $color-background;
         }
       }
     }

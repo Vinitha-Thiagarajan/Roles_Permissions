@@ -1,6 +1,6 @@
 @import "../../assets/constant/color";
 
-@mixin loading-spinner($activeColor: $color-blue, $selector: "&::before", $time: 1.5s ) {
+@mixin loading-spinner($activeColor: $color-background, $selector: "&::before", $time: 1.5s ) {
     @keyframes spinner {
         0% {
             transform: translate3d(-50%, -50%, 0) rotate(0deg);

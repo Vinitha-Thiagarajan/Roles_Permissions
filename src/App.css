@@ -3,7 +3,9 @@
  --container-color:#2c2d38;
  --color:#fff;
  --fontstyle:14px;
- --fontFamily:sans-serif
+ --fontstyleHead:20px;
+ --fontFamily:sans-serif;
+ --iconYellow:#FFEB02;
 }
 
 .App {

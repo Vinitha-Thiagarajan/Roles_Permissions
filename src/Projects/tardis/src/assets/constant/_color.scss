@@ -1,5 +1,9 @@
-$color-blue: var(--container-color);
-$color-darkblue: #2855b4;
+$color-background:var(--background-color);
+$color-container:var(--container-color);
+$color-text:var(--color);
+$color-FontFamily:var(--fontFamily);
+$color-fontstyle:var(--fontstyle);
+
 $color-trend:#11192f;
 $color-green: #35b27d;
 $color-dash-green: #0c8559;
@@ -20,7 +24,6 @@ $color-puregray:#cccccc;
 $color-black: #172b4d;
 $color-redshade: #fef8f8;
 $color-fill-svg: #40536c;
-$color-notify-orange: #ff9f00;
 $color-pureblack: #000000;
 $color-defalut-tooltip:#333333;
 $color-pagination:#8898aa;

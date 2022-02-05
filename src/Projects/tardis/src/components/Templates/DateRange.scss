@@ -14,7 +14,7 @@
   border       : none;
   outline      : none;
   box-shadow   : 0px 1px 7px $color-fade3-white;
-  caret-color  : $color-blue;
+  caret-color  : $color-background;
 }
 
 ::placeholder {
@@ -36,7 +36,7 @@
   text-align      : center;
   font-weight     : bold;
   padding         : 2px;
-  background-color: $color-blue;
+  background-color: $color-background;
   cursor          : pointer;
   @include center-align;
 }
@@ -74,7 +74,7 @@
 
 .react-datepicker {
   font-weight  : 500;
-  font-family  : "Roboto-Regular";
+  font-family  : $color-FontFamily;
   border       : 1px solid $color-tab-br !important;
   border-radius: 15px !important;
 
@@ -103,7 +103,7 @@
   }
 
   .react-datepicker__day--selected {
-    background-color: $color-blue;
+    background-color: $color-background;
   }
 
   .react-datepicker__navigation {
@@ -126,7 +126,7 @@
   .react-datepicker__current-month {
     text-align : left;
     font-weight: 500;
-    font-family: "Roboto-Regular";
+    font-family:$color-FontFamily;
     font-size  : 12px;
     margin-top : 10px;
   }
@@ -142,7 +142,7 @@
   width      : 50%;
   padding    : 5px 10px 10px 0px;
   font-weight: 500;
-  font-family: "Roboto-Regular";
+  font-family: $color-FontFamily;
 
   input {
     height       : 35px;
@@ -198,7 +198,7 @@
   width      : 100%;
   padding    : 5px 10px 10px 0px;
   font-weight: 500;
-  font-family: "Roboto-Regular";
+  font-family: $color-FontFamily;
 
   textarea {
     margin       : 5px 0px;
@@ -245,7 +245,7 @@
     padding      : 10px;
     font-size    : 11px;
     color        : #172b4d;
-    font-family  : "Roboto-Regular";
+    font-family  : $color-FontFamily;
   }
 }
 
@@ -327,7 +327,7 @@
     span {
       cursor     : pointer;
       font-weight: 500;
-      font-family: "Roboto-Regular";
+      font-family: $color-FontFamily;
       font-size  : 12px;
       color      : #172b4d;
     }

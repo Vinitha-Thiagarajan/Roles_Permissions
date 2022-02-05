@@ -1,4 +1,4 @@
-$color-blue: #3976eb;
+
 html {
   box-sizing: border-box;
 }
@@ -29,18 +29,18 @@ html {
 
 body {
   margin: 0;
-  font-family: "Roboto-Regular";
+  font-family: var(--fontFamily);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #f8f8fb;
 }
 @font-face {
-  font-family: 'Roboto-Medium';
+  font-family: var(--fontFamily);
   src: url(./assets/fonts/Roboto-Medium.ttf) format('truetype');
 }
 
 @font-face {
-    font-family: 'Roboto-Regular';
+    font-family: var(--fontFamily);
     font-weight: 900;
     src:  url(./assets/fonts/Roboto-Regular.ttf) format('truetype');
 }

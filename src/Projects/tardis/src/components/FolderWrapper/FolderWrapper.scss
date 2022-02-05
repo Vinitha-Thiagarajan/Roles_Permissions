@@ -15,14 +15,14 @@
     .topcontainer {
       width: 100%;
       height: 20px;
-      background-color: $color-blue;
+      background-color: $color-title-white;
       position: relative;
       border-top-left-radius: 20px;
       .whitecontainer {
         position: absolute;
         width: 160px;
         height: 20px;
-        background-color: $color-blue;
+        background-color: $color-title-white;
         right: 0px;
         border-top: 20px solid #ffffff;
         border-left: 20px solid transparent;
@@ -31,7 +31,7 @@
     .main-container {
       width: 100%;
       height: 140px;
-      background-color: $color-blue;
+      background-color: $color-title-white;
       border-radius: 0px 20px 20px 20px;
       .first-container {
         @include flex-start-align;
@@ -48,24 +48,24 @@
         }
         span {
           font-weight: 500;
-          color: $color-purewhite;
-          font-family: "Roboto-Regular";
+          color: $color-text;
+          font-family: $color-FontFamily;
           font-size: 14px;
         }
       }
       .second-container {
         @include spacebetween-end;
         padding: 7px 20px;
-        color: $color-purewhite;
+        color: $color-text;
         .folderview {
           display: flex;
           flex-direction: column;
 
           .folder {
-            font-size: 8px;
+            font-size: 12px;
             margin-bottom: 5px;
             text-transform: uppercase;
-            color: rgba(255, 255, 255, 0.6);
+            color: rgba(131, 129, 129, 0.6);
           }
           .viewname {
             font-size: 12px;
@@ -73,12 +73,12 @@
         }
         .knowmore {
           font-size: 9px;
-          color: rgba(255, 255, 255, 0.6);
+          color:rgba(131, 129, 129, 0.6);
           svg {
             width: 10px;
             margin-left: 10px;
             path {
-              fill: rgba(255, 255, 255, 0.6);
+              fill: rgba(131, 129, 129, 0.6);
             }
           }
         }
@@ -87,13 +87,21 @@
   }
   .folder-container.selected:hover {
     .topcontainer {
-      background-color: $color-darkblue;
+      background-color: $color-background;
       .whitecontainer {
-        background-color: $color-darkblue;
+        background-color: $color-background;
       }
     }
     .main-container {
-      background-color: $color-darkblue;
+      background-color: $color-background;
+      .first-container{
+        span{
+          color: $color-purewhite !important;
+        }
+      }
+      .second-container{
+        color: $color-purewhite;
+      }
     }
 
   }
@@ -137,7 +145,7 @@
         span {
           font-weight: 500;
           color: $color-black;
-          font-family: "Roboto-Regular";
+          font-family: $color-FontFamily;
           font-size: 14px;
         }
       }

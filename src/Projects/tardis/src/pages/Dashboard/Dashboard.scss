@@ -41,7 +41,7 @@
             .calendar {
                 @include center-align;
                 margin-left: 20px;
-                background-color: $color-darkblue;
+                background-color: $color-container;
                 border-radius: 40px;
                 height: 40px;
                 font-size: 14px;
@@ -56,7 +56,7 @@
                     width: 40px;
                     border-radius: 40px;
                     height: 40px;
-                    background-color: $color-notify-orange;
+                    background-color: var(--iconYellow);
                     color: $color-black;
                     span {
                         font-size: 25px;
@@ -74,7 +74,7 @@
             .title {
                 font-size: 22px;
                 color: $color-black;
-                font-family: "Roboto-Medium";
+                font-family: $color-FontFamily;
                 width: 190px;
             }
         }
@@ -84,7 +84,7 @@
             .holder {
                 @include center-align;
                 color: $color-black;
-                font-family: "Roboto-Regular";
+                font-family: $color-FontFamily;
                 .statuscircle {
                     width: 100% !important;
                     padding: 5px 8px !important;
@@ -105,7 +105,7 @@
                 }
                 .delay {
                     color: $color-purewhite;
-                    background-color: $color-notify-orange;
+                    background-color: var(--iconYellow);
                 }
             }
             .margin40 {
@@ -128,7 +128,7 @@
                 width: 100%;
                 height: 41px;
                 padding-left: 5px;
-                font-family: "Roboto-Medium";
+                font-family:$color-FontFamily;
             }
             .headerleft {
                 width: 220px;
@@ -136,7 +136,7 @@
                 margin-bottom: 5px;
                 padding: 15px 5px !important;
                 font-size: 14px;
-                font-family: "Roboto-Regular";
+                font-family: $color-FontFamily;
                 color: $color-black;
                 text-overflow: ellipsis;
                 overflow: hidden;
@@ -247,7 +247,7 @@
         margin-top: 3px;
         cursor: pointer;
         font-weight: 500;
-        font-family: "Roboto-Regular";
+        font-family: $color-FontFamily;
         font-size: 12px;
         color: $color-black;
     }

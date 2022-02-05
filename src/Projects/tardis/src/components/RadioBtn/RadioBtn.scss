@@ -10,7 +10,7 @@
     .radiobtn {
       width: 16px;
       height: 16px;
-      border: 1px solid $color-blue;
+      border: 1px solid $color-background;
       margin-right: 5px;
       border-radius: 10px;
 
@@ -18,7 +18,7 @@
         width: 6px;
         height: 6px;
         border-radius: 3px;
-        background-color: $color-blue;
+        background-color: $color-background;
       }
     }
   }

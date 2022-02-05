@@ -24,7 +24,7 @@
         justify-content: space-between;
         cursor: pointer;
         font-weight: 500;
-        font-family: "Roboto-Regular";
+        font-family:$color-FontFamily;
         font-size: 12px;
         color: $color-black;
     }
@@ -34,7 +34,7 @@
         margin-right: 10px;
     }
     .submitbtn {
-        background-color: $color-blue;
+        background-color: $color-background;
         height: 40px;
         margin-left: 20px;
         min-width: 80px;
@@ -80,7 +80,7 @@
 
         .exportbtn {
             @include center-align;
-            background-color: $color-blue;
+            background-color: $color-background;
             color: $color-purewhite;
             padding: 8px;
             border-radius: 4px;
@@ -94,7 +94,7 @@
             border: none;
             color: $color-purewhite;
             padding: 9px;
-            background-color: $color-blue;
+            background-color: $color-background;
         }
     }
 }

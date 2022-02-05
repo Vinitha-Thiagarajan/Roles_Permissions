@@ -29,7 +29,7 @@
 }
 .chip {
   padding: 4px 10px;
-  background: $color-blue;
+  background: $color-background;
   margin-right: 5px;
   margin-bottom: 5px;
   border-radius: 10px;
@@ -75,7 +75,7 @@
   padding: 10px 10px;
 }
 .multiSelectContainer li:hover {
-  background: $color-blue;
+  background: $color-background;
   color: $color-purewhite;
   cursor: pointer;
 }
@@ -87,7 +87,7 @@
   opacity: 0.5;
 }
 .highlightOption {
-  background: $color-blue;
+  background: $color-background;
   color: $color-purewhite;
 }
 .displayBlock {

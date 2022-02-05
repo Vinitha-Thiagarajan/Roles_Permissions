@@ -54,7 +54,7 @@
  
 .button{
 background-color: white;
-color: black;
+color: var(--color);
 width: 230px;
 height: 30px;
 margin-left: 40px;

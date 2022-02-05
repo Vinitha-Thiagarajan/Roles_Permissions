@@ -18,12 +18,12 @@
       
       cursor: pointer;
       position: relative;
-      color: $color-black;
+      color: $color-text;
     }
     .menu span {
       font-size: 12px;
       font-weight: 500;
-      font-family: "Roboto-Regular";
+      font-family: $color-FontFamily;
     }
     .menuimg {
       width: 21px;
@@ -39,7 +39,7 @@
         stroke: $color-fill-svg;
       }
       circle {
-        fill: $color-notify-orange;
+        fill:var(--iconYellow);
       }
     }
     .btm-menu {
@@ -50,7 +50,7 @@
     .notifydot {
       width: 7px;
       height: 7px;
-      background-color: $color-notify-orange;
+      background-color: var(--iconYellow);
       border-radius: 4px;
       position: absolute;
       right: 25px;
@@ -59,11 +59,11 @@
     .btm-menu span {
       cursor: pointer;
       font-weight: 400;
-      font-family: "Roboto-Regular";
+      font-family: $color-FontFamily;
       color: $color-gray;
     }
     .selectionmenu {
-      background-color: $color-blue;
+      background-color: $color-background;
       border-radius: 10px;
       color: $color-white;
       .menuimg {

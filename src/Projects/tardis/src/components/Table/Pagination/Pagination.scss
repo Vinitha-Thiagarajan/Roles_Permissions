@@ -7,7 +7,7 @@
   margin-bottom: 40px;
   .leftpaginiation {
     font-weight: 400;
-    font-family: "Roboto-Regular";
+    font-family:$color-FontFamily;
     font-size: 12px;
     color: $color-gray;
     position: relative;
@@ -34,7 +34,7 @@
     left: 60px;
     width: 14px;
     height: 17px;
-    background-color: $color-blue;
+    background-color: $color-background;
     pointer-events: none;
   }
   .rightpaginiation {
@@ -50,10 +50,10 @@
       border: 0.5px solid $color-pagination;
       margin: 0px 3px;
       font-size: 11px;
-      color: $color-blue;
+      color: $color-background;
       cursor: pointer;
       font-weight: 400;
-      font-family:"Roboto-Regular";
+      font-family:$color-FontFamily;
     }
     .prev img {
       width: 6px;
@@ -62,8 +62,8 @@
       width: 6px;
     }
     .selectedpageno {
-      background-color: $color-blue;
-      border: 1px solid $color-blue;
+      background-color: $color-background;
+      border: 1px solid $color-background;
       color: $color-purewhite;
     }
   }

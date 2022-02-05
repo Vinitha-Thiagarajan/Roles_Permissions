@@ -2,7 +2,7 @@
 @import "../../assets/constant/mixin";
 .sidebar {
     width: 60px;
-    background-color: $color-blue;
+    background-color: $color-background;
     position: fixed;
     height: 100%;
     overflow-x: hidden;
@@ -27,12 +27,12 @@
         }
     }
     .selection{
-        background-color: $color-darkblue !important;
+        background-color: $color-container !important;
         border-radius: 4px  !important;
         padding: 10px
     }
     .fillwhite{
-        background-color: $color-blue;
+        background-color: $color-background;
         border-radius: 10px;
         color: $color-purewhite;
         .menuimg {

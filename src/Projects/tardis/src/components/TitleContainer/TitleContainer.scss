@@ -5,7 +5,7 @@
   padding-left: 10px;
   cursor: pointer;
   font-weight: 500;
-  font-family: "Roboto-Regular";
+  font-family: $color-FontFamily;
 }
 
 .container-title {
@@ -73,7 +73,7 @@
   }
   .title span {
     @include title_option;
-    color: $color-blue;
+    color: $color-text;
     cursor: default;
     min-width: 200px;
   }

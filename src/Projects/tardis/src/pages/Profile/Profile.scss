@@ -50,7 +50,7 @@
                     justify-content: space-between;
                     align-items: center;
                     .btn {
-                        background-color: $color-blue;
+                        background-color: $color-background;
                         margin: 0px;
                         width: 75px;
                         height: 25px;
@@ -85,7 +85,7 @@
         display: flex;
         margin-top:10px;
         .blueclr{
-            background-color: $color-blue;
+            background-color: $color-background;
             width:140px;
         }
         .clearbtncolor{

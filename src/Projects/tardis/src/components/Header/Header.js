@@ -66,7 +66,7 @@ const Header = (props) => {
         </div>
         <div className="rtprofile">
           <div className="avatar">
-            {IntialGen(user)}
+            
           </div>
           {user.username?<DropDown
             id={"profiledd"}

@@ -41,9 +41,7 @@ const Profile = props => {
   return (
     <Fragment>
       <div className="profile centeralign">
-        {/* <img alt="" src={props.img} /> */}
         <div className="avatar">
-          {IntialGen(user)}
         </div>
         <span>{props.name}</span>
       </div>

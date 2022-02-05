@@ -10,11 +10,11 @@
   margin-bottom: -2px;
   padding: 0.5rem 0.75rem;
   font-size: 10px;
-  font-family: "Roboto-Regular";
+  font-family: $color-FontFamily;
   cursor:pointer;
 }
 
 .tab-list-active {
   background-color: $color-purewhite;
-  border-bottom: 2px solid $color-blue;
+  border-bottom: 2px solid $color-background;
 }

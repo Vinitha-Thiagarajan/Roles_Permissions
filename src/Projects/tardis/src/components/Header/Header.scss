@@ -4,7 +4,7 @@
 .top-container {
   width: 100%;
   height: 350px;
-  background-color: $color-blue;
+  background-color: $color-background;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -15,7 +15,7 @@
     height: 100%;
     flex-direction: column;
      #ProfileCanvas {
-      background-color: $color-blue;
+      background-color: $color-background;
     }
     .profile {
       height: 260px;
@@ -33,7 +33,7 @@
         min-width: 75px;
         height: 75px;
         border-radius: 50%;
-        background-color: $color-notify-orange;
+        background-color: $color-puregray;
         @include center-align;
         font-size: 30px;
         color: $color-purewhite;
@@ -45,7 +45,7 @@
     .profile span {
       padding-top: 25px;
       font-weight: 500;
-      font-family: "Roboto-Regular";
+      font-family: $color-FontFamily;
     }
     .profilemenus {
       width: 100%;
@@ -66,7 +66,7 @@
     }
     .profilemenu span {
       font-weight: 400;
-      font-family: "Roboto-Regular";
+      font-family: $color-FontFamily;
     }
     .profilemenu img {
       height: 13px;
@@ -83,11 +83,11 @@
       height: 30px;
       font-size: 10px;
       color: $color-purewhite;
-      background-color: $color-darkblue;
+      background-color: $color-container;
       padding: 0px 7px 0px 7px;
       border-radius: 3px;
       font-weight: 400;
-      font-family: "Roboto-Regular";
+      font-family: $color-FontFamily;
       width: 175px;
       display: flex;
       justify-content: space-between;
@@ -98,7 +98,7 @@
     .rttimezonearrow {
       height: 100%;
       //padding: 0px 7px;
-      background-color: $color-darkblue;
+      background-color: $color-container;
       margin-left: 25px;
       cursor: pointer;
       border-radius: 0px 3px 3px 0px;
@@ -111,7 +111,7 @@
       padding: 0px 10px;
       cursor: pointer;
       font-weight: 400;
-      font-family: "Roboto-Regular";
+      font-family: $color-FontFamily;
       font-size: 11px;
       color:$color-purewhite;
       
@@ -130,7 +130,7 @@
       flex-direction: row;
       height: 35px;
       border-radius: 20px;
-      background-color: $color-darkblue;
+      background-color: $color-container;
       #profiledd{
         span{
           text-transform: capitalize;
@@ -140,7 +140,7 @@
         min-width: 33px;
         height: 33px;
         border-radius: 50%;
-        background-color: $color-notify-orange;
+        background-color: $color-puregray;
         @include center-align;
         font-size: 15px;
         color: $color-purewhite;

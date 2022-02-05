@@ -27,7 +27,7 @@
     border-radius: 4px;
     border: 0.5px solid $color-lightgray;
     font-size: 11px;
-    font-family: "Roboto-Regular";
+    font-family: $color-FontFamily;
     background-color: $color-purewhite;
   }
   table input:focus {
@@ -40,14 +40,14 @@
     height: 60px;
     box-shadow: 0px 1px 7px $color-fade3-white;
     font-weight: 500;
-    font-family: "Roboto-Regular";
+    font-family: $color-FontFamily;
     font-size: 11px;
   }
   thead th {
     text-align: left;
     font-size: 10px;
     font-weight: 500;
-    font-family: "Roboto-Medium";
+    font-family: $color-FontFamily;
     color: $color-gray;
     padding: 0px 5px
   }
@@ -155,7 +155,7 @@
   .detailimg {
     width: 35px;
     height: 35px;
-    background: $color-blue;
+    background: $color-background;
     border-radius: 35px;
   }
   .detailimg img {

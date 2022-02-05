@@ -2,7 +2,7 @@
 
 .select-search {
     position: relative;
-    font-family: "Roboto-Regular";
+    font-family:$color-FontFamily;
     box-sizing: border-box;
     width: 190px;
   }
@@ -37,7 +37,7 @@
     border: 1px solid $color-puregray;
     border-radius: 3px;
     outline: none;
-    font-family: "Roboto-Regular";
+    font-family: $color-FontFamily;
     font-size: 12px;
     text-align: left;
     text-overflow: ellipsis;
@@ -83,7 +83,7 @@
     background: $color-purewhite;
     border: none;
     outline: none;
-    font-family: "Roboto-Regular";
+    font-family:$color-FontFamily;
     font-size: 11px;
     text-align: left;
     cursor: pointer;

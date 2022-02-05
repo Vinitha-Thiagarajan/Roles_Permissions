@@ -15,17 +15,17 @@
         text-transform: capitalize;
       }
       th{
-        font-family: 'Roboto-Medium';
+        font-family: $color-FontFamily;
        
       }
       td{
           padding: 5px;
-          font-family: 'Roboto-Regular';
+          font-family: $color-FontFamily;
           font-size: 14px;
           word-break: break-all;
       }
       .title{
-        font-family: 'Roboto-Medium';
+        font-family: $color-FontFamily;
       }
 }
 .graph-container{
@@ -42,7 +42,7 @@
 .loader {
   border: 3px solid #f3f3f3;
   border-radius: 50%;
-  border-top: 3px solid $color-blue;
+  border-top: 3px solid $color-background;
   width: 30px;
   height: 30px;
   -webkit-animation: spin 2s linear infinite;

@@ -14,10 +14,10 @@
     .heading {
       font-weight: 500;
       color: $color-black;
-      font-family: "Roboto-Medium";
+      font-family: $color-FontFamily;
       span {
         font-size: 12px;
-        font-family: "Roboto-Regular";
+        font-family: $color-FontFamily;
       }
       h3{
         margin: 10px 0px;
@@ -33,12 +33,12 @@
     }
     .btncontainer {
       font-weight: 500;
-      font-family: "Roboto-Regular";
+      font-family:$color-FontFamily;
       padding-top: 20px;
       .supportbtn {
         display: flex;
         flex-direction: row;
-        background-color: $color-blue;
+        background-color: $color-background;
         width: 150px;
         font-size: 9px;
         text-transform: uppercase;
@@ -58,7 +58,7 @@
       padding: 30px 0px;
       font-size: 12px;
       a{
-        color:$color-blue
+        color:$color-background
       }
     }
   }

@@ -80,6 +80,7 @@
         align-items: center;
         height: 40px;
         padding: 0px 20px;
+        background-color: var(--container-color);
         border: 1px solid #ccc;
         div{
             font-weight: bold;
@@ -93,7 +94,8 @@
         min-width       : 300px;
         max-width       : 950px;
         padding         : 0px 20px;
-        background-color:  var(--container-color);
+        border: solid 1px whitesmoke;
+        background-color:  var(--background-color);
         color: var(--color);
         border-bottom: 1px solid #ccc;
         .title {
