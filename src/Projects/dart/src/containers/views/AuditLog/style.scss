@@ -34,7 +34,7 @@ thead tr {
     padding-left: 3% !important;
     font-style  : normal;
     font-weight : 325;
-    font-size   : 13px;
+    font-size   : var(--fontstyle);
     line-height : 16px;
     color       : #172b4d;
 }
@@ -51,7 +51,7 @@ thead tr {
 }
 
 .jsoncell {
-    font-size     : 13px;
+    font-size     : var(--fontstyle);
     line-height   : 19px;
     letter-spacing: 0.2px;
     color         : #858282;
@@ -111,7 +111,7 @@ thead tr {
     }
 
     .jsoncell {
-        font-size     : 13px;
+        font-size     : var(--fontstyle);
         line-height   : 19px;
         letter-spacing: 0.2px;
         color         : #858282;

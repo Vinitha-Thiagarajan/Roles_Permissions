@@ -10,7 +10,7 @@
           color: $color-purewhite;
           padding: 8px;
           border-radius: 4px;
-          font-size: 13px;
+          font-size: var(--fontstyle);
           width: 100px;
           cursor: pointer;
         }

@@ -7,7 +7,7 @@
   font-weight: 500;
   font-family: $color-FontFamily;
   color: white;
-  font-size: 13px;
+  font-size: var(--fontstyle);
   margin: 0px 10px;
 }
 .greenclr {
@@ -39,5 +39,5 @@
   font-weight: 500;
   font-family: $color-FontFamily;
   color: $color-purewhite;
-  font-size: 13px;
+  font-size: var(--fontstyle);
 }

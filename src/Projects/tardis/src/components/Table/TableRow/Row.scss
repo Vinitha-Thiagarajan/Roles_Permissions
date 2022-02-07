@@ -14,7 +14,7 @@
   color        : $color-gray;
   padding      : 8px;
   border-radius: 4px;
-  font-size    : 13px;
+  font-size    : var(--fontstyle);
   cursor       : pointer;
 }
 
@@ -97,7 +97,7 @@
 
   .norecord {
     text-align: center;
-    font-size : 14px;
+    font-size : var(--fontstyle);
   }
 
   .customselect {
@@ -164,7 +164,7 @@
       color           : $color-purewhite;
       padding         : 8px;
       border-radius   : 4px;
-      font-size       : 13px;
+      font-size       : var(--fontstyle);
       cursor          : pointer;
       width           : 100px;
     }
@@ -506,7 +506,7 @@
     .title {
       padding       : 5px;
       text-transform: capitalize;
-      font-size     : 15px;
+      font-size     :var(--fontstyle);
       width         : 300px;
       overflow-wrap : break-word;
     }
@@ -517,7 +517,7 @@
 
       .item {
         padding  : 10px 40px;
-        font-size: 12px;
+        font-size: var(--fontstyle);
 
         .icontick {
           margin-right: 5px;
@@ -656,7 +656,7 @@
     margin-bottom  : 60px;
     font-style     : normal;
     font-weight    : normal;
-    font-size      : 14px;
+    font-size      :var(--fontstyle);
     line-height    : 19px;
     color          : #ffffff;
 
@@ -741,7 +741,7 @@
         padding-right : 10px;
         font-style    : normal;
         font-weight   : normal;
-        font-size     : 12px;
+        font-size     : var(--fontstyle);
         line-height   : 18px;
         letter-spacing: 0.2px;
         color         : #ffffff;
@@ -790,7 +790,7 @@
         padding-right : 10px;
         font-style    : normal;
         font-weight   : normal;
-        font-size     : 12px;
+        font-size     : var(--fontstyle);
         line-height   : 18px;
         letter-spacing: 0.2px;
         color         : #ffffff;

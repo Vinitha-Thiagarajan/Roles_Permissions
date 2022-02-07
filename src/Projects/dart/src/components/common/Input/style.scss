@@ -12,7 +12,7 @@
     left: 19px;
     color: #f17f21;
     padding: 0px 10px;
-    font-size: 12px;
+    font-size: var(--fontstyle);
     font-family: "Poppins";
     font-weight: 400;
     font-style: normal;
@@ -35,7 +35,7 @@
 }
 .fieldtext-holder-audit {
   .drop-title {
-    font-size: 15px;
+    font-size: var(--fontstyle);
     color: #fff;
     font-family: "Poppins";
     font-weight: 400;
@@ -58,7 +58,7 @@
       background: #606dab;
       border: none;
       color: #aeb5d5;
-      font-size: 12px;
+      font-size: var(--fontstyle);
       line-height: 18px;
       letter-spacing: 0.2px;
       min-width: 120px;

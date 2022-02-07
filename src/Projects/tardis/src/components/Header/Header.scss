@@ -59,7 +59,7 @@
       width: 120px;
       cursor: pointer;
       color: $color-purewhite;
-      font-size: 12px;
+      font-size: var(--fontstyle);
       padding: 0px 20px;
       margin: 0px;
       height: 100%;
@@ -142,7 +142,7 @@
         border-radius: 50%;
         background-color: $color-puregray;
         @include center-align;
-        font-size: 15px;
+        font-size:var(--fontstyle);
         color: $color-purewhite;
       }
     }

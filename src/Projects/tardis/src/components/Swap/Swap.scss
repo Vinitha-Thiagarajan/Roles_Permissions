@@ -11,7 +11,7 @@
         height: 12px;
     }
     span{
-        font-size: 13px;
+        font-size: var(--fontstyle);
         color:  $color-purewhite;
     }
 }

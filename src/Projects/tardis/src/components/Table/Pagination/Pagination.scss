@@ -8,7 +8,7 @@
   .leftpaginiation {
     font-weight: 400;
     font-family:$color-FontFamily;
-    font-size: 12px;
+    font-size: var(--fontstyle);
     color: $color-gray;
     position: relative;
   }

@@ -136,7 +136,7 @@ main {
     cursor: pointer;
     font-weight: 500;
     font-family: $color-FontFamily;
-    font-size: 12px;
+    font-size: var(--fontstyle);
     color: $color-black;
   }
   .searchop {
@@ -189,11 +189,11 @@ main {
       margin: 30px 0px;
       font-weight: 400;
       font-family:$color-FontFamily;
-      font-size: 12px;
+      font-size: var(--fontstyle);
     }
     .controls span {
       color: $color-lightgray;
-      font-size: 12px;
+      font-size: var(--fontstyle);
     }
   }
   .modaladdbtn {
@@ -367,7 +367,7 @@ input:disabled {
             padding: 0px 10px;
             border-radius: 3px;
             border: 1px solid rgba(0, 0, 0, 0.15);
-            font-size: 12px;
+            font-size: var(--fontstyle);
           }
         }
       }

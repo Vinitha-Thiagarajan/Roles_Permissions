@@ -24,7 +24,7 @@
             width: 100%;
             span{
                 margin: 10px;
-                font-size: 14px;
+                font-size: var(--fontstyle);
             }
             .permission{
                 border: 1px solid $color-profile;
@@ -43,7 +43,7 @@
                 width: 200px;
                 border: 2px dotted $color-profile;
                 padding: 10px;
-                font-size: 13px;
+                font-size: var(--fontstyle);
                 margin: 10px;
                 .TitleContainer {
                     display: flex;

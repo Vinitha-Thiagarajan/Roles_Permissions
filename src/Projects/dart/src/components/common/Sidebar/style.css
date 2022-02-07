@@ -25,20 +25,20 @@
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  color: #626884;
-  font-size: 15px;
+  color:var(--background-color);
+  font-size: var(--fontstyle);
   cursor: pointer;
 }
 
 .sidebar-list-li-a:hover {
   text-decoration: none;
   color: #626884;
-  font-size: 15px;
+  font-size: var(--fontstyle);
   cursor: pointer;
 }
 
 .sidebar-list-li-name {
-  font-size: 15px;
+  font-size:var(--fontstyle);
   line-height: 22.5px;
   padding-top: 20px;
 }

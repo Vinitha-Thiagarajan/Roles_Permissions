@@ -13,7 +13,7 @@
             margin-right: 10px;
         }
         span{
-            font-size: 14px;
+            font-size:var(--fontstyle);
             color: $color-black;
         }
     }
@@ -39,12 +39,12 @@
                 margin-right: 10px;
             }
             span{
-                font-size: 14px;
+                font-size: var(--fontstyle);
                 color: $color-black;
             }
         }
         span{
-            font-size: 14px;
+            font-size: var(--fontstyle);
             color: $color-gray;
         }
     }

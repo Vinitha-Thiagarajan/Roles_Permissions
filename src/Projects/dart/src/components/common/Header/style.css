@@ -5,6 +5,7 @@
   align-items: center;
   padding-top: 20px;
   padding-bottom: 20px;
+  color:var(--background-color);
 }
 
 .header-left {
@@ -59,7 +60,7 @@
 .header-right-ul-li-user {
   border-radius: 5px;
   padding: 10px;
-  background: #6b7bc7;
+  background:var(--background-color);
 }
 .header-title-icon {
   padding-right: 20px;

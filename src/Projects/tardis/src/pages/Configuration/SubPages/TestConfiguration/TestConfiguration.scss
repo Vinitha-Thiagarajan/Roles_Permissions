@@ -47,7 +47,7 @@
             border       : 1px solid #ccc;
             border-radius: 5px;
             padding-left : 10px;
-            font-size: 16px;
+            font-size: var(--fontstyle);
         }
         .cronholder{
             display: flex;
@@ -58,7 +58,7 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                font-size: 13px;
+                font-size:var(--fontstyle);
                 padding: 0px 10px;
             }
         }

@@ -24,7 +24,7 @@
     cursor: pointer;
     font-weight: 500;
     font-family:$color-FontFamily;
-    font-size: 12px;
+    font-size: var(--fontstyle);
     color: $color-black;
   }
   .options img {
@@ -63,7 +63,7 @@
         color: $color-purewhite;
         padding: 8px;
         border-radius: 4px;
-        font-size: 13px;
+        font-size:var(--fontstyle);
         width: 100px;
         cursor: pointer;
         margin-left: 10px;

@@ -16,20 +16,20 @@
   }
   .drop-select-value {
     color: #5a5b63 !important;
-    font-size: 12px;
+    font-size: var(--fontstyle);
     font-family: "Poppins";
     font-weight: 400;
     font-style: normal;
   }
   .drop-placeholder {
     color: #b6b7bf !important;
-    font-size: 12px;
+    font-size: var(--fontstyle);
     font-family: "Poppins";
     font-weight: 400;
     font-style: normal;
   }
   .drop-title {
-    font-size: 15px;
+    font-size: var(--fontstyle);
     color: #fff;
     font-family: "Poppins";
     font-weight: 400;
@@ -81,7 +81,7 @@
         padding-left: 32px;
         font-family: "Poppins";
         font-weight: 400;
-        font-size: 12px;
+        font-size: var(--fontstyle);
         color: #3f3f46;
       }
       .dropselected {
@@ -161,7 +161,7 @@
     left: 33px;
     color: #F17F21;
     padding: 0px 10px;
-    font-size: 12px;
+    font-size: var(--fontstyle);
     font-family: "Poppins";
     font-weight: 400;
     font-style: normal;
@@ -239,7 +239,7 @@
         padding-left: 32px;
         font-family: "Poppins";
         font-weight: 400;
-        font-size: 12px;
+        font-size: var(--fontstyle);
         color: #3f3f46;
       }
       .dropselected {

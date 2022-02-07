@@ -35,7 +35,7 @@
   border-radius: 10px;
   display: inline-flex;
   align-items: center;
-  font-size: 13px;
+  font-size:var(--fontstyle);
   color: $color-purewhite;
   white-space: nowrap;
 }
@@ -49,7 +49,7 @@
   display: none;
 }
 .closeIcon {
-  font-size: 12px;
+  font-size: var(--fontstyle);
   float: right;
   margin-left: 2px;
   cursor: pointer;

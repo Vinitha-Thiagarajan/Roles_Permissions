@@ -72,7 +72,7 @@ $color-lightgray: #a6adbb;
       text-align: left;
       font-weight: 500;
       font-family: "Poppins";
-      font-size: 12px;
+      font-size: var(--fontstyle);
       margin-top: 10px;
     }
     .react-datepicker__month {

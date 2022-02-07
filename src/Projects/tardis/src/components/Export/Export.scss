@@ -21,7 +21,7 @@
       td{
           padding: 5px;
           font-family: $color-FontFamily;
-          font-size: 14px;
+          font-size:var(--fontstyle);
           word-break: break-all;
       }
       .title{

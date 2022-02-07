@@ -10,7 +10,7 @@
     background-color: $color-fade-white;
     border-radius: 4px;
     margin: 5px;
-    font-size: 14px;
+    font-size: var(--fontstyle);
 
     img{
         width: 8px !important;
@@ -27,9 +27,9 @@
     background-color: $color-fade-white;
     border-radius: 4px;
     margin: 5px;
-    font-size: 14px;
+    font-size: var(--fontstyle);
     svg{
-      font-size: 16px;
+      font-size: var(--fontstyle);
       cursor: pointer;
     }
     input{
@@ -37,7 +37,7 @@
       background-color: $color-fade-white;
       border:none;
       padding-left:0px;
-      font-size: 14px;
+      font-size: var(--fontstyle);
     }
     input:focus{
         border:none;

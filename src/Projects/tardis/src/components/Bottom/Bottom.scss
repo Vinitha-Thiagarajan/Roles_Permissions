@@ -21,7 +21,7 @@
       color: $color-text;
     }
     .menu span {
-      font-size: 12px;
+      font-size: var(--fontstyle);
       font-weight: 500;
       font-family: $color-FontFamily;
     }

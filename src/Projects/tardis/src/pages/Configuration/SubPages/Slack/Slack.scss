@@ -50,6 +50,6 @@
   }
   .labelspan{
     color: $color-lightgray;
-    font-size: 12px;
+    font-size: var(--fontstyle);
   }
 }

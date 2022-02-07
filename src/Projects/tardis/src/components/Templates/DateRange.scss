@@ -127,7 +127,7 @@
     text-align : left;
     font-weight: 500;
     font-family:$color-FontFamily;
-    font-size  : 12px;
+    font-size  : var(--fontstyle);
     margin-top : 10px;
   }
 
@@ -149,7 +149,7 @@
     width        : 100%;
     border-radius: 3px;
     border       : 1px solid $color-lightgray;
-    font-size    : 12px;
+    font-size    : var(--fontstyle);
     padding      : 5px;
     margin       : 5px 0px;
   }
@@ -186,7 +186,7 @@
       width        : 100%;
       border       : 1px solid $color-profile;
       border-radius: 0px 3px 3px 0px;
-      font-size    : 15px;
+      font-size    : var(--fontstyle);
       padding      : 5px;
       margin       : 5px 0px;
     }
@@ -207,7 +207,7 @@
     resize       : none;
     border-radius: 3px;
     border       : 1px solid $color-lightgray;
-    font-size    : 12px;
+    font-size    : var(--fontstyle);
     padding      : 5px;
   }
 
@@ -328,7 +328,7 @@
       cursor     : pointer;
       font-weight: 500;
       font-family: $color-FontFamily;
-      font-size  : 12px;
+      font-size  : var(--fontstyle);
       color      : #172b4d;
     }
   }

@@ -38,7 +38,7 @@
     border-radius: 3px;
     outline: none;
     font-family: $color-FontFamily;
-    font-size: 12px;
+    font-size: var(--fontstyle);
     text-align: left;
     text-overflow: ellipsis;
     line-height: 36px;

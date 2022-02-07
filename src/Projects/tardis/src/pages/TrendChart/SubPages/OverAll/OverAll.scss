@@ -25,7 +25,7 @@
         cursor: pointer;
         font-weight: 500;
         font-family:$color-FontFamily;
-        font-size: 12px;
+        font-size:var(--fontstyle);
         color: $color-black;
     }
     .options img {
@@ -67,7 +67,7 @@
         #donuttooltip p {
             margin: 0;
             font-family: sans-serif;
-            font-size: 16px;
+            font-size: var(--fontstyle);
             line-height: 20px;
         }
     }
@@ -84,7 +84,7 @@
             color: $color-purewhite;
             padding: 8px;
             border-radius: 4px;
-            font-size: 13px;
+            font-size:var(--fontstyle);
             width: 100px;
             cursor: pointer;
             margin-left: 10px;
