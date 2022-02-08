@@ -29,8 +29,8 @@
     position: relative;
     z-index: 1000;
     padding: 0px;
-    border: 20px solid #E9EDFF;
-    background: #E9EDFF;
+    border: 20px solid #bdbec4;
+    background: #bdbec4;
     font-size: var(--fontstyle);
     justify-content: center;
     align-items: center;
@@ -49,8 +49,8 @@
     position: relative;
     z-index: 1000;
     padding: 0px;
-    border: 12px solid #E9EDFF;
-    background: #6B7BC7;
+    border: 12px solid #d2d3d8;
+    background: black;
     font-size: var(--fontstyle);
     justify-content: center;
     align-items: center;

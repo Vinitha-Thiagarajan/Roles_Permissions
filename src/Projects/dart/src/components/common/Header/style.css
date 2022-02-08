@@ -78,7 +78,7 @@
   align-items: center;
 }
 .card-header-left-icon {
-  background: #e0e3fa;
+  background: #cfcfcf !important;
   border-radius: 5px;
   padding: 15px 10px;
   display: inline-flex;
