@@ -89,13 +89,14 @@
       }
     }
     .active {
-      background-color: #f17f21;
+      background-color: var(--iconYellow);
       margin: 0px !important;
       padding-left: 5px;
       padding-right: 4px;
       justify-content: space-between;
+      color:black !important;
       .dropdowntxt {
-        color: #fff;
+        color: black;
       }
       .dropselected {
         display: block !important;
@@ -247,13 +248,13 @@
       }
     }
     .active {
-      background-color: #f17f21;
+      background-color:var(--iconYellow);
       margin: 0px !important;
       padding-left: 5px;
       padding-right: 4px;
       justify-content: space-between;
       .dropdowntxt {
-        color: #fff;
+        color: black;
       }
       .dropselected {
         display: block !important;

@@ -5,7 +5,7 @@
   align-items: center;
   padding-top: 20px;
   padding-bottom: 20px;
-  color:var(--background-color);
+  color:var(--color);
 }
 
 .header-left {
@@ -91,7 +91,7 @@
 
 .card-header-left-text {
   font-size: 20px;
-  color: #000000;
+  color: var(--color)!important;
 }
 
 .card-header-right {

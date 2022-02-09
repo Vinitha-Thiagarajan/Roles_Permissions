@@ -73,7 +73,7 @@
             }
             .title {
                 font-size: 22px;
-                color: $color-black;
+                color:var(--color);
                 font-family: $color-FontFamily;
                 width: 190px;
             }
@@ -137,7 +137,7 @@
                 padding: 15px 5px !important;
                 font-size: var(--fontstyle);
                 font-family: $color-FontFamily;
-                color: $color-black;
+                color: var(--color);
                 text-overflow: ellipsis;
                 overflow: hidden;
                 white-space: nowrap;

@@ -61,7 +61,7 @@
   }
   .backoption span {
     @include title_option;
-    color: $color-black;
+    color: var(--color);
   }
   .title {
     width: 100%;

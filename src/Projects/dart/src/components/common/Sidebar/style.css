@@ -25,14 +25,14 @@
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  color:var(--background-color);
+  color:var(--color);
   font-size: var(--fontstyle);
   cursor: pointer;
 }
 
 .sidebar-list-li-a:hover {
   text-decoration: none;
-  color: #626884;
+  color:var(--color);
   font-size: var(--fontstyle);
   cursor: pointer;
 }
@@ -44,5 +44,5 @@
 }
 .sidebar-list-li-active {
   background: #f6f6f6;
-  border-left: 3px solid #f17f21;
+  border-left: 3px solid var(--color);
 }

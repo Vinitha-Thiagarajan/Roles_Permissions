@@ -30,6 +30,7 @@ thead tr {
 .sortcontainer{
     display: flex;
     align-items: center;
+    color:var(--color);
 }
 .sortcontainer .sort {
     display: flex;

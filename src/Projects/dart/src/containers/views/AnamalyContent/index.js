@@ -166,7 +166,7 @@ const Anamaly = () => {
                                             <thead>
                                                 <tr>
                                                     <th scope="col" className="datecol" style={{width:120}}><div className="sortcontainer">CREATED DATE <Sort onClick={(e) => { SortOrder(e, "date") }} /></div></th>
-                                                    <th scope="col">DESCRIPTION</th>
+                                                    <th scope="col" className="sortcontainer">DESCRIPTION</th>
                                                     <th scope="col"><div className="sortcontainer">DETAILED DESCRIPTION <Sort onClick={(e) => { SortOrder(e, "desc") }} /></div></th>
                                                 </tr>
                                             </thead>
