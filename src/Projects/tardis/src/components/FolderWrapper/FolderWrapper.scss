@@ -62,13 +62,13 @@
           flex-direction: column;
 
           .folder {
-            font-size: var(--fontstyle);
+            font-size: 8px;
             margin-bottom: 5px;
             text-transform: uppercase;
             color: rgba(131, 129, 129, 0.6);
           }
           .viewname {
-            font-size: var(--fontstyle);
+            font-size:12px;
           }
         }
         .knowmore {

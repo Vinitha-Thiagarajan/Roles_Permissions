@@ -46,7 +46,7 @@ const AddMapSource = props => {
   }, [data.SourceList])
 
   return (
-    <div className="modal-main">
+    <div className="modal-main1">
       <div className="modal-title">
         <div className="title-left centeralign">
           <div className="detailimg centeralign">

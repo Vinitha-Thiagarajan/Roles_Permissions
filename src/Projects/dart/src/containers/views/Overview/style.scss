@@ -92,11 +92,11 @@ $color-black: #172b4d;
         @include center-align;
         margin-right: 5px;
         white-space: pre;
-        font-size: 7px;
+        font-size: 10px;
         font-family: "Poppins";
         font-weight: 400;
         font-style: normal;
-        color: #737384;
+        color: #28282b;
         .line {
           width: 7px;
           height: 1px;
@@ -221,6 +221,7 @@ $color-black: #172b4d;
     height: 18px;
     border-radius: 2px;
     margin-top:1px;
+    margin-left:-5px;
     background-color: var(--background-color);
     pointer-events: none;
   }

@@ -153,7 +153,7 @@ main {
   }
 }
 
-.modal-main {
+.modal-main1 {
   .modal-title {
     @include spacebetween-align;
     .title-left {
@@ -179,6 +179,7 @@ main {
   
   .modal-content {
     display: flex;
+    border:none;
     .addform-container {
       width: 100%;
     }
@@ -305,7 +306,7 @@ input:disabled {
   }
 }
 
-.modal-main {
+.modal-main1 {
   .modal-content {
     .controls {   
       .c1 {

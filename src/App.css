@@ -13,7 +13,7 @@
 }
 #root{
   font-family: var(--fontFamily) !important;
-  background-color: var(--background-color);
+  
 }
 
 .App-logo {

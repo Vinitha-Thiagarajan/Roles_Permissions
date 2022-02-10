@@ -43,7 +43,7 @@
   }
   .textbox {
     width: 100%;
-    background: #606dab;
+    background: white;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -55,9 +55,9 @@
  
     input {
       width: 100%;
-      background: #606dab;
+      background:white;
       border: none;
-      color: #aeb5d5;
+      color: var(--color);
       font-size: var(--fontstyle);
       line-height: 18px;
       letter-spacing: 0.2px;
